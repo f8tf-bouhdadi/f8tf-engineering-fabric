@@ -303,3 +303,96 @@ The evaluation may verify:
 - explicit operation outcomes;
 - reproducibility of delivered evidence.
 
+
+---
+
+## DATA3-ES — Versioned Key-Value Index Engineering Service
+
+### Engineering Promise
+
+Manage versioned engineering entries through deterministic, idempotent operations.
+
+### Customer Need
+
+Use DATA3-ES when engineering services or client applications need to store,
+retrieve and update versioned entries through a stable service interface.
+
+This is relevant when key-based information must remain uniquely identifiable,
+consistently versioned and safely updated without unintended duplicate effects.
+
+### Engineering Concern
+
+DATA3-ES addresses engineering concerns related to:
+
+- deterministic key-based indexing;
+- unique entry identification;
+- idempotent updates;
+- monotonic version evolution;
+- repeatable service execution;
+- audit-ready engineering evidence.
+
+### Engineering Capability
+
+DATA3-ES provides the capability to create, retrieve and update versioned
+key-value entries through deterministic service operations.
+
+It extends the DATA Engineering pipeline with controlled indexing, version
+management and idempotent update behavior.
+
+### Service Contract
+
+The service defines explicit:
+
+- key and value inputs;
+- Put operations;
+- retrieval operations;
+- deterministic operation results;
+- stable service interfaces;
+- repeatable execution conditions;
+- customer delivery packages.
+
+The underlying implementation remains separated from the public service
+contract.
+
+### Engineering Guarantees
+
+Current DATA3-ES guarantees include:
+
+- stable service interfaces;
+- deterministic behavior;
+- idempotent update operations;
+- monotonic version evolution;
+- unique key identification;
+- audit-ready engineering evidence.
+
+Guarantees remain bounded by the declared service scope and current Registered
+maturity.
+
+### Verification and Evidence
+
+DATA3-ES currently provides:
+
+- runnable verification;
+- audit-oriented verification gates;
+- generated engineering evidence;
+- delivery packages;
+- traceability to RM-ODP specifications;
+- formal models prepared for future qualification.
+
+Formal verification evidence remains a future qualification target and is not
+presented as completed assurance.
+
+### Evaluation
+
+A DATA3 Engineering PoC evaluates versioned index scenarios against explicit
+acceptance criteria.
+
+The evaluation may verify:
+
+- successful creation and retrieval of indexed entries;
+- deterministic operation results;
+- idempotent update behavior;
+- correct monotonic version evolution;
+- unique key handling;
+- generation of engineering evidence and delivery packages.
+
