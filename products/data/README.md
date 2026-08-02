@@ -496,3 +496,107 @@ The evaluation may verify:
 - contract validation;
 - reproducible audit-package generation.
 
+
+---
+
+## DATA5-ES — Bounded Workflow Orchestration Engineering Service
+
+### Engineering Promise
+
+Orchestrate bounded engineering workflows through explicit contracts, ordered
+execution, traceability and reproducible verification evidence.
+
+### Customer Need
+
+Use DATA5-ES when an engineering process must coordinate several explicit
+steps and qualified Engineering Services under a controlled workflow.
+
+This is relevant when clients need to preserve execution order, identify every
+workflow and request, stop safely after the first failure and obtain evidence
+that the declared workflow was executed as qualified.
+
+### Engineering Concern
+
+DATA5-ES addresses concerns related to:
+
+- contractual workflow execution;
+- ordered orchestration of engineering steps;
+- workflow, request and trace identification;
+- duplicate step identification;
+- fail-fast behavior;
+- controlled invocation of qualified Engineering Services;
+- reproducible execution evidence.
+
+### Engineering Capability
+
+DATA5-ES provides the capability to validate and execute bounded workflows
+composed of ordered engineering steps.
+
+The qualified service supports explicit step outcomes and controlled
+inter-service invocation while preserving the identifiers required for
+traceability and audit.
+
+### Service Contract
+
+The service defines explicit:
+
+- workflow requests and responses;
+- required workflow and request identifiers;
+- optional trace identifiers;
+- ordered workflow steps;
+- unique step identifiers;
+- successful and failed execution outcomes;
+- fail-fast execution semantics;
+- evidence and audit deliverables.
+
+The underlying implementation remains separated from the public service
+contract.
+
+### Engineering Guarantees
+
+Current DATA5-ES guarantees include:
+
+- contractual workflow execution;
+- preservation of declared execution order;
+- validation of unique step identifiers;
+- explicit workflow and step outcomes;
+- termination after the first qualified execution error;
+- workflow, request and traceability preservation;
+- controlled invocation of qualified Engineering Services;
+- reproducible V1 verification evidence.
+
+The current qualification does not claim timeout enforcement, automatic
+retries, compensation, recovery, parallel execution, distributed execution or
+formal proof.
+
+### Verification and Evidence
+
+DATA5-ES is qualified through:
+
+- runnable V0 verification;
+- nominal workflow execution;
+- duplicate StepId rejection;
+- demonstrated fail-fast behavior;
+- canonical invocation of DATA4-ES;
+- RM-ODP specifications;
+- UML representations;
+- an explicit IDL interface;
+- a reproducible V1 audit package;
+- execution logs, gate reports and a SHA-256 integrity manifest.
+
+Formal Event-B modelling and proof remain deferred to V2.
+
+### Evaluation
+
+A DATA5 Engineering PoC evaluates a bounded workflow scenario against explicit
+acceptance criteria.
+
+The evaluation may verify:
+
+- successful execution of a valid ordered workflow;
+- preservation of workflow, request and trace identifiers;
+- rejection of duplicate step identifiers;
+- termination after the first failed step;
+- controlled invocation of another qualified Engineering Service;
+- production and verification of the audit package.
+
