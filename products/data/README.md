@@ -396,3 +396,103 @@ The evaluation may verify:
 - unique key handling;
 - generation of engineering evidence and delivery packages.
 
+
+---
+
+## DATA4-ES — Distributed Data Engineering Service
+
+### Engineering Promise
+
+Manage distributed engineering data through bounded replication and failover.
+
+### Customer Need
+
+Use DATA4-ES when engineering data must remain available across a bounded
+distributed configuration rather than a single local data store.
+
+This is relevant when client applications or Engineering Services need to
+write and retrieve data across two nodes, tolerate a bounded node failure and
+retain traceable operation results.
+
+### Engineering Concern
+
+DATA4-ES addresses engineering concerns related to:
+
+- bounded distributed-data management;
+- two-node replication;
+- read availability during a demonstrated failover scenario;
+- explicit request and response contracts;
+- request and trace identification;
+- reproducible verification and audit evidence.
+
+### Engineering Capability
+
+DATA4-ES provides the capability to execute bounded PUT and GET operations over
+a two-node distributed-data configuration with minimal replication and simple
+failover behavior.
+
+It extends the DATA Engineering pipeline by introducing distribution above the
+versioned indexing capabilities provided by DATA3-ES.
+
+### Service Contract
+
+The service defines explicit:
+
+- distributed PUT requests;
+- distributed GET requests;
+- request identifiers;
+- trace identifiers;
+- operation results;
+- node and failover context;
+- contractual request and response schemas;
+- verification evidence.
+
+The underlying implementation remains separated from the public service
+contract.
+
+### Engineering Guarantees
+
+Current DATA4-ES guarantees are bounded to the demonstrated V0/V1 scope and
+include:
+
+- explicit processing of contractual PUT and GET requests;
+- replication across the declared two-node configuration;
+- traceable request and response handling;
+- deterministic contract validation;
+- successful execution of the qualified failover scenario;
+- reproducible generation of audit-ready evidence.
+
+DATA4-ES does not claim universal consistency, unrestricted availability,
+automatic conflict resolution, production-scale distribution or formal proof.
+
+### Verification and Evidence
+
+DATA4-ES is qualified through:
+
+- runnable verification at V0;
+- contract validation and smoke scenarios;
+- PUT and GET execution evidence;
+- a bounded GET failover scenario;
+- RM-ODP specifications;
+- UML deployment and sequence diagrams;
+- an audit-ready DATA4 package at V1;
+- integrity and gate reports.
+
+Formal Event-B modelling and proof remain deferred to V2.
+
+### Evaluation
+
+A DATA4 Engineering PoC evaluates a bounded two-node distributed-data scenario
+against explicit acceptance criteria.
+
+The evaluation may verify:
+
+- successful PUT execution;
+- successful GET execution;
+- replication within the declared configuration;
+- continued qualified read behavior during the demonstrated node-failure
+  scenario;
+- request and trace identification;
+- contract validation;
+- reproducible audit-package generation.
+
