@@ -600,3 +600,124 @@ The evaluation may verify:
 - controlled invocation of another qualified Engineering Service;
 - production and verification of the audit package.
 
+
+---
+
+## DATA6-ES — Service Execution Observability Engineering Service
+
+### Engineering Promise
+
+Measure and trace Engineering Service executions through contractual metric
+events, append-only recording, bounded service-level evaluation and
+reproducible audit evidence.
+
+### Customer Need
+
+Use DATA6-ES when Engineering Service executions must be observed through
+explicit and verifiable execution measurements.
+
+This is relevant when clients need to preserve execution identifiers,
+distinguish successful and failed operations, measure elapsed time, evaluate
+bounded service-level indicators and retain reproducible audit evidence.
+
+### Engineering Concern
+
+DATA6-ES addresses concerns related to:
+
+- contractual execution observations;
+- module, trace and request identification;
+- successful and failed execution status;
+- elapsed-time measurement;
+- append-only metric-event recording;
+- bounded error-rate calculation;
+- bounded p95 elapsed-time calculation;
+- configurable service-level threshold evaluation;
+- reproducible observability evidence.
+
+### Engineering Capability
+
+DATA6-ES provides the capability to emit contract-valid MetricEvents, observe
+wrapped command executions and derive bounded service-level indicators from
+recorded events.
+
+The qualified service preserves the execution context required for traceability
+and produces reproducible verification and audit evidence.
+
+### Service Contract
+
+The service defines explicit:
+
+- required module, trace and request identifiers;
+- optional workflow identifiers;
+- accepted execution status values;
+- non-negative elapsed-time values;
+- optional structured execution details;
+- append semantics for accepted MetricEvents;
+- bounded error-rate and p95 calculations;
+- configurable threshold evaluation;
+- evidence and audit deliverables.
+
+The underlying implementation remains separated from the public service
+contract.
+
+### Engineering Guarantees
+
+Current DATA6-ES guarantees include:
+
+- required execution identifiers;
+- status restricted to `OK` or `ERROR`;
+- non-negative elapsed time;
+- valid serialization of accepted MetricEvents;
+- rejection of invalid status and elapsed-time values;
+- preservation of supplied execution identifiers;
+- append-only recording within the active metric journal;
+- wrapped execution status and elapsed-time observation;
+- reproducible event-count and error-rate calculations;
+- reproducible p95 elapsed-time calculation;
+- configurable service-level threshold evaluation;
+- reproducible V1 audit evidence.
+
+The current qualification does not claim automated secret detection,
+distributed metric storage, remote telemetry transport, streaming aggregation,
+alert delivery, high availability or formal proof.
+
+### Verification and Evidence
+
+DATA6-ES is qualified through:
+
+- runnable V0 verification;
+- valid MetricEvent emission;
+- wrapped failed-command observation;
+- safe serialization of quoted identifiers;
+- rejection of invalid status values;
+- rejection of negative elapsed time;
+- deterministic V1 event generation;
+- validation of recorded MetricEvents;
+- error-rate and p95 calculations;
+- configurable threshold checks;
+- RM-ODP specifications;
+- UML representations;
+- an explicit IDL interface;
+- execution logs and SLO reports;
+- a reproducible V1 audit package;
+- a SHA-256 integrity manifest.
+
+Formal Event-B modelling and proof remain deferred to V2.
+
+### Evaluation
+
+A DATA6 Engineering PoC evaluates a bounded observability scenario against
+explicit acceptance criteria.
+
+The evaluation may verify:
+
+- successful recording of valid execution observations;
+- rejection of invalid observations;
+- preservation of module, trace, request and workflow identifiers;
+- distinction between successful and failed executions;
+- append-only recording within the active journal;
+- reproducible error-rate calculation;
+- reproducible p95 elapsed-time calculation;
+- evaluation of configured thresholds;
+- generation and verification of the audit package.
+
