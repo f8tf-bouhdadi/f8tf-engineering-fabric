@@ -721,3 +721,125 @@ The evaluation may verify:
 - evaluation of configured thresholds;
 - generation and verification of the audit package.
 
+
+---
+
+## DATA7-ES — Interaction Identity Preservation Engineering Service
+
+### Engineering Promise
+
+Preserve coherent logical identity across Engineering Service interactions
+through contractual identity contexts, explicit validation, controlled
+propagation and reproducible audit evidence.
+
+### Customer Need
+
+Use DATA7-ES when distributed Engineering Service interactions must retain
+stable actor, tenant, trace, request and optional workflow or session
+identities.
+
+This is relevant when clients need to initialize interaction identities,
+reject invalid contexts, correlate related executions and verify that accepted
+identity values remain unchanged across request and response envelopes.
+
+### Engineering Concern
+
+DATA7-ES addresses concerns related to:
+
+- contractual interaction identity;
+- actor and tenant attribution;
+- trace and request identification;
+- optional workflow and session identification;
+- identity-context initialization;
+- required-identity validation;
+- invalid-context rejection;
+- identity preservation across service interactions;
+- execution-correlation preparation;
+- reproducible identity evidence.
+
+### Engineering Capability
+
+DATA7-ES provides the capability to initialize, validate and propagate
+contractual IdentityContexts through explicit RequestEnvelope and
+ResponseEnvelope structures.
+
+The qualified service preserves accepted logical identity values across
+service interactions and produces reproducible verification and audit
+evidence.
+
+### Service Contract
+
+The service defines explicit:
+
+- required module, tenant and actor identifiers;
+- required trace and request identifiers;
+- required issued-at information;
+- optional workflow and session identifiers;
+- IdentityContext structure;
+- RequestEnvelope structure;
+- ResponseEnvelope structure;
+- identity initialization semantics;
+- validation and rejection behavior;
+- identity-propagation semantics;
+- response status and error representation;
+- evidence and audit deliverables.
+
+The underlying implementation remains separated from the public service
+contract.
+
+### Engineering Guarantees
+
+Current DATA7-ES guarantees include:
+
+- non-empty required identity values;
+- generation of missing trace and request identifiers where permitted;
+- generation of issued-at information where absent;
+- rejection of invalid required identities;
+- exact preservation of accepted IdentityContext values;
+- preservation across RequestEnvelope and ResponseEnvelope transformation;
+- payload-to-result mapping;
+- response status restricted to `OK` or `ERROR`;
+- explicit response error representation;
+- reproducible V1 audit evidence.
+
+The current qualification does not claim authentication, authorization,
+credential issuance or storage, identity federation, cryptographic identity
+proof, external IAM integration, global identifier uniqueness or formal proof.
+
+### Verification and Evidence
+
+DATA7-ES is qualified through:
+
+- runnable V0 verification;
+- deterministic identity-context initialization;
+- valid IdentityContext acceptance;
+- invalid IdentityContext rejection;
+- exact context-preservation verification;
+- RequestEnvelope-to-ResponseEnvelope transformation;
+- payload-to-result verification;
+- JSON contract parsing;
+- RM-ODP specifications;
+- Enterprise, Information, Computational and Engineering representations;
+- an explicit IDL interface;
+- initialized-context and propagated-response evidence;
+- a reproducible V1 audit package;
+- a SHA-256 integrity manifest.
+
+Formal Event-B modelling and proof remain deferred to V2.
+
+### Evaluation
+
+A DATA7 Engineering PoC evaluates a bounded interaction-identity scenario
+against explicit acceptance criteria.
+
+The evaluation may verify:
+
+- initialization of required interaction identities;
+- acceptance of a valid IdentityContext;
+- rejection of an invalid IdentityContext;
+- preservation of actor, tenant, trace and request identifiers;
+- preservation of optional workflow and session identifiers when supplied;
+- equality of request and response identity contexts;
+- explicit response status and error behavior;
+- generation and verification of the audit package.
+
