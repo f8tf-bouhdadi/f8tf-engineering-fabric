@@ -24,7 +24,7 @@ verification, replay, traceability or audit.
 
 DATA0-ES addresses foundational concerns related to:
 
-- durable data recording;
+- persistent append recording within the declared runtime scope;
 - non-destructive persistence;
 - traceability of persistence operations;
 - reproducible verification;
@@ -61,8 +61,9 @@ Current DATA0-ES guarantees include:
 - validation of required input;
 - scoped monotonic offset assignment;
 - persistence following successful append;
-- serialized append execution;
-- audit-oriented traceability;
+- append serialization within one service instance, implemented but not yet
+  covered by the current behavioural verification;
+- minimal timestamp-based persistence trace information;
 - and reproducible verification and packaging.
 
 Guarantees remain bounded by the declared service scope and maturity.
@@ -75,14 +76,36 @@ DATA0-ES is progressively qualified through:
 - audit-ready verification at V1;
 - a verified maturity target at V2.
 
-Available evidence may include:
+Available evidence includes:
 
-- execution results;
-- smoke-test and gate reports;
-- trace records;
+- behavioural V0 execution results;
+- strict V1 contract-audit results;
+- RM-ODP and UML rendering results;
+- captured gate reports;
+- contract schemas and samples;
 - integrity manifests;
-- Action–Verification–Evidence records;
-- and client verification procedures.
+- and an offline client verification procedure.
+
+### Current Qualification
+
+DATA0-ES is currently qualified at:
+
+- **V0 — Runnable and behaviourally verified**;
+- **V1 — Audit-ready and client-verifiable**.
+
+The qualified V1 delivery verifies valid and invalid payload behaviour,
+append-only preservation, preservation of previously accepted records, scoped
+monotonic offsets, minimal file persistence, minimal timestamp trace
+information, contract artefacts and integrity information.
+
+The current verification does not claim:
+
+- recovery of persistence across process restart;
+- multi-process or distributed write serialization;
+- replication or sharding;
+- high availability;
+- production-scale performance;
+- or formal proof at V1.
 
 ### Evaluation
 
@@ -94,7 +117,7 @@ The evaluation may verify:
 - successful append behavior;
 - rejection of invalid input;
 - preservation of previously recorded data;
-- deterministic offset behavior;
+- scoped monotonic offset behavior;
 - traceability;
 - and reproducibility of the delivered evidence.
 
