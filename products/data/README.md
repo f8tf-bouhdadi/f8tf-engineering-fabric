@@ -177,11 +177,14 @@ The current public repository does not expose the qualified delivery package
 as an unrestricted download. Access is handled through a structured evaluation
 request.
 
-Before submitting a request, prospective clients should review the Engineering
-PoC process, including its expected scope, guarantees, evidence and acceptance
-criteria:
+Before submitting a request, prospective clients should review:
+
+- the generic Engineering PoC process;
+- and the DATA0-specific evaluation handling process.
 
 [Review the F8TF Engineering PoC Process](../../engineering-pocs/)
+
+[Review the DATA0 Engineering Evaluation Process](../../engineering-pocs/DATA0_EVALUATION_PROCESS.md)
 
 To request an initial fit assessment, controlled evaluation delivery, scoped
 PoC, adaptation, integration discussion or commercial proposal:
