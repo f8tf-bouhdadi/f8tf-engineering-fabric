@@ -121,6 +121,40 @@ The evaluation may verify:
 - traceability;
 - and reproducibility of the delivered evidence.
 
+### Client Journey
+
+DATA0-ES supports a complete client journey from initial discovery to
+verified delivery, acceptance and possible integration.
+
+1. **Discover** — understand the customer need addressed by DATA0-ES.
+2. **Assess fit** — compare the required behavior with the declared scope,
+   guarantees and limitations.
+3. **Evaluate** — define a bounded scenario and explicit acceptance criteria.
+4. **Obtain a delivery** — receive an identified and versioned DATA0 package.
+5. **Prepare the environment** — review the required runtime, tools and
+   configuration.
+6. **Execute** — run the delivered service and the documented interaction
+   scenarios.
+7. **Verify** — check package integrity, qualified behavior and the supplied
+   evidence.
+8. **Accept or request revision** — record whether the delivery is accepted,
+   accepted with conditions, requires revision or is rejected.
+9. **Request a proposal** — define a scoped PoC, adaptation or integration
+   engagement.
+10. **Integrate and evolve** — connect DATA0 with complementary F8TF
+    Engineering Services when additional needs are identified.
+
+Possible outcomes include:
+
+- DATA0-ES is sufficient for the declared bounded need;
+- DATA0-ES requires a client-specific adaptation;
+- DATA0-ES must be composed with other Engineering Services;
+- or the requested need is outside the currently qualified scope.
+
+The client journey is evidence-driven: public claims, delivered artifacts,
+verification results and acceptance decisions must remain mutually
+consistent.
+
 ## Portfolio Progression
 
 DATA0-ES provides the foundational persistence layer.
