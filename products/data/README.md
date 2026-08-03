@@ -843,3 +843,122 @@ The evaluation may verify:
 - explicit response status and error behavior;
 - generation and verification of the audit package.
 
+
+---
+
+## DATA8-ES — Bounded Replication Policy Enforcement Engineering Service
+
+### Engineering Promise
+
+Validate and apply a bounded replication policy to a qualified distributed-data
+service and produce reproducible evidence of supported write-quorum
+enforcement.
+
+### Customer Need
+
+Use DATA8-ES when a distributed-data deployment must apply an explicit
+replication factor and write-quorum requirement under auditable control.
+
+This is relevant when clients need to reject incoherent replication policies,
+verify that the required replicas participated in a write and retain evidence
+linking the evaluated policy to the underlying distributed-data execution.
+
+### Engineering Concern
+
+DATA8-ES addresses concerns related to:
+
+- contractual replication-policy definition;
+- replication-factor and quorum coherence;
+- bounded write-quorum enforcement;
+- unsupported-policy rejection;
+- attachment to a qualified distributed-data service;
+- observable replica participation;
+- policy preservation and integrity;
+- reproducible replication evidence.
+
+### Engineering Capability
+
+DATA8-ES provides the capability to validate a bounded replication policy,
+resolve it against DATA4-ES and evaluate the observed replica writes against
+the supported write-quorum requirement.
+
+The qualified service preserves the evaluated policy, attaches the underlying
+DATA4-ES evidence and produces a reproducible audit package.
+
+### Service Contract
+
+The service defines explicit:
+
+- replication factor `N`;
+- write quorum `W`;
+- read quorum `R`;
+- retry-limit and timeout-baseline fields;
+- basic `N/W/R` coherence constraints;
+- a resolved DATA4 execution plan;
+- observed replica-write information;
+- write-quorum evaluation status;
+- unsupported-configuration rejection;
+- evidence and audit deliverables.
+
+The underlying implementation remains separated from the public service
+contract.
+
+### Engineering Guarantees
+
+Current DATA8-ES guarantees include:
+
+- presence of the required replication-policy fields;
+- rejection of `W > N`;
+- rejection of `R > N`;
+- rejection of quorum values lower than one;
+- execution against the qualified DATA4 two-replica baseline;
+- rejection of replication factors other than `N = 2`;
+- supported write-quorum evaluation for `W = 1` or `W = 2`;
+- demonstrated enforcement for `N = 2` and `W = 2`;
+- observable participation of replicas `A` and `B`;
+- preservation and SHA-256 hashing of the evaluated policy;
+- attachment of DATA4-ES execution evidence;
+- reproducible V1 audit evidence.
+
+The current qualification does not claim runtime enforcement of read quorum
+`R`, retry limits or timeout values, topologies containing more than two
+replicas, replica replacement, automatic recovery, high availability or formal
+proof.
+
+### Verification and Evidence
+
+DATA8-ES is qualified through:
+
+- portable replication-policy contract checks;
+- rejection of an invalid `W > N` policy;
+- runnable V0 verification;
+- deterministic resolved-plan generation;
+- execution of the qualified DATA4-ES V1 scenario;
+- observation of writes to replicas `A` and `B`;
+- write-quorum evaluation for the two-replica topology;
+- RM-ODP Enterprise, Information, Computational and Engineering
+  representations;
+- an explicit replication-policy schema and sample;
+- an attached DATA4-ES audit package;
+- policy snapshot and SHA-256 checksum;
+- gate reports and execution logs;
+- reproducible V0 and V1 integrity manifests.
+
+Formal Event-B modelling and proof remain deferred to V2.
+
+### Evaluation
+
+A DATA8 Engineering PoC evaluates a bounded replication-policy scenario against
+explicit acceptance criteria.
+
+The evaluation may verify:
+
+- acceptance of a coherent `N = 2`, `W = 2`, `R = 1` policy;
+- rejection of a write quorum greater than the replication factor;
+- generation of a resolved DATA4 execution plan;
+- execution against the DATA4 two-replica baseline;
+- observation of writes to replicas `A` and `B`;
+- satisfaction of the configured write quorum;
+- preservation and hashing of the evaluated policy;
+- attachment and verification of the DATA4-ES evidence;
+- generation and verification of the DATA8 audit package.
