@@ -155,6 +155,33 @@ The client journey is evidence-driven: public claims, delivered artifacts,
 verification results and acceptance decisions must remain mutually
 consistent.
 
+### Obtain the DATA0 Delivery
+
+A qualified DATA0 V1 delivery package exists for controlled client
+evaluation.
+
+The qualified delivery contains:
+
+- an identified and versioned DATA0 package;
+- the applicable service scope and declared limitations;
+- contract schemas and representative samples;
+- behavioural and audit verification evidence;
+- integrity manifests;
+- and an offline client verification procedure.
+
+The delivery enables a client to verify package integrity, inspect the
+qualification evidence and compare the observed results with the declared
+DATA0 guarantees.
+
+The current public repository does not expose the qualified delivery package
+as an unrestricted download. A public request and delivery-access mechanism
+has not yet been published.
+
+Prospective clients can review the Engineering PoC process and its expected
+scope, guarantees, evidence and acceptance criteria:
+
+[Review the F8TF Engineering PoC Process](../../engineering-pocs/)
+
 ## Portfolio Progression
 
 DATA0-ES provides the foundational persistence layer.
