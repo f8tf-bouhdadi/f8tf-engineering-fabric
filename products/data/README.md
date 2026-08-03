@@ -962,3 +962,137 @@ The evaluation may verify:
 - preservation and hashing of the evaluated policy;
 - attachment and verification of the DATA4-ES evidence;
 - generation and verification of the DATA8 audit package.
+
+---
+
+## DATA9-ES — Bounded Deterministic Shard Routing Engineering Service
+
+### Engineering Promise
+
+Validate a bounded shard-routing policy, deterministically select a logical
+shard identifier for each supplied routing key and produce reproducible routing
+evidence.
+
+### Customer Need
+
+Use DATA9-ES when a data platform must route already-extracted keys to logical
+shard identifiers under an explicit deterministic policy.
+
+This is relevant when clients need predictable routing decisions, bounded shard
+selection and auditable evidence without coupling the service contract to
+physical shard infrastructure.
+
+### Engineering Concern
+
+DATA9-ES addresses concerns related to:
+
+- explicit shard-routing policy definition;
+- bounded logical shard counts;
+- deterministic hash-based routing;
+- unsupported-policy rejection;
+- predictable key-to-shard selection;
+- routing-decision traceability;
+- policy preservation and integrity;
+- reproducible routing evidence.
+
+### Engineering Capability
+
+DATA9-ES provides the capability to validate a bounded shard-routing policy,
+compute an FNV-1a 32-bit hash for each supplied key and select a logical shard
+identifier through modulo routing.
+
+The qualified service preserves the evaluated policy and produces reproducible
+routing evidence containing the supplied key, computed hash and selected
+logical shard identifier.
+
+### Service Contract
+
+The service defines explicit:
+
+- logical shard count;
+- shard-key designation;
+- supported hash algorithm;
+- timeout declaration;
+- shard-count bounds;
+- deterministic routing rule;
+- bounded logical shard identifiers;
+- unsupported-policy rejection;
+- routing evidence and audit deliverables.
+
+The routing rule is:
+
+    hash = fnv1a32(key)
+    shard = hash mod shard_count
+
+The underlying implementation remains separated from the public service
+contract.
+
+### Engineering Guarantees
+
+Current DATA9-ES guarantees include:
+
+- presence of the required shard-routing policy fields;
+- validation of `shard_count` in `[1,256]`;
+- rejection of an empty `shard_key`;
+- rejection of unsupported hash algorithms;
+- acceptance of `fnv1a32` as the qualified algorithm;
+- rejection of non-positive timeout declarations;
+- deterministic hash computation for the same key;
+- deterministic logical shard selection for the same key and policy;
+- shard identifiers bounded by `[0, shard_count - 1]`;
+- preservation of the supplied key, computed hash and selected shard;
+- preservation and SHA-256 hashing of the evaluated policy;
+- reproducible V0 and V1 routing evidence.
+
+The current qualification routes already-extracted keys to logical shard
+identifiers.
+
+It does not claim physical data placement, storage, physical shard endpoint
+resolution, structured-record key extraction, migration, redistribution,
+automatic rebalancing, runtime timeout enforcement, dynamic hash selection,
+failure recovery, high availability or general statistical load balancing.
+
+### Verification and Evidence
+
+DATA9-ES is qualified through:
+
+- portable shard-routing policy contract checks;
+- rejection of invalid shard counts;
+- rejection of unsupported hash algorithms;
+- rejection of non-positive timeout declarations;
+- runnable V0 verification;
+- deterministic FNV-1a 32-bit routing;
+- repeated-key routing verification;
+- logical shard-bound verification;
+- observation of logical shards `0` and `1` for the qualified sample;
+- RM-ODP Enterprise, Information, Computational and Engineering
+  representations;
+- an explicit shard-routing policy schema and sample;
+- representative routing-key samples;
+- JSONL routing evidence;
+- policy snapshot and SHA-256 checksum;
+- gate reports;
+- reproducible V0 and V1 integrity manifests.
+
+Observation of both logical shards in the qualified two-shard sample does not
+establish a general statistical balancing guarantee.
+
+Formal Event-B modelling and proof remain deferred to V2.
+
+### Evaluation
+
+A DATA9 Engineering PoC evaluates a bounded deterministic shard-routing
+scenario against explicit acceptance criteria.
+
+The evaluation may verify:
+
+- acceptance of a valid bounded shard-routing policy;
+- rejection of a shard count outside `[1,256]`;
+- rejection of an unsupported hash algorithm;
+- rejection of a non-positive timeout declaration;
+- deterministic routing of the same key;
+- production of a shard identifier inside the configured logical interval;
+- observation of logical shards `0` and `1` for the qualified sample;
+- preservation and hashing of the evaluated policy;
+- generation of JSONL routing evidence;
+- generation and verification of the DATA9 audit package.
