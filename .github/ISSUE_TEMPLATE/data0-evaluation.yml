@@ -29,6 +29,23 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: client_role
+    attributes:
+      label: Client role
+      description: Which role best describes the requester?
+      options:
+        - Platform provider
+        - Systems integrator
+        - Engineering or development team
+        - Auditor or compliance team
+        - Operator
+        - Procurement or decision-maker
+        - Research or evaluation team
+        - Other
+    validations:
+      required: true
+
   - type: textarea
     id: client_need
     attributes:
@@ -87,6 +104,42 @@ body:
         - label: I reviewed the DATA0 guarantees and limitations published in the repository.
           required: true
         - label: I understand that this request does not itself create a contract or guarantee unrestricted delivery access.
+          required: true
+
+  - type: dropdown
+    id: expected_decision
+    attributes:
+      label: Expected decision
+      description: What decision should this evaluation support?
+      options:
+        - Determine whether DATA0 fits the need
+        - Decide whether to request a scoped PoC
+        - Decide whether adaptation is required
+        - Decide whether integration should begin
+        - Decide whether to request a commercial proposal
+        - Compare DATA0 with another solution
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: timeframe
+    attributes:
+      label: Requested timeframe
+      description: Identify any relevant evaluation or decision date.
+      placeholder: Example: evaluation during September 2026
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: data_sensitivity
+    attributes:
+      label: Evaluation data
+      description: Confirm the type of data intended for the evaluation.
+      options:
+        - label: The evaluation will use only fictitious, public or non-sensitive data.
+          required: true
+        - label: No credentials, secrets, personal data or production data will be submitted through this public request.
           required: true
 
   - type: textarea
