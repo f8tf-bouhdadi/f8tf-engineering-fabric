@@ -132,6 +132,10 @@ proof must remain explicitly distinguished.
 
 ## 11. Client Acceptance Record
 
+The client should use:
+
+[DATA0 Client Acceptance Record Template](DATA0_CLIENT_ACCEPTANCE_RECORD_TEMPLATE.md)
+
 The client records in the GitHub issue:
 
 - the evaluated delivery identifier;
