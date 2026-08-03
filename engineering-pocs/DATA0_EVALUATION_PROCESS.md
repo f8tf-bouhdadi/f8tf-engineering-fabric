@@ -6,6 +6,11 @@ Evaluation request.
 Submission of a request does not create a contract and does not automatically
 grant access to a qualified delivery package.
 
+When an evaluation proceeds, the concrete engineering activities, outputs,
+verification, delivery and acceptance are governed by:
+
+[DATA0 Engineering Service Execution Process](DATA0_SERVICE_EXECUTION_PROCESS.md)
+
 ## 1. Request Received
 
 The submitted request identifies:

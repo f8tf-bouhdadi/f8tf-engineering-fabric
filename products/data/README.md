@@ -180,11 +180,14 @@ request.
 Before submitting a request, prospective clients should review:
 
 - the generic Engineering PoC process;
-- and the DATA0-specific evaluation handling process.
+- the DATA0-specific evaluation handling process;
+- and the DATA0 Engineering Service execution process.
 
 [Review the F8TF Engineering PoC Process](../../engineering-pocs/)
 
 [Review the DATA0 Engineering Evaluation Process](../../engineering-pocs/DATA0_EVALUATION_PROCESS.md)
+
+[Review the DATA0 Engineering Service Execution Process](../../engineering-pocs/DATA0_SERVICE_EXECUTION_PROCESS.md)
 
 To request an initial fit assessment, controlled evaluation delivery, scoped
 PoC, adaptation, integration discussion or commercial proposal:
