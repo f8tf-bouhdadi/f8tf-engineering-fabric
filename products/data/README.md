@@ -174,13 +174,23 @@ qualification evidence and compare the observed results with the declared
 DATA0 guarantees.
 
 The current public repository does not expose the qualified delivery package
-as an unrestricted download. A public request and delivery-access mechanism
-has not yet been published.
+as an unrestricted download. Access is handled through a structured evaluation
+request.
 
-Prospective clients can review the Engineering PoC process and its expected
-scope, guarantees, evidence and acceptance criteria:
+Before submitting a request, prospective clients should review the Engineering
+PoC process, including its expected scope, guarantees, evidence and acceptance
+criteria:
 
 [Review the F8TF Engineering PoC Process](../../engineering-pocs/)
+
+To request an initial fit assessment, controlled evaluation delivery, scoped
+PoC, adaptation, integration discussion or commercial proposal:
+
+[Submit a DATA0 Engineering Evaluation Request](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/issues/new?template=data0-evaluation.yml)
+
+Requests must not contain confidential, personal or security-sensitive
+information. Submission does not create a commercial contract or guarantee
+delivery access.
 
 ## Portfolio Progression
 

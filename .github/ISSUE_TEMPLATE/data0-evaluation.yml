@@ -1,0 +1,93 @@
+name: DATA0 Engineering Evaluation
+description: Request a bounded evaluation, PoC, adaptation or integration discussion for DATA0-ES.
+title: "[DATA0 Evaluation] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to describe a concrete need related to DATA0-ES.
+
+        Do not include confidential, personal or security-sensitive information.
+        Submission of this form does not create a commercial contract or guarantee access to a delivery.
+
+  - type: dropdown
+    id: engagement
+    attributes:
+      label: Requested engagement
+      description: What kind of interaction are you requesting?
+      options:
+        - Initial fit assessment
+        - Controlled evaluation delivery
+        - Scoped Engineering PoC
+        - Client-specific adaptation
+        - Integration discussion
+        - Commercial proposal
+    validations:
+      required: true
+
+  - type: textarea
+    id: client_need
+    attributes:
+      label: Client need
+      description: Describe the concrete engineering problem you need to address.
+      placeholder: We need to preserve...
+    validations:
+      required: true
+
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Evaluation scenario
+      description: Describe the bounded scenario that DATA0-ES should support.
+      placeholder: The service receives..., records..., and the client verifies...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Target environment
+      description: Identify the relevant operating system, runtime, platform and integration constraints.
+      placeholder: Windows or Linux, .NET version, deployment context, existing systems...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: guarantees
+    attributes:
+      label: Guarantees to evaluate
+      description: Select the DATA0 behaviors relevant to your need.
+      options:
+        - label: Required payload validation
+        - label: Append-only recording
+        - label: Preservation of previously recorded data
+        - label: Scoped monotonic offsets
+        - label: Minimal persistence traceability
+        - label: Reproducible client verification
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: State the observable results required for a successful evaluation.
+      placeholder: The evaluation is accepted when...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: limitations
+    attributes:
+      label: Scope acknowledgement
+      description: Confirm that you reviewed the currently declared DATA0 limitations.
+      options:
+        - label: I reviewed the DATA0 guarantees and limitations published in the repository.
+          required: true
+        - label: I understand that this request does not itself create a contract or guarantee unrestricted delivery access.
+          required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add relevant non-confidential constraints, expected dates or questions.
