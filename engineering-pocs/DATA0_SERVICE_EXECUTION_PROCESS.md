@@ -7,6 +7,10 @@ The GitHub issue is the traceable communication record for the process. It does
 not replace the DATA0 Service Contract, qualified implementation, verification
 evidence or delivery package.
 
+F8TF supplier responses should use:
+
+[DATA0 Supplier Response Template](DATA0_SUPPLIER_RESPONSE_TEMPLATE.md)
+
 ## 1. Establish the DATA0 Service Reference
 
 F8TF confirms that the request targets:
