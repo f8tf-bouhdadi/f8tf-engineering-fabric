@@ -11,6 +11,10 @@ F8TF supplier responses should use:
 
 [DATA0 Supplier Response Template](DATA0_SUPPLIER_RESPONSE_TEMPLATE.md)
 
+Remote delivery and client verification must follow:
+
+[DATA0 Remote Delivery and Client Verification](DATA0_REMOTE_DELIVERY_AND_VERIFICATION.md)
+
 ## 1. Establish the DATA0 Service Reference
 
 F8TF confirms that the request targets:
