@@ -1,0 +1,222 @@
+## DATA0-ES — Foundational Immutable Data Persistence Engineering Service
+
+### Engineering Promise
+
+Preserve engineering data without destructive mutation.
+
+### Customer Need
+
+Use DATA0-ES when an engineering system needs to record information while
+preserving the existing data baseline.
+
+This is relevant when recorded information must remain available for later
+verification, replay, traceability or audit.
+
+### Engineering Concern
+
+DATA0-ES addresses foundational concerns related to:
+
+- persistent append recording within the declared runtime scope;
+- non-destructive persistence;
+- traceability of persistence operations;
+- reproducible verification;
+- preservation of an auditable data baseline.
+
+### Engineering Capability
+
+DATA0-ES provides the capability to validate and append raw engineering data
+through an explicit service contract.
+
+It may participate in qualified Engineering Service Compositions requiring
+immutable persistence and explicit persistence traceability.
+
+### Service Contract
+
+The service defines explicit:
+
+- inputs;
+- preconditions;
+- successful outcomes;
+- failure conditions;
+- trace records;
+- and verification evidence.
+
+The underlying implementation remains separated from the public service
+contract.
+
+### Engineering Guarantees
+
+Current DATA0-ES guarantees include:
+
+- append-only preservation;
+- no destructive mutation through append;
+- validation of required input;
+- scoped monotonic offset assignment;
+- persistence following successful append;
+- append serialization within one service instance, implemented but not yet
+  covered by the current behavioural verification;
+- minimal timestamp-based persistence trace information;
+- and reproducible verification and packaging.
+
+Guarantees remain bounded by the declared service scope and maturity.
+
+### Verification and Evidence
+
+DATA0-ES is progressively qualified through:
+
+- runnable verification at V0;
+- audit-ready verification at V1;
+- a verified maturity target at V2.
+
+Available evidence includes:
+
+- behavioural V0 execution results;
+- strict V1 contract-audit results;
+- RM-ODP and UML rendering results;
+- captured gate reports;
+- contract schemas and samples;
+- integrity manifests;
+- and an offline client verification procedure.
+
+### Current Qualification
+
+DATA0-ES is currently qualified at:
+
+- **V0 — Runnable and behaviourally verified**;
+- **V1 — Audit-ready and client-verifiable**.
+
+The qualified V1 delivery verifies valid and invalid payload behaviour,
+append-only preservation, preservation of previously accepted records, scoped
+monotonic offsets, minimal file persistence, minimal timestamp trace
+information, contract artefacts and integrity information.
+
+The current verification does not claim:
+
+- recovery of persistence across process restart;
+- multi-process or distributed write serialization;
+- replication or sharding;
+- high availability;
+- production-scale performance;
+- or formal proof at V1.
+
+### Standard Qualified Delivery
+
+DATA0-ES provides a qualified standard delivery for reviewing the published
+service contract, declared guarantees, limitations and verification evidence.
+
+The standard delivery does not require a client-defined scenario or new
+acceptance criteria. Its scope and qualified behavior are already defined by
+the published DATA0 Engineering Service contract.
+
+The qualified delivery verifies:
+
+- successful append behavior;
+- rejection of invalid input;
+- preservation of previously recorded data;
+- scoped monotonic offset behavior;
+- minimal persistence traceability;
+- contract artefacts;
+- reproducible verification evidence;
+- and package integrity.
+
+### Standard Client Journey
+
+The standard DATA0 client journey is:
+
+1. **Discover** — understand the generic data engineering need addressed by
+   DATA0-ES.
+2. **Review** — examine the published service contract, guarantees and
+   limitations.
+3. **Obtain the qualified delivery** — receive or access the identified and
+   versioned DATA0 package.
+4. **Prepare the environment** — review the runtime, tools and configuration
+   required by the delivery.
+5. **Execute** — run the documented DATA0 interactions.
+6. **Verify** — check package integrity, qualified behavior and supplied
+   evidence using the client verification procedure.
+7. **Assess suitability** — determine whether the standard DATA0 service fits
+   the intended use.
+8. **Request a custom engagement if needed** — request a scoped PoC,
+   adaptation, integration discussion or commercial proposal only when the
+   standard delivery does not fully cover the intended context.
+
+Possible outcomes include:
+
+- the standard DATA0 delivery is sufficient;
+- integration support is required;
+- a client-specific adaptation is required;
+- DATA0 must be composed with other F8TF Engineering Services;
+- or the intended use is outside the currently qualified scope.
+
+### Obtain the DATA0 Standard Delivery
+
+A qualified DATA0 V1 delivery package exists.
+
+The qualified delivery contains:
+
+- an identified and versioned DATA0 package;
+- the applicable service scope and declared limitations;
+- contract schemas and representative samples;
+- behavioral and audit verification evidence;
+- integrity manifests;
+- and an offline client verification procedure.
+
+The delivery enables a client to verify package integrity, inspect the
+qualification evidence and compare the observed results with the declared
+DATA0 guarantees.
+
+The qualified DATA0 Standard Delivery 1.0 is publicly available.
+
+[Download DATA0 Standard Qualified Delivery 1.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-standard-qualified-delivery-v1.0/F8TF_DATA0_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz)
+
+[Download the SHA-256 checksum](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-standard-qualified-delivery-v1.0/F8TF_DATA0_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz.sha256)
+
+[Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data0-standard-qualified-delivery-v1.0)
+
+### Custom Engineering Engagement
+
+A custom engineering engagement is separate from the standard qualified
+delivery.
+
+It may be requested when a prospective client needs:
+
+- a scoped Engineering PoC;
+- a client-specific adaptation;
+- an integration discussion;
+- or a commercial proposal.
+
+Such engagements may require a bounded client context, target environment and
+specific acceptance criteria.
+
+[Review the DATA0 Custom Engineering Engagement Assessment Process](../../engineering-pocs/DATA0_EVALUATION_PROCESS.md)
+
+[Review the DATA0 Engineering Service Execution Process](../../engineering-pocs/DATA0_SERVICE_EXECUTION_PROCESS.md)
+
+[Request a DATA0 Custom Engineering Engagement](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/issues/new?template=data0-custom-engagement.yml)
+
+Requests must not contain confidential, personal or security-sensitive
+information. Submission does not create a commercial contract.
+
+## Portfolio Progression
+
+DATA0-ES provides the foundational persistence layer.
+
+Additional F8TF Data Engineering Services progressively address:
+
+- deterministic audit queries;
+- persistent document storage;
+- versioned key-value indexing;
+- distributed data;
+- workflows;
+- observability;
+- identity;
+- replication;
+- sharding;
+- and idempotency.
+
+Continue your journey:
+
+[Explore F8TF Engineering PoCs](../../engineering-pocs/)
+
+---
+
