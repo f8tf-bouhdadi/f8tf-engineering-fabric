@@ -1,12 +1,15 @@
 # F8TF Data Service Offers
 
-This directory exposes governed Service Offers for Data Engineering Services
-and qualified Data Engineering Service Compositions.
+This directory exposes governed Service Offers for Data Engineering Services.
+
+A qualified Engineering Service Composition first defines an Engineering
+Service with its own identity, interface, contract and guarantees. TRADER0
+publishes the resulting Engineering Service as one ServiceType.
 
 Service Offers follow the TRADER0 model and declare:
 
 - Service Offer identity and version;
-- offered Engineering Service or composition;
+- offered Engineering Service and referenced ServiceType;
 - customer need and scope;
 - selected guarantees;
 - qualification and evidence;
