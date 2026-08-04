@@ -173,10 +173,13 @@ The delivery enables a client to verify package integrity, inspect the
 qualification evidence and compare the observed results with the declared
 DATA0 guarantees.
 
-The current public repository documents the qualified delivery but does not
-yet expose the package as an unrestricted public download.
+The qualified DATA0 Standard Delivery 1.0 is publicly available.
 
-Access conditions and the final public delivery mechanism are being prepared.
+[Download DATA0 Standard Qualified Delivery 1.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-standard-qualified-delivery-v1.0/F8TF_DATA0_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz)
+
+[Download the SHA-256 checksum](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-standard-qualified-delivery-v1.0/F8TF_DATA0_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz.sha256)
+
+[Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data0-standard-qualified-delivery-v1.0)
 
 ### Custom Engineering Engagement
 
