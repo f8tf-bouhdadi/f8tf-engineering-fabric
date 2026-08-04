@@ -1,4 +1,4 @@
-# Simulated DATA0 Engineering Evaluation Request
+# Simulated DATA0 Custom Engineering Engagement Request
 
 This request is a public, non-confidential simulation used to exercise the
 DATA0 client-supplier interaction process.
@@ -7,7 +7,7 @@ It does not represent a real client, contract or delivery commitment.
 
 ## Requested Engagement
 
-Controlled evaluation delivery
+Scoped Engineering PoC
 
 ## Client Role
 
@@ -105,8 +105,8 @@ The client acknowledges that the current DATA0 qualification does not claim:
 
 ## Expected Decision
 
-Determine whether DATA0-ES fits the bounded persistence need and whether a
-controlled evaluation delivery should proceed.
+Determine whether the requested scoped engineering engagement fits the
+published DATA0 scope and what supplier response should be proposed.
 
 ## Requested Timeframe
 

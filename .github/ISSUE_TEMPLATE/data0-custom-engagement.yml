@@ -1,12 +1,12 @@
-name: DATA0 Engineering Evaluation
-description: Request a bounded evaluation, PoC, adaptation or integration discussion for DATA0-ES.
-title: "[DATA0 Evaluation] "
+name: DATA0 Custom Engineering Engagement
+description: Request a scoped PoC, adaptation, integration discussion or commercial engagement for DATA0-ES.
+title: "[DATA0 Custom Engagement] "
 labels: []
 body:
   - type: markdown
     attributes:
       value: |
-        Use this form to describe a concrete need related to DATA0-ES.
+        Use this form only when the standard DATA0 delivery does not fully cover your intended context and you need a scoped engineering engagement.
 
         Review the DATA0 Engineering Evaluation Process before submitting:
         https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/blob/main/engineering-pocs/DATA0_EVALUATION_PROCESS.md
@@ -15,7 +15,7 @@ body:
         https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/blob/main/engineering-pocs/DATA0_SERVICE_EXECUTION_PROCESS.md
 
         Do not include confidential, personal or security-sensitive information.
-        Submission of this form does not create a commercial contract or guarantee access to a delivery.
+        This form is not required to review or verify the standard qualified DATA0 delivery. Submission does not create a commercial contract.
 
   - type: dropdown
     id: engagement
@@ -23,8 +23,6 @@ body:
       label: Requested engagement
       description: What kind of interaction are you requesting?
       options:
-        - Initial fit assessment
-        - Controlled evaluation delivery
         - Scoped Engineering PoC
         - Client-specific adaptation
         - Integration discussion

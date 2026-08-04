@@ -1,6 +1,6 @@
 # DATA0 Engineering Service Execution Process
 
-This process describes how a DATA0 Engineering Evaluation request is transformed
+This process describes how a DATA0 Custom Engineering Engagement request is transformed
 into an executed, verified and concluded DATA0 Engineering Service engagement.
 
 The GitHub issue is the traceable communication record for the process. It does

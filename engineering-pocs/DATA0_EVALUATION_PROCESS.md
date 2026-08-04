@@ -1,10 +1,16 @@
-# DATA0 Engineering Evaluation Process
+# DATA0 Custom Engineering Engagement Assessment Process
 
-This reference describes how F8TF handles a submitted DATA0 Engineering
-Evaluation request.
+This reference describes how F8TF assesses a submitted DATA0 Custom
+Engineering Engagement request.
+
+This process applies only when the standard qualified DATA0 delivery does not
+fully cover the prospective client's intended context.
+
+It is not required to review, obtain or verify the standard qualified DATA0
+delivery.
 
 Submission of a request does not create a contract and does not automatically
-grant access to a qualified delivery package.
+grant access to a client-specific delivery.
 
 When an evaluation proceeds, the concrete engineering activities, outputs,
 verification, delivery and acceptance are governed by:

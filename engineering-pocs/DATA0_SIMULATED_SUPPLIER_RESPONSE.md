@@ -1,7 +1,7 @@
 # Simulated DATA0 Supplier Response
 
 This simulated response exercises the F8TF supplier-side handling of the
-public simulated DATA0 Engineering Evaluation request.
+public simulated DATA0 Custom Engineering Engagement request.
 
 The response must remain aligned with the published DATA0 Service Contract,
 current qualification, guarantees, limitations and execution process.
@@ -9,9 +9,9 @@ current qualification, guarantees, limitations and execution process.
 ## 1. Request Reference
 
 - GitHub issue: not submitted — public process simulation
-- Request title: Simulated DATA0 Engineering Evaluation Request
+- Request title: Simulated DATA0 Custom Engineering Engagement Request
 - Requester role: Systems integrator
-- Requested engagement: Controlled evaluation delivery
+- Requested engagement: Scoped Engineering PoC
 - Review date: 2026-08-03
 
 ## 2. Request Completeness
@@ -30,8 +30,9 @@ current qualification, guarantees, limitations and execution process.
 - acceptance criteria: identified delivery, successful integrity verification,
   service startup, offsets `0` and `1`, blank payload rejection, preserved
   records, trace information and offline verification `PASS`;
-- expected decision: determine whether DATA0-ES fits the bounded persistence
-  need and whether controlled evaluation delivery should proceed;
+- expected decision: determine whether the requested scoped engineering
+  engagement fits the published DATA0 scope and what supplier response should
+  be proposed;
 - requested timeframe: public process simulation only;
 - evaluation data confirmation: fictitious and non-sensitive data only.
 

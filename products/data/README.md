@@ -107,65 +107,65 @@ The current verification does not claim:
 - production-scale performance;
 - or formal proof at V1.
 
-### Evaluation
+### Standard Qualified Delivery
 
-A DATA0 Engineering PoC can evaluate a bounded persistence scenario against
-explicit acceptance criteria.
+DATA0-ES provides a qualified standard delivery for reviewing the published
+service contract, declared guarantees, limitations and verification evidence.
 
-The evaluation may verify:
+The standard delivery does not require a client-defined scenario or new
+acceptance criteria. Its scope and qualified behavior are already defined by
+the published DATA0 Engineering Service contract.
+
+The qualified delivery verifies:
 
 - successful append behavior;
 - rejection of invalid input;
 - preservation of previously recorded data;
 - scoped monotonic offset behavior;
-- traceability;
-- and reproducibility of the delivered evidence.
+- minimal persistence traceability;
+- contract artefacts;
+- reproducible verification evidence;
+- and package integrity.
 
-### Client Journey
+### Standard Client Journey
 
-DATA0-ES supports a complete client journey from initial discovery to
-verified delivery, acceptance and possible integration.
+The standard DATA0 client journey is:
 
-1. **Discover** — understand the customer need addressed by DATA0-ES.
-2. **Assess fit** — compare the required behavior with the declared scope,
-   guarantees and limitations.
-3. **Evaluate** — define a bounded scenario and explicit acceptance criteria.
-4. **Obtain a delivery** — receive an identified and versioned DATA0 package.
-5. **Prepare the environment** — review the required runtime, tools and
-   configuration.
-6. **Execute** — run the delivered service and the documented interaction
-   scenarios.
-7. **Verify** — check package integrity, qualified behavior and the supplied
-   evidence.
-8. **Accept or request revision** — record whether the delivery is accepted,
-   accepted with conditions, requires revision or is rejected.
-9. **Request a proposal** — define a scoped PoC, adaptation or integration
-   engagement.
-10. **Integrate and evolve** — connect DATA0 with complementary F8TF
-    Engineering Services when additional needs are identified.
+1. **Discover** — understand the generic data engineering need addressed by
+   DATA0-ES.
+2. **Review** — examine the published service contract, guarantees and
+   limitations.
+3. **Obtain the qualified delivery** — receive or access the identified and
+   versioned DATA0 package.
+4. **Prepare the environment** — review the runtime, tools and configuration
+   required by the delivery.
+5. **Execute** — run the documented DATA0 interactions.
+6. **Verify** — check package integrity, qualified behavior and supplied
+   evidence using the client verification procedure.
+7. **Assess suitability** — determine whether the standard DATA0 service fits
+   the intended use.
+8. **Request a custom engagement if needed** — request a scoped PoC,
+   adaptation, integration discussion or commercial proposal only when the
+   standard delivery does not fully cover the intended context.
 
 Possible outcomes include:
 
-- DATA0-ES is sufficient for the declared bounded need;
-- DATA0-ES requires a client-specific adaptation;
-- DATA0-ES must be composed with other Engineering Services;
-- or the requested need is outside the currently qualified scope.
+- the standard DATA0 delivery is sufficient;
+- integration support is required;
+- a client-specific adaptation is required;
+- DATA0 must be composed with other F8TF Engineering Services;
+- or the intended use is outside the currently qualified scope.
 
-The client journey is evidence-driven: public claims, delivered artifacts,
-verification results and acceptance decisions must remain mutually
-consistent.
+### Obtain the DATA0 Standard Delivery
 
-### Obtain the DATA0 Delivery
-
-A qualified DATA0 V1 delivery package exists for controlled client
-evaluation.
+A qualified DATA0 V1 delivery package exists.
 
 The qualified delivery contains:
 
 - an identified and versioned DATA0 package;
 - the applicable service scope and declared limitations;
 - contract schemas and representative samples;
-- behavioural and audit verification evidence;
+- behavioral and audit verification evidence;
 - integrity manifests;
 - and an offline client verification procedure.
 
@@ -173,30 +173,34 @@ The delivery enables a client to verify package integrity, inspect the
 qualification evidence and compare the observed results with the declared
 DATA0 guarantees.
 
-The current public repository does not expose the qualified delivery package
-as an unrestricted download. Access is handled through a structured evaluation
-request.
+The current public repository documents the qualified delivery but does not
+yet expose the package as an unrestricted public download.
 
-Before submitting a request, prospective clients should review:
+Access conditions and the final public delivery mechanism are being prepared.
 
-- the generic Engineering PoC process;
-- the DATA0-specific evaluation handling process;
-- and the DATA0 Engineering Service execution process.
+### Custom Engineering Engagement
 
-[Review the F8TF Engineering PoC Process](../../engineering-pocs/)
+A custom engineering engagement is separate from the standard qualified
+delivery.
 
-[Review the DATA0 Engineering Evaluation Process](../../engineering-pocs/DATA0_EVALUATION_PROCESS.md)
+It may be requested when a prospective client needs:
+
+- a scoped Engineering PoC;
+- a client-specific adaptation;
+- an integration discussion;
+- or a commercial proposal.
+
+Such engagements may require a bounded client context, target environment and
+specific acceptance criteria.
+
+[Review the DATA0 Custom Engineering Engagement Assessment Process](../../engineering-pocs/DATA0_EVALUATION_PROCESS.md)
 
 [Review the DATA0 Engineering Service Execution Process](../../engineering-pocs/DATA0_SERVICE_EXECUTION_PROCESS.md)
 
-To request an initial fit assessment, controlled evaluation delivery, scoped
-PoC, adaptation, integration discussion or commercial proposal:
-
-[Submit a DATA0 Engineering Evaluation Request](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/issues/new?template=data0-evaluation.yml)
+[Request a DATA0 Custom Engineering Engagement](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/issues/new?template=data0-custom-engagement.yml)
 
 Requests must not contain confidential, personal or security-sensitive
-information. Submission does not create a commercial contract or guarantee
-delivery access.
+information. Submission does not create a commercial contract.
 
 ## Portfolio Progression
 
