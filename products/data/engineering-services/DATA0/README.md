@@ -99,6 +99,20 @@ The current verification does not claim:
 - production-scale performance;
 - or formal proof at V1.
 
+### Runtime Realization
+
+DATA0-ES is realized by an executable persistent-data runtime implementing the
+declared DATA0 Service Contract within the currently qualified scope.
+
+The runtime is an Engineering Asset realizing the service; it is not the
+Engineering Service itself.
+
+A controlled DATA0 Runtime Delivery profile packages that runtime for operator
+deployment and is verified through a dedicated runtime-delivery lifecycle gate.
+
+This Runtime Delivery profile is distinct from the DATA0 Standard Qualified
+Delivery described below.
+
 ### Standard Qualified Delivery
 
 DATA0-ES provides a qualified standard delivery for reviewing the published
