@@ -65,6 +65,30 @@ Within the qualified DATA01 boundary:
 - repeated equivalent queries over unchanged indexed state produce equivalent responses;
 - returned audit results preserve `raw_ref`, `ts_utc` and payload correspondence.
 
+## Qualification Status
+
+DATA01 is a qualified Engineering Service Composition of the independently
+qualified DATA0-ES and DATA1-ES Engineering Services.
+
+The DATA01 qualification covers eight declared composition Service Guarantees:
+
+- `DATA01-GUA-01` — Accepted Source Guarantee;
+- `DATA01-GUA-02` — Content Preservation Guarantee;
+- `DATA01-GUA-03` — Source Traceability Guarantee;
+- `DATA01-GUA-04` — Deterministic Identity Guarantee;
+- `DATA01-GUA-05` — Registration Idempotence Guarantee;
+- `DATA01-GUA-06` — Deterministic Query Guarantee;
+- `DATA01-GUA-07` — Explicit Outcome Guarantee;
+- `DATA01-GUA-08` — Evidence Traceability Guarantee.
+
+These guarantees apply within the declared DATA01 composition boundary and do
+not extend the independently qualified guarantees of DATA0-ES or DATA1-ES.
+
+The technology-independent service contracts, composition guarantees,
+acceptance criteria and qualification evidence define the public engineering
+surface. Runtime implementations and internal realization assets remain
+separate from that public surface.
+
 ## Composition Boundary
 
 The initial qualified composition is bounded to:
