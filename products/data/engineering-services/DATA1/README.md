@@ -50,22 +50,31 @@ contract.
 
 Current DATA1-ES guarantees include:
 
-- deterministic responses;
-- repeatable execution;
 - stable contractual interface;
-- audit-ready delivery;
-- reproducible verification;
-- client-ready packaging.
+- explicit registration outcome;
+- registration idempotence;
+- conflicting identity rejection;
+- existing-entry preservation;
+- source-reference preservation;
+- deterministic query results;
+- repeatable query execution.
+
+All eight declared DATA1-ES Service Guarantees are qualified at V1 within
+the currently declared service scope.
 
 Guarantees remain bounded by the declared service scope and maturity.
 
 ### Verification and Evidence
 
-DATA1-ES is progressively qualified through:
+DATA1-ES is currently qualified at:
 
-- runnable verification at V0;
-- audit-ready verification at V1;
-- verified maturity target at V2.
+- **V0 — Runnable and behaviourally verified**;
+- **V1 — Audit-ready and client-verifiable**.
+
+The DATA1-ES Service Contract is qualified at V1 within its declared scope.
+
+All eight declared Service Guarantees are covered by the current qualification
+against the real DATA1 runtime.
 
 Available evidence may include:
 
@@ -75,6 +84,21 @@ Available evidence may include:
 - customer delivery packages;
 - Action–Verification–Evidence records;
 - customer verification procedures.
+
+### Runtime Realization
+
+DATA1-ES is realized by an executable audit-query runtime implementing the
+declared DATA1 Service Contract within the currently qualified scope.
+
+The runtime is an Engineering Asset realizing DATA1-ES; it is not the
+Engineering Service itself.
+
+A controlled DATA1 Runtime Delivery packages the qualified runtime for
+deployment, integration and operational use.
+
+The qualified DATA1 Runtime Delivery is available under commercial engagement.
+The runtime implementation and operational delivery assets are not distributed
+as part of the public DATA1 Engineering Service description.
 
 ### Evaluation
 
