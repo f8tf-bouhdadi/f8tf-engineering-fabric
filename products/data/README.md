@@ -61,10 +61,12 @@ Current DATA0-ES guarantees include:
 - validation of required input;
 - scoped monotonic offset assignment;
 - persistence following successful append;
-- append serialization within one service instance, implemented but not yet
-  covered by the current behavioural verification;
+- append serialization within one service instance;
 - minimal timestamp-based persistence trace information;
 - and reproducible verification and packaging.
+
+All eight declared DATA0-ES Service Guarantees are qualified at V1 within
+the currently declared service scope.
 
 Guarantees remain bounded by the declared service scope and maturity.
 
@@ -93,10 +95,11 @@ DATA0-ES is currently qualified at:
 - **V0 — Runnable and behaviourally verified**;
 - **V1 — Audit-ready and client-verifiable**.
 
-The qualified V1 delivery verifies valid and invalid payload behaviour,
-append-only preservation, preservation of previously accepted records, scoped
-monotonic offsets, minimal file persistence, minimal timestamp trace
-information, contract artefacts and integrity information.
+The DATA0-ES Service Contract is qualified at V1 within its declared scope.
+
+All eight declared Service Guarantees are covered by the current qualification,
+including append serialization, timestamp-based traceability and reproducible
+verification and delivery integrity.
 
 The current verification does not claim:
 
@@ -106,6 +109,14 @@ The current verification does not claim:
 - high availability;
 - production-scale performance;
 - or formal proof at V1.
+
+### Commercial Runtime Delivery
+
+A qualified executable DATA0 Runtime Delivery is available under commercial
+engagement for deployment, integration and operational use.
+
+The runtime implementation and operational delivery assets are not distributed
+as part of the public Standard Qualified Delivery.
 
 ### Standard Qualified Delivery
 
