@@ -89,3 +89,17 @@ whether a customer-specific evaluation is required.
 The PoC does not evaluate DATA01 composition guarantees. Auditable
 persistence-and-query requirements involving DATA0-ES and DATA1-ES belong
 to the DATA01 Engineering Service Composition.
+
+### DATA1-PoC — Service Guarantee Evaluation
+
+Evaluate the declared DATA1-ES Service Guarantees for deterministic,
+repeatable audit-oriented registration and query behavior.
+
+**Offer:**
+[`DATA1-PoC — Service Guarantee Evaluation`](offers/DATA1_ServiceGuaranteeEvaluation/README.md)
+
+**Engineering Service:**
+[`DATA1-ES — Deterministic Audit Query Engineering Service`](../products/data/engineering-services/DATA1/README.md)
+
+Requirements combining persistent source data with deterministic audit-oriented
+query belong to the DATA01 Engineering Service Composition.
