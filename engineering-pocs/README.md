@@ -103,3 +103,17 @@ repeatable audit-oriented registration and query behavior.
 
 Requirements combining persistent source data with deterministic audit-oriented
 query belong to the DATA01 Engineering Service Composition.
+
+### DATA01-PoC — Composition Guarantee Evaluation
+
+Evaluate the declared guarantees of the DATA01-ES Auditable Data Foundation
+across the qualified DATA0 and DATA1 service boundaries.
+
+**Offer:**
+[`DATA01-PoC — Composition Guarantee Evaluation`](offers/DATA01_CompositionGuaranteeEvaluation/README.md)
+
+**Engineering Service Composition:**
+[`DATA01-ES — Auditable Data Foundation`](../products/data/engineering-service-compositions/DATA01/README.md)
+
+This PoC evaluates DATA01 composition guarantees rather than repeating the
+independent DATA0-ES and DATA1-ES Service Guarantee Evaluations.
