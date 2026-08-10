@@ -66,3 +66,26 @@ A completed PoC supports one of the following decisions:
 Continue your journey:
 
 [Review F8TF Guarantees](../guarantees/)
+
+---
+
+## Available Engineering PoC Offers
+
+### DATA0_POC01 — Service Guarantee Evaluation
+
+Evaluate a selected subset of the declared DATA0-ES Service Guarantees
+against an agreed customer requirement or bounded integration context.
+
+This is a scoped commercial Engineering PoC. Customers can first inspect
+DATA0-ES and its Standard Qualified Delivery at no cost before deciding
+whether a customer-specific evaluation is required.
+
+**Offer:**
+[`DATA0_POC01 — Service Guarantee Evaluation`](offers/DATA0_POC01_ServiceGuaranteeEvaluation/README.md)
+
+**Engineering Service:**
+[`DATA0-ES — Foundational Immutable Data Persistence Engineering Service`](../products/data/engineering-services/DATA0/README.md)
+
+The PoC does not evaluate DATA01 composition guarantees. Auditable
+persistence-and-query requirements involving DATA0-ES and DATA1-ES belong
+to the DATA01 Engineering Service Composition.
