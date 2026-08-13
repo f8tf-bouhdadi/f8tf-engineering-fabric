@@ -217,7 +217,7 @@ specific acceptance criteria.
 
 [Review the DATA0 Engineering Service Execution Process](../../engineering-pocs/DATA0_SERVICE_EXECUTION_PROCESS.md)
 
-[Request a DATA0 Custom Engineering Engagement](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/issues/new?template=data0-custom-engagement.yml)
+**Interested in evaluating DATA0 for your system?** Contact F8TF at `m.bouhdadi@um5r.ac.ma`.
 
 Requests must not contain confidential, personal or security-sensitive
 information. Submission does not create a commercial contract.
