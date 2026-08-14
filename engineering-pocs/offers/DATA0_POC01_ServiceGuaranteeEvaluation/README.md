@@ -124,3 +124,5 @@ deliverables are supplied through the corresponding engagement.
   `engineering-pocs/DATA0_SERVICE_EXECUTION_PROCESS.md`
 - Remote delivery and verification:
   `engineering-pocs/DATA0_REMOTE_DELIVERY_AND_VERIFICATION.md`
+
+**Interested in evaluating DATA0 for your system?** Contact F8TF at `m.bouhdadi@um5r.ac.ma`.

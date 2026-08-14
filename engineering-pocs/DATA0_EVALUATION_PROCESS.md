@@ -137,3 +137,5 @@ A successful evaluation may lead to:
 
 No commercial engagement exists until its scope and terms are explicitly
 agreed.
+
+**Interested in evaluating DATA0 for your system?** Contact F8TF at `m.bouhdadi@um5r.ac.ma`.
