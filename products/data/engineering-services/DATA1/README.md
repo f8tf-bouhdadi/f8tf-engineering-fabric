@@ -146,7 +146,16 @@ Engineering Service itself.
 A controlled DATA1 Runtime Delivery packages the qualified runtime for
 deployment, integration and operational use.
 
-The qualified DATA1 Runtime Delivery is available under commercial engagement.
+The DATA1 Qualified Runtime Delivery is available on request for engineering
+evaluation and PoC engagements.
+
+[Request DATA1 Qualified Runtime Delivery evaluation access](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/discussions/1)
+
+An evaluation recipient can independently verify the complete delivery
+integrity, verify the qualified runtime identity and qualification binding,
+execute the documented runtime verification, register an audit index entry,
+execute a deterministic audit query, and inspect the resulting registration
+decision and query response.
 The runtime implementation and operational delivery assets are not distributed
 as part of the public DATA1 Engineering Service description.
 

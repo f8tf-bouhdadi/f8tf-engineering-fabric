@@ -370,13 +370,28 @@ review and offline verification of the qualified V1 service boundary.
 
 [Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data1-standard-qualified-delivery-v1.0)
 
-### Commercial Runtime Delivery
+### Qualified Runtime Delivery
 
-A qualified executable DATA1 Runtime Delivery is available under commercial
-engagement for deployment, integration and operational use.
+DATA1-ES has a qualified executable Runtime Delivery corresponding to the
+published DATA1 Service Contract and currently qualified V1 scope.
 
-The runtime implementation and operational delivery assets remain separate
-from the public DATA1 Engineering Service description.
+The delivery provides the executable DATA1 runtime together with integration
+material, runtime verification, qualification binding and integrity evidence.
+
+Evaluation access to the DATA1 Qualified Runtime Delivery is available on
+request for engineering evaluation and PoC engagements.
+
+[Request DATA1 Qualified Runtime Delivery evaluation access](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/discussions/1)
+
+An evaluation recipient can independently:
+
+1. verify the complete delivery integrity;
+2. verify the qualified runtime identity;
+3. verify the binding between qualification and delivered runtime;
+4. execute the documented runtime verification;
+5. register an audit index entry;
+6. execute a deterministic audit query;
+7. inspect the resulting registration decision and query response.
 
 ### Evaluation
 
