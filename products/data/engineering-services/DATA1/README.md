@@ -85,6 +85,37 @@ Available evidence may include:
 - Action–Verification–Evidence records;
 - customer verification procedures.
 
+### Standard Client Journey
+
+The standard DATA1 client journey is:
+
+1. **Discover** — understand the deterministic audit-query need addressed by
+   DATA1-ES.
+2. **Review** — examine the published Service Contract, guarantees, qualified
+   scope and declared limitations.
+3. **Obtain the qualified delivery** — download the identified DATA1 Standard
+   Qualified Delivery.
+4. **Prepare the environment** — review the supplied documentation, schemas,
+   samples, migrations and verification procedure.
+5. **Execute** — exercise the documented DATA1 registration and audit-query
+   interactions within the qualified scope.
+6. **Verify** — check package integrity, qualification evidence and declared
+   DATA1 guarantees using the supplied client verification procedure.
+7. **Assess suitability** — determine whether autonomous DATA1-ES satisfies the
+   intended deterministic audit-query requirement.
+8. **Choose the continuation** — adopt DATA1, request a scoped PoC or commercial
+   Runtime Delivery, or evaluate DATA01 when persistent source data and
+   deterministic audit queries must form one qualified composition.
+
+Possible outcomes include:
+
+- the standard DATA1 delivery is sufficient for evaluation;
+- a qualified DATA1 Runtime Delivery or integration engagement is required;
+- a client-specific adaptation or PoC is required;
+- DATA1 must participate in the qualified DATA01 Auditable Data Foundation
+  composition;
+- or the intended use is outside the currently qualified DATA1 scope.
+
 ### Standard Qualified Delivery
 
 DATA1-ES provides a public Standard Qualified Delivery for independent review
