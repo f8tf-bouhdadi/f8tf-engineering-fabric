@@ -89,6 +89,32 @@ acceptance criteria and qualification evidence define the public engineering
 surface. Runtime implementations and internal realization assets remain
 separate from that public surface.
 
+## Standard Qualified Delivery
+
+DATA01 provides a public Standard Qualified Delivery for independent review
+and offline verification of the qualified V1 composition boundary.
+
+The delivery contains:
+
+- the declared DATA01 composition boundary;
+- acceptance criteria;
+- qualification evidence covering `DATA01-GUA-01` through `DATA01-GUA-08`;
+- persistent composition evidence for accepted and rejected execution paths;
+- RM-ODP and UML documentation;
+- contracts and representative samples;
+- integrity information;
+- and an offline client verification procedure.
+
+The delivery verifies DATA01 as an Engineering Service Composition.
+It does not independently re-qualify DATA0-ES or DATA1-ES and does not expose
+their commercial runtime deliveries.
+
+[Download DATA01 Standard Qualified Delivery 1.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data01-standard-qualified-delivery-v1.0/F8TF_DATA01_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz)
+
+[Download the SHA-256 checksum](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data01-standard-qualified-delivery-v1.0/F8TF_DATA01_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz.sha256)
+
+[Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data01-standard-qualified-delivery-v1.0)
+
 ## Composition Boundary
 
 The initial qualified composition is bounded to:
@@ -134,3 +160,5 @@ auditability through explicit service contracts, information correspondences,
 engineering bindings, acceptance rules and reproducible evidence.
 
 > **Persist. Audit.**
+
+**Interested in evaluating DATA01 for your system?** Contact F8TF at `m.bouhdadi@um5r.ac.ma`.

@@ -102,6 +102,17 @@ guarantees belonging to higher F8TF compositions.
 
 ---
 
+## Standard Qualified Delivery
+
+The qualified DATA01 Standard Qualified Delivery 1.0 is publicly available for
+independent review and offline verification before or alongside a scoped PoC.
+
+[Download DATA01 Standard Qualified Delivery 1.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data01-standard-qualified-delivery-v1.0/F8TF_DATA01_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz)
+
+[Download the SHA-256 checksum](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data01-standard-qualified-delivery-v1.0/F8TF_DATA01_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz.sha256)
+
+[Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data01-standard-qualified-delivery-v1.0)
+
 ## Commercial Continuation
 
 A successful DATA01-PoC may support:
@@ -131,3 +142,5 @@ application PoC without redefining the generic DATA01 contract.
   `products/data/engineering-services/DATA1/README.md`
 - Engineering PoC catalog:
   `engineering-pocs/README.md`
+
+**Interested in evaluating DATA01 for your system?** Contact F8TF at `m.bouhdadi@um5r.ac.ma`.
