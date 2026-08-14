@@ -268,7 +268,11 @@ DATA1-ES addresses foundational concerns related to:
 DATA1-ES provides the capability to execute contractual audit queries over
 indexed engineering events and produce deterministic, repeatable responses.
 
-It builds upon DATA0-ES and enables higher-level engineering data services.
+DATA1-ES is an autonomous Engineering Service.
+
+It may be composed with DATA0-ES when a qualified persistence-to-audit-query
+chain is required. That relationship is declared by the DATA01 Auditable Data
+Foundation composition.
 
 ### Service Contract
 
