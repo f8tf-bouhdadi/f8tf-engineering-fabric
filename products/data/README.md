@@ -110,13 +110,46 @@ The current verification does not claim:
 - production-scale performance;
 - or formal proof at V1.
 
-### Commercial Runtime Delivery
+### Qualified Runtime Delivery
 
-A qualified executable DATA0 Runtime Delivery is available under commercial
-engagement for deployment, integration and operational use.
+DATA0-ES also provides a qualified executable Runtime Delivery for independent
+deployment, operation and evaluation.
 
-The runtime implementation and operational delivery assets are not distributed
-as part of the public Standard Qualified Delivery.
+The Qualified Runtime Delivery contains the executable DATA0 runtime together
+with operator tooling, integration material, runtime verification, qualification
+binding and integrity evidence.
+
+A client can independently verify the delivered runtime identity, install the
+service, execute the documented interactions, verify its contractual runtime
+behaviour and remove the installation.
+
+The public Qualified Runtime Delivery is a standard realization of DATA0-ES
+within the currently qualified scope. Client-specific adaptation, integration
+and Engineering PoC engagements remain separate commercial activities.
+
+### Obtain the DATA0 Qualified Runtime Delivery
+
+The DATA0 Qualified Runtime Delivery 1.0.0 is publicly available for independent
+deployment, operation and evaluation within the currently qualified DATA0-ES
+scope.
+
+[Download DATA0 Qualified Runtime Delivery 1.0.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-qualified-runtime-delivery-v1.0.0/F8TF_DATA0_QUALIFIED_RUNTIME_DELIVERY_1.0.0.tar.gz)
+
+[Download the SHA-256 checksum](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-qualified-runtime-delivery-v1.0.0/F8TF_DATA0_QUALIFIED_RUNTIME_DELIVERY_1.0.0.tar.gz.sha256)
+
+[Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data0-qualified-runtime-delivery-v1.0.0)
+
+A client can independently:
+
+1. verify the release archive checksum;
+2. verify the complete delivery manifest;
+3. verify the qualified runtime identity;
+4. install DATA0 locally;
+5. start the service;
+6. execute the documented runtime verification;
+7. perform append operations;
+8. inspect service status and logs;
+9. stop and uninstall the service.
 
 ### Standard Qualified Delivery
 

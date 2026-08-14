@@ -115,14 +115,45 @@ Engineering Service itself.
 A controlled DATA0 Runtime Delivery profile packages that runtime for operator
 deployment and is verified through a dedicated runtime-delivery lifecycle gate.
 
-The qualified Runtime Delivery is a commercial F8TF delivery available under
-a commercial engagement. The runtime implementation and operational delivery
-assets are not distributed as part of the public DATA0 Standard Qualified
-Delivery.
+The qualified Runtime Delivery is publicly available for independent
+deployment, operation and evaluation within the currently qualified DATA0-ES
+scope.
 
-The Runtime Delivery is distinct from the public DATA0 Standard Qualified
-Delivery described below, which enables independent review of the service
-contract, guarantees, qualification evidence and package integrity.
+It contains the executable runtime together with operator tooling, integration
+material, runtime verification, qualification binding and integrity evidence.
+
+The Runtime Delivery remains distinct from the DATA0 Standard Qualified
+Delivery described below. The Standard Qualified Delivery supports independent
+review of the Service Contract, guarantees, qualification evidence and package
+integrity, while the Qualified Runtime Delivery additionally enables the client
+to operate and verify the qualified executable realization.
+
+Client-specific adaptation, integration and Engineering PoC engagements remain
+separate commercial activities.
+
+### Obtain the DATA0 Qualified Runtime Delivery
+
+The DATA0 Qualified Runtime Delivery 1.0.0 is publicly available for independent
+deployment, operation and evaluation within the currently qualified DATA0-ES
+scope.
+
+[Download DATA0 Qualified Runtime Delivery 1.0.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-qualified-runtime-delivery-v1.0.0/F8TF_DATA0_QUALIFIED_RUNTIME_DELIVERY_1.0.0.tar.gz)
+
+[Download the SHA-256 checksum](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-qualified-runtime-delivery-v1.0.0/F8TF_DATA0_QUALIFIED_RUNTIME_DELIVERY_1.0.0.tar.gz.sha256)
+
+[Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data0-qualified-runtime-delivery-v1.0.0)
+
+A client can independently:
+
+1. verify the release archive checksum;
+2. verify the complete delivery manifest;
+3. verify the qualified runtime identity;
+4. install DATA0 locally;
+5. start the service;
+6. execute the documented runtime verification;
+7. perform append operations;
+8. inspect service status and logs;
+9. stop and uninstall the service.
 
 ### Standard Qualified Delivery
 
