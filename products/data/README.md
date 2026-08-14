@@ -322,6 +322,17 @@ Available evidence may include:
 - Action–Verification–Evidence records;
 - customer verification procedures.
 
+### Standard Qualified Delivery
+
+The DATA1 Standard Qualified Delivery 1.0 is publicly available for independent
+review and offline verification of the qualified V1 service boundary.
+
+[Download DATA1 Standard Qualified Delivery 1.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data1-standard-qualified-delivery-v1.0/F8TF_DATA1_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz)
+
+[Download the SHA-256 checksum](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data1-standard-qualified-delivery-v1.0/F8TF_DATA1_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz.sha256)
+
+[Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data1-standard-qualified-delivery-v1.0)
+
 ### Commercial Runtime Delivery
 
 A qualified executable DATA1 Runtime Delivery is available under commercial
@@ -343,6 +354,7 @@ The evaluation may verify:
 - stable interfaces;
 - audit-ready evidence generation.
 
+**Interested in evaluating DATA1 for your system?** Contact F8TF at `m.bouhdadi@um5r.ac.ma`.
 
 ---
 

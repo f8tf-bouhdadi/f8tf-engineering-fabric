@@ -93,3 +93,5 @@ next evaluation target is DATA01.
   `products/data/engineering-services/DATA1/README.md`
 - Engineering PoC catalog:
   `engineering-pocs/README.md`
+
+**Interested in evaluating DATA1 for your system?** Contact F8TF at `m.bouhdadi@um5r.ac.ma`.

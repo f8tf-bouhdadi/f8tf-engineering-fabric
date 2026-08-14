@@ -85,6 +85,25 @@ Available evidence may include:
 - Action–Verification–Evidence records;
 - customer verification procedures.
 
+### Standard Qualified Delivery
+
+DATA1-ES provides a public Standard Qualified Delivery for independent review
+of the qualified V1 service boundary.
+
+The delivery contains the qualified Service Contract, evidence covering
+`DATA1-GUA-01` through `DATA1-GUA-08`, RM-ODP and UML documentation,
+schemas, samples, migrations, integrity information and an offline client
+verification procedure.
+
+It is an audit and verification delivery. It does not include the commercial
+DATA1 Runtime Delivery.
+
+[Download DATA1 Standard Qualified Delivery 1.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data1-standard-qualified-delivery-v1.0/F8TF_DATA1_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz)
+
+[Download the SHA-256 checksum](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data1-standard-qualified-delivery-v1.0/F8TF_DATA1_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz.sha256)
+
+[Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data1-standard-qualified-delivery-v1.0)
+
 ### Runtime Realization
 
 DATA1-ES is realized by an executable audit-query runtime implementing the
@@ -113,5 +132,6 @@ The evaluation may verify:
 - stable interfaces;
 - audit-ready evidence generation.
 
+**Interested in evaluating DATA1 for your system?** Contact F8TF at `m.bouhdadi@um5r.ac.ma`.
 
 ---
