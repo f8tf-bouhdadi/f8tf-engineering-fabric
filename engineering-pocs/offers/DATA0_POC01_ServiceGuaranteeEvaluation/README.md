@@ -81,7 +81,7 @@ The public delivery provides a no-cost entry point for examining:
 
 DATA0_POC01 is therefore not required merely to inspect DATA0.
 
-It is the commercial engineering engagement used when evaluation must be
+It is the customer-specific engineering engagement used when evaluation must be
 performed against a specific customer requirement or bounded integration
 context.
 
@@ -99,16 +99,16 @@ is outside the boundary of this PoC.
 
 ---
 
-## Commercial Engagement
+## Customer-Specific Engineering Engagement
 
-DATA0_POC01 is offered as a scoped commercial Engineering PoC.
+DATA0_POC01 is offered as a scoped customer-specific Engineering PoC.
 
-Scope, schedule, acceptance criteria, delivery conditions, and commercial terms
+Scope, schedule, acceptance criteria, delivery conditions, and any applicable engagement terms
 are agreed for each engagement.
 
 The public repository intentionally exposes the offer and evaluation model,
-while customer-specific execution material and qualified commercial
-deliverables are supplied through the corresponding engagement.
+while customer-specific execution material and any additional project-specific
+engineering deliverables are supplied through the corresponding engagement.
 
 ---
 
