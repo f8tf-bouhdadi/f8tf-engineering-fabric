@@ -133,15 +133,15 @@ separate commercial activities.
 
 ### Obtain the DATA0 Qualified Runtime Delivery
 
-The DATA0 Qualified Runtime Delivery 1.0.0 is publicly available at no cost for
+The DATA0 Qualified Runtime Delivery 1.0.1 is publicly available at no cost for
 independent deployment, operation and evaluation within the currently qualified
 DATA0-ES scope.
 
-[Download DATA0 Qualified Runtime Delivery 1.0.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-qualified-runtime-delivery-v1.0.0/F8TF_DATA0_QUALIFIED_RUNTIME_DELIVERY_1.0.0.tar.gz)
+[Download DATA0 Qualified Runtime Delivery 1.0.1](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-qualified-runtime-delivery-v1.0.1/F8TF_DATA0_QUALIFIED_RUNTIME_DELIVERY_1.0.1.tar.gz)
 
-[Download the SHA-256 checksum](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-qualified-runtime-delivery-v1.0.0/F8TF_DATA0_QUALIFIED_RUNTIME_DELIVERY_1.0.0.tar.gz.sha256)
+[Download the SHA-256 checksum](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-qualified-runtime-delivery-v1.0.1/F8TF_DATA0_QUALIFIED_RUNTIME_DELIVERY_1.0.1.tar.gz.sha256)
 
-[Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data0-qualified-runtime-delivery-v1.0.0)
+[Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data0-qualified-runtime-delivery-v1.0.1)
 
 A client can independently:
 
