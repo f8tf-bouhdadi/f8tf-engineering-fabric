@@ -90,8 +90,12 @@ Before a controlled evaluation or PoC begins, the parties must identify:
 
 ## 6. Delivery Decision
 
-A qualified DATA0 package is provided only when the applicable evaluation
-scope and delivery conditions have been established.
+The public standard qualified DATA0 delivery remains available at no cost and
+independently of this Custom Engineering Engagement process.
+
+When an engagement requires an additional client-specific DATA0 delivery,
+that delivery is prepared only after the applicable evaluation scope and
+delivery conditions have been established.
 
 A delivery must be:
 

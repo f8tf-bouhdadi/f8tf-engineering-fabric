@@ -309,8 +309,12 @@ the issue.
 
 ## 11. Produce the DATA0 Delivery
 
-When delivery conditions are satisfied, F8TF prepares an identified and
-versioned DATA0 delivery.
+The public standard qualified DATA0 delivery remains available at no cost and
+independent of this Custom Engineering Engagement.
+
+When the engagement requires an additional client-specific delivery and its
+delivery conditions are satisfied, F8TF prepares an identified and versioned
+DATA0 engagement delivery.
 
 The delivery must state:
 
@@ -326,7 +330,7 @@ The delivery must state:
 
 ### Output
 
-- DATA0 Qualified Delivery Package.
+- DATA0 Client-Specific Engagement Delivery Package.
 
 ### Passage condition
 

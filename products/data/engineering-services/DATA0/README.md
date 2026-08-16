@@ -115,7 +115,7 @@ Engineering Service itself.
 A controlled DATA0 Runtime Delivery profile packages that runtime for operator
 deployment and is verified through a dedicated runtime-delivery lifecycle gate.
 
-The qualified Runtime Delivery is publicly available for independent
+The qualified Runtime Delivery is publicly available at no cost for independent
 deployment, operation and evaluation within the currently qualified DATA0-ES
 scope.
 
@@ -133,9 +133,9 @@ separate commercial activities.
 
 ### Obtain the DATA0 Qualified Runtime Delivery
 
-The DATA0 Qualified Runtime Delivery 1.0.0 is publicly available for independent
-deployment, operation and evaluation within the currently qualified DATA0-ES
-scope.
+The DATA0 Qualified Runtime Delivery 1.0.0 is publicly available at no cost for
+independent deployment, operation and evaluation within the currently qualified
+DATA0-ES scope.
 
 [Download DATA0 Qualified Runtime Delivery 1.0.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-qualified-runtime-delivery-v1.0.0/F8TF_DATA0_QUALIFIED_RUNTIME_DELIVERY_1.0.0.tar.gz)
 
@@ -221,7 +221,7 @@ The delivery enables a client to verify package integrity, inspect the
 qualification evidence and compare the observed results with the declared
 DATA0 guarantees.
 
-The qualified DATA0 Standard Delivery 1.0 is publicly available.
+The qualified DATA0 Standard Delivery 1.0 is publicly available at no cost.
 
 [Download DATA0 Standard Qualified Delivery 1.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data0-standard-qualified-delivery-v1.0/F8TF_DATA0_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz)
 
