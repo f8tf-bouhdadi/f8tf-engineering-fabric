@@ -1,53 +1,100 @@
-# F8TF Engineering Products
+# F8TF Engineering Services Catalog
 
-F8TF Engineering Products realize the capabilities presented through the
-Customer Interface.
+F8TF provides Engineering Services for distributed systems through explicit
+Service Contracts, declared guarantees and verifiable engineering
+realizations.
 
-A product combines Engineering Services, contracts, guarantees, evidence and
-evaluation paths into a coherent offering.
+Start with the services currently presented for direct evaluation or use.
 
-## Current Products
+---
 
-### NET0 — Trusted Fabric Binding
+## Featured Engineering Services
 
-For organizations that need distributed interactions governed by explicit
-trust boundaries, policies and binding requirements.
+### DATA0-ES — Foundational Immutable Data Persistence
 
-Capability:
+Persist accepted data while preserving its established content.
 
-- Trusted Distributed Communication
+**Availability:** Public Qualified Runtime Delivery
 
-[Explore NET0](net0/)
+[Explore DATA0-ES](data/engineering-services/DATA0/)
 
-### TRADER0 — Governed Service Discovery
+---
 
-For organizations that need to publish, discover and select Engineering
-Services through explicit rules and traceable outcomes.
+### DATA1-ES — Deterministic Audit Query
 
-Capability:
+Obtain deterministic audit-query results over qualified engineering data.
 
-- Governed Service Discovery
+**Availability:** Qualified Runtime Delivery
 
-[Explore TRADER0](trader0/)
+[Explore DATA1-ES](data/engineering-services/DATA1/)
 
-### DATA — Traceable Engineering Data
+---
 
-For organizations that need deterministic, versioned and auditable engineering
-information throughout system interactions.
+### COM1-ES — Bounded Framed Message Interaction
 
-Capability:
+Establish bounded application-message interactions over a byte-stream
+transport with explicit qualified framing guarantees.
 
-- Traceable Engineering Data
+**Availability:** Controlled Qualified Runtime Delivery
 
-[Explore DATA](data/)
+[Explore COM1-ES](com/engineering-services/COM1-ES/)
 
-## How Products Are Evaluated
+---
 
-F8TF products are evaluated through governed Engineering PoCs.
+## Browse by Engineering Service Family
 
-An Engineering PoC selects a bounded capability, defines acceptance criteria
-and produces evidence supporting an adoption decision.
+### Data Engineering Services
 
-Continue your journey:
+Engineering Services for persistent, deterministic, auditable and distributed
+engineering data.
 
-[Explore Engineering PoCs](../engineering-pocs/)
+[Browse Data Engineering Services](data/)
+
+### Communication Engineering Services
+
+Engineering Services for explicit and qualified communication interactions.
+
+[Browse Communication Engineering Services](com/)
+
+---
+
+## Additional Engineering Services
+
+### NET0-ES — Policy-Constrained Fabric Binding
+
+Engineering Service for trusted and policy-constrained distributed binding.
+
+[Explore NET0-ES](net0/)
+
+### TRADER0-ES — RM-ODP Trading Function
+
+Engineering Service for governed publication, discovery and selection of
+Engineering Services.
+
+[Explore TRADER0-ES](trader0/)
+
+---
+
+## Evaluation and Acquisition
+
+Each Engineering Service defines its own scope, guarantees, qualification
+status and delivery conditions.
+
+A public listing does not imply that every runtime realization is publicly
+downloadable.
+
+Review the individual Engineering Service before making an evaluation or
+acquisition decision.
+
+[Start an evaluation](../evaluation/)
+
+---
+
+## Technical Depth
+
+Customers requiring deeper assessment can follow the references provided by
+each Engineering Service to its contracts, guarantees, qualification and
+supporting engineering material.
+
+The catalog is the customer-facing entry point; the underlying engineering
+material remains available for technical evaluation.

@@ -1,91 +1,117 @@
-# F8TF — Trusted Engineering Fabric
+# F8TF Engineering Services
 
-Engineering Services with explicit guarantees, traceable evidence and
-governed evaluation.
+Qualified engineering services for distributed systems.
 
-> Every visitor should find a relevant path within 30 seconds.
+F8TF provides ready-to-evaluate Engineering Services with explicit Service
+Contracts, qualified guarantees and independently verifiable runtime
+deliveries.
 
-## What brings you here today?
+---
 
-### I need a solution
+## Available Engineering Services
 
-Discover how F8TF addresses:
+### DATA0-ES — Foundational Immutable Data Persistence
 
-- trusted distributed communication;
-- governed service discovery;
-- traceable engineering data;
-- auditable engineering platforms.
+Persist accepted data while preserving its established content.
 
-[Explore solutions](solutions/)
+**Use it when you need:**
 
-### I want to understand F8TF capabilities
+- controlled data persistence;
+- explicit persistence guarantees;
+- independently verifiable delivery and operation.
 
-Discover the Engineering Capabilities F8TF provides to organizations.
+**Availability:** Public Qualified Runtime Delivery
 
-[Explore Engineering Capabilities](engineering-capabilities/)
+[Explore DATA0-ES](products/data/engineering-services/DATA0/)
 
-### I want to understand the products
+---
 
-Discover the current F8TF Engineering Products:
+### DATA1-ES — Deterministic Audit Query
 
-- NET0 — trusted and policy-constrained distributed communication;
-- TRADER0 — governed Engineering Service publication and discovery;
-- DATA — deterministic and traceable engineering data services.
+Obtain deterministic audit-query results over qualified engineering data.
 
-[Explore products](products/)
+**Use it when you need:**
 
-### I want to evaluate F8TF
+- deterministic audit queries;
+- explicit query guarantees;
+- a qualified runtime realization that can be independently evaluated.
 
-Run a governed Engineering PoC addressing a concrete client need and producing
-explicit evidence for an adoption decision.
+**Availability:** Qualified Runtime Delivery
 
-[Explore Engineering PoCs](engineering-pocs/)
+[Explore DATA1-ES](products/data/engineering-services/DATA1/)
 
-### I need guarantees and evidence
+---
 
-Review the properties, guarantees, maturity and verification principles
-associated with F8TF Engineering Services.
+### COM1-ES — Bounded Framed Message Interaction
 
-[Explore guarantees](guarantees/)
+Establish bounded application-message interactions over a byte-stream
+transport.
 
-### I want to discuss adoption
+**Use it when you need:**
 
-Understand the evaluation process and how a prospect progresses from discovery
-to PoC, commercial engagement and customer delivery.
+- bounded frame acceptance;
+- complete frame reception;
+- response only after complete admissible input;
+- client interaction failure isolation.
+
+**Availability:** Controlled Qualified Runtime Delivery
+
+[Explore COM1-ES](products/com/engineering-services/COM1-ES/)
+
+---
+
+## How It Works
+
+1. Choose an Engineering Service.
+2. Review its Service Contract, qualified guarantees and declared limitations.
+3. Evaluate the corresponding Qualified Runtime Delivery.
+4. Verify the delivered runtime independently.
+5. Operate it in your own environment.
+
+---
+
+## Browse Engineering Services
+
+Explore the current F8TF Engineering Services and service families.
+
+[Browse Engineering Services](products/)
+
+---
+
+## Evaluation and Acquisition
+
+Some Qualified Runtime Deliveries are publicly available.
+
+Others are supplied through controlled evaluation or commercial delivery.
 
 [Start an evaluation](evaluation/)
 
-## Public exposure principle
+---
 
-F8TF follows one fundamental rule:
+## Why F8TF?
 
-> Publish WHAT — Keep HOW private.
+F8TF does not ask customers merely to trust that an implementation works.
 
-This public repository presents solutions, products, interfaces, guarantees,
-Engineering PoCs and non-sensitive evaluation material.
+Each qualified Engineering Service defines what it promises, the scope in
+which those promises apply, and how the corresponding runtime realization can
+be independently verified.
 
-The proprietary Engineering Factory, internal automation, delivery factories,
-customer evidence and confidential commercial assets remain private.
+Engineering details, guarantees, qualification material and supporting
+documentation remain available for customers who need deeper technical
+assessment.
 
-## Customer Journey
-
-The F8TF public repository is organized around the customer journey.
-
-Customer Need
-→ Solution
-→ Engineering Capability
-→ Engineering Product
-→ Engineering PoC
-→ Engineering Guarantees
-→ Engineering Evidence
-→ Customer Decision
-
-This journey is described in:
-
-[Customer Model](CUSTOMER_MODEL.md)
+---
 
 ## About F8TF
 
-F8TF designs Engineering Services for distributed and high-assurance systems.
+F8TF develops qualified Engineering Services for open distributed systems.
 
-[Learn more](about/)
+[About F8TF](about/)
+
+---
+
+## Contact
+
+For technical evaluation, acquisition or engineering discussions:
+
+`m.bouhdadi@um5r.ac.ma`
