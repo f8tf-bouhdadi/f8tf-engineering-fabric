@@ -93,9 +93,8 @@ DATA0_POC01 evaluates DATA0-ES.
 
 It does not claim the guarantees of compositions or other Engineering Services.
 
-In particular, an auditable persistence-and-query foundation involving
-DATA0-ES and DATA1-ES belongs to the DATA01 Engineering Service Composition and
-is outside the boundary of this PoC.
+Requirements that depend on composition with other Engineering Services are
+outside the boundary of this PoC.
 
 ---
 

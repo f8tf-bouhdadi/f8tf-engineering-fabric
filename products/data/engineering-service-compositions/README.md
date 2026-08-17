@@ -15,9 +15,8 @@ A composition is an engineering object with its own:
 - verification rules;
 - composition evidence.
 
-Current public composition:
+No Data Engineering Service Composition is currently exposed publicly.
 
-- [DATA01-ADF — F8TF Auditable Data Foundation](DATA01/)
-  - DATA0-ES
-  - DATA1-ES
-  - Promise: Persist. Audit.
+Qualified compositions may be published only after their public service
+boundary, guarantees, verification material and delivery have been reviewed
+for external release.
