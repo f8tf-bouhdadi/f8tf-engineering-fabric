@@ -19,6 +19,7 @@ Each Engineering Service defines its own:
 Current publicly separated service definitions:
 
 - [DATA0-ES — Foundational Immutable Data Persistence Engineering Service](DATA0/)
+- [DATA1-ES — Deterministic Audit Query Engineering Service](DATA1/)
 
 A relationship between Engineering Services is not implied by numbering or
 catalog order. Relationships are declared through qualified Engineering
