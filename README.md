@@ -115,3 +115,34 @@ F8TF develops qualified Engineering Services for open distributed systems.
 For technical evaluation, acquisition or engineering discussions:
 
 `m.bouhdadi@um5r.ac.ma`
+
+---
+
+## RM-ODP Engineering Concerns
+
+F8TF engineering services address distributed-system concerns described
+through RM-ODP transparencies, including:
+
+- Access Transparency
+- Failure Transparency
+- Location Transparency
+- Migration Transparency
+- Persistence Transparency
+- Relocation Transparency
+- Replication Transparency
+- Transaction Transparency
+
+The repository also organizes engineering concerns around RM-ODP function
+groups, including:
+
+- Management Functions
+- Coordination Functions
+- Repository Functions
+- Security Functions
+
+Formal engineering mechanisms, including Event-B refinement and proof
+obligations, support specification, realization qualification and evidence.
+
+These engineering concerns identify the scope in which F8TF services are
+developed and classified. They do not imply that every transparency or
+function group is already realized or qualified by every published service.
