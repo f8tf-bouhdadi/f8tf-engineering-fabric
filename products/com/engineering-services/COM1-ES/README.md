@@ -100,6 +100,11 @@ Service Contract and Service Guarantees.
 See:
 
 - [Product 1 Realization Mapping](realization/PRODUCT1_REALIZATION_MAPPING.md)
+- [Integrator Traceability Map](integration/INTEGRATOR_TRACEABILITY_MAP.md)
+
+The Integrator Traceability Map provides a guarantee-to-realization navigation
+projection and introduces no new Service Guarantee, specification obligation,
+Specification Proof Obligation or realization responsibility.
 
 ## Product 1 Boundary
 
