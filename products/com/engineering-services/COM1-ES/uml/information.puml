@@ -1,0 +1,105 @@
+@startuml
+title COM1-ES — RM-ODP Information Viewpoint Projection
+
+class "Candidate Framed Interaction\nINF-OBJ-01" as Candidate {
+  declaredExtent
+  receivedExtent
+  interactionContext
+}
+
+class "Declared Message Extent\nINF-OBJ-02" as Extent {
+  declaredExtent : integer
+}
+
+class "Message Payload\nINF-OBJ-03" as Payload {
+  orderedPayloadUnits
+  receivedExtent : integer
+}
+
+class "Admission Outcome\nINF-OBJ-04" as Admission {
+  status : Admitted | Rejected
+}
+
+class "Complete Admitted Message\nINF-OBJ-05" as Complete
+
+class "Interaction Response\nINF-OBJ-06" as Response
+
+class "Interaction Failure Outcome\nINF-OBJ-07" as Failure
+
+Candidate *-- Extent
+Candidate *-- Payload
+Candidate --> Admission : evaluated as
+Admission --> Complete : if admitted\nand complete
+Complete --> Response : enables
+Candidate --> Failure : may produce
+
+note top of Candidate
+INF-INIT-01
+Initial Interaction State
+
+- no active candidate
+- no admitted message
+- no complete message
+- no successful response
+- no failure outcome
+- receivedExtent = 0
+end note
+
+note left of Extent
+INF-INV-01
+declaredExtent >= 0
+
+INF-INV-02
+admission only within
+supported bound
+end note
+
+note left of Payload
+INF-INV-03
+0 <= receivedExtent
+<= declaredExtent
+
+INF-INV-05
+receivedExtent < declaredExtent
+=> no complete message
+end note
+
+note right of Admission
+INF-INV-06
+Rejected interaction
+=> no complete message
+end note
+
+note right of Complete
+INF-INV-04
+Complete exists only if:
+Admission = Admitted
+and
+receivedExtent = declaredExtent
+end note
+
+note right of Response
+INF-INV-07
+Successful response only if
+Complete Admitted Message exists
+end note
+
+note bottom of Failure
+INF-INV-08
+Failure of one interaction
+does not invalidate subsequent
+independent interactions
+end note
+
+note bottom
+Dynamic schema:
+
+INF-DYN-01 Submit Candidate Interaction
+INF-DYN-02 Evaluate Admission
+INF-DYN-03 Accumulate Message Payload
+INF-DYN-04 Establish Complete Admitted Message
+INF-DYN-05 Produce Interaction Response
+INF-DYN-06 Fail Interaction
+end note
+
+@enduml

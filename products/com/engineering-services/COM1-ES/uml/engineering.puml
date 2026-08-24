@@ -1,0 +1,75 @@
+@startuml
+title COM1-ES — RM-ODP Engineering Viewpoint Projection
+
+left to right direction
+
+rectangle "COM1 Engineering Service Boundary\nENG-BND-01" as Boundary {
+
+  component "Interaction Processing Capsule\nENG-CAP-01" as Processing
+  component "Admission Capsule\nENG-CAP-02" as Admission
+  component "Completion Capsule\nENG-CAP-03" as Completion
+  component "Response Capsule\nENG-CAP-04" as Response
+  component "Failure Isolation Capsule\nENG-CAP-05" as Isolation
+
+  interface "External Interaction Engineering Interface\nENG-IF-01" as IF1
+  interface "Admission Engineering Interface\nENG-IF-02" as IF2
+  interface "Completion Engineering Interface\nENG-IF-03" as IF3
+  interface "Response Engineering Interface\nENG-IF-04" as IF4
+  interface "Failure Isolation Engineering Interface\nENG-IF-05" as IF5
+
+  IF1 -- Processing
+
+  Processing --> IF2
+  IF2 --> Admission
+
+  Processing --> IF3
+  IF3 --> Completion
+
+  Processing --> IF4
+  IF4 --> Response
+
+  Processing --> IF5
+  IF5 --> Isolation
+}
+
+actor "Invoking Environment" as Invoker
+
+Invoker --> IF1 : ENG-BIND-01\nInvocation Binding
+
+Processing --> Admission : ENG-BIND-02\nAdmission Binding
+Processing --> Completion : ENG-BIND-03\nCompletion Binding
+Processing --> Response : ENG-BIND-04\nResponse Binding
+Processing --> Isolation : ENG-BIND-05\nFailure Isolation Binding
+
+note top of IF1
+ENG-CH-01
+Service Interaction Channel
+end note
+
+note bottom of Processing
+ENG-CH-02
+Internal Interaction
+Processing Channel
+end note
+
+note right of Boundary
+ENG-INV-01
+Computational Contract Preservation
+
+ENG-INV-02
+Bounded Admission Preservation
+
+ENG-INV-03
+Complete Reception Preservation
+
+ENG-INV-04
+Response Eligibility Preservation
+
+ENG-INV-05
+Failure Isolation Preservation
+
+ENG-INV-06
+Information Ordering Preservation
+end note
+
+@enduml

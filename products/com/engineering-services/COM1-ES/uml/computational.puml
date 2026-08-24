@@ -1,0 +1,85 @@
+@startuml
+title COM1-ES — RM-ODP Computational Viewpoint Projection
+
+actor "Service Consumer" as Consumer
+
+participant "COM1 Framed Interaction Service Object\nCOMP-OBJ-01" as Service
+participant "Admission Responsibility\nCOMP-OBJ-02" as Admission
+participant "Completion Responsibility\nCOMP-OBJ-03" as Completion
+participant "Response Responsibility\nCOMP-OBJ-04" as Response
+participant "Failure-Isolation Responsibility\nCOMP-OBJ-05" as Isolation
+
+note over Consumer, Service
+COMP-IF-01 — Bounded Framed Interaction Interface
+
+COMP-OP-01
+submitInteraction(CandidateFramedInteraction)
+-> InteractionResponse | InteractionFailureOutcome
+end note
+
+Consumer -> Service : COMP-OP-01\nsubmitInteraction(...)
+
+Service -> Admission : evaluate admission
+note right of Admission
+COMP-RULE-02
+Bounded Admission Preservation
+end note
+
+alt admissible interaction
+
+  Admission --> Service : admitted
+
+  Service -> Completion : accumulate / establish completeness
+  note right of Completion
+  COMP-RULE-03
+  Complete Reception Preservation
+  end note
+
+  alt complete admitted message
+
+    Completion --> Service : complete
+
+    Service -> Response : produce response
+    note right of Response
+    COMP-RULE-04
+    Response Eligibility Preservation
+    end note
+
+    Response --> Service : InteractionResponse
+    Service --> Consumer : InteractionResponse
+
+  else incomplete or processing failure
+
+    Completion --> Service : InteractionFailureOutcome
+    Service -> Isolation : isolate current interaction
+    Isolation --> Service : isolated
+    Service --> Consumer : InteractionFailureOutcome
+
+  end
+
+else inadmissible interaction
+
+  Admission --> Service : InteractionFailureOutcome
+  Service -> Isolation : isolate rejected interaction
+  Isolation --> Service : isolated
+  Service --> Consumer : InteractionFailureOutcome
+
+end
+
+note over Service, Isolation
+COMP-RULE-01
+Information Contract Preservation
+
+COMP-RULE-05
+Interaction Failure Isolation
+
+COMP-RULE-06
+Explicit Outcome
+end note
+
+note over Consumer, Isolation
+COMP-RULE-07
+No Technology Assumption
+end note
+
+@enduml

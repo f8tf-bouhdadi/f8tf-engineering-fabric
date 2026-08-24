@@ -221,4 +221,5 @@ Subsequent Engineering and Technology viewpoints shall define how the
 computational specification is realized.
 
 Explicit correspondence specifications shall preserve traceability between
-these viewpoints and between the Technology Viewpoint and its subsequent realization.
+these viewpoints and between the Technology Viewpoint and the Product 1 realization
+mapping.

@@ -1,0 +1,72 @@
+@startuml
+title COM1-ES — RM-ODP Technology Viewpoint Projection
+
+left to right direction
+
+rectangle ".NET 8 TCP Length-Prefixed Interaction Profile\nTECH-PROF-01" as Profile {
+
+  component "COM1 Domain Information Component\nTECH-COMP-01" as Domain
+  component "COM1 Application Interaction Component\nTECH-COMP-02" as Application
+  component "COM1 TCP Framed Channel Component\nTECH-COMP-03" as Channel
+  component "COM1 Runtime Boundary Component\nTECH-COMP-04" as Runtime
+
+  Application --> Domain
+  Runtime --> Application
+  Runtime --> Channel
+}
+
+cloud "TCP Byte-Stream Transport\nTECH-MECH-01" as TCP
+
+note right of TCP
+TECH-MECH-02
+Length-Prefix Framing
+
+[4-byte signed big-endian length]
+[payload bytes]
+end note
+
+note right of Channel
+TECH-MECH-03
+V1 Payload Bound
+
+0 <= declaredLength <= 65536
+
+TECH-MECH-04
+Exact Message Reconstruction
+
+TECH-MECH-05
+Framed Response Emission
+end note
+
+note right of Runtime
+TECH-MECH-06
+Per-Client Failure Isolation
+
+TECH-MECH-07
+Configurable Runtime Endpoint
+
+default:
+127.0.0.1:5002
+end note
+
+TCP --> Channel
+Channel --> Runtime : framed interaction
+
+note bottom of Profile
+TECH-INV-01
+Upstream Contract Preservation
+
+TECH-INV-02
+Bounded Admission Preservation
+
+TECH-INV-03
+Complete Reconstruction Preservation
+
+TECH-INV-04
+Response Eligibility Preservation
+
+TECH-INV-05
+Interaction Failure Isolation Preservation
+end note
+
+@enduml

@@ -1,5 +1,16 @@
 # COM1-ES — Bounded Framed Message Interaction Engineering Service
 
+## Public Product
+
+This public surface exposes:
+
+**COM1-ES Product 1 — Assured Integration-Ready Engineering Service Specification**
+
+Product 1 defines what COM1-ES commits to provide, how its authoritative Service
+Guarantees are preserved across the RM-ODP specification chain, and how an
+independent integrator may derive a conforming realization without redefining
+the Service Contract or Service Guarantees.
+
 ## When COM1-ES Is Relevant
 
 COM1-ES is intended for systems in which application messages are exchanged
@@ -17,19 +28,9 @@ Typical situations include:
 
 COM1-ES is not merely a framing implementation.
 
-It is an Engineering Service Specification that makes the required interaction
-guarantees explicit and traces their realization across the five RM-ODP
-viewpoints.
-
-
-## Public Product
-
-This public surface exposes:
-
-**Product 1 — Engineering Service Specification**
-
-It defines what COM1-ES commits to provide and how its authoritative Service
-Guarantees are assured through the RM-ODP viewpoint specifications.
+It is an Engineering Service whose Product 1 specification makes the required
+interaction guarantees explicit, preserves them across the RM-ODP viewpoints
+and exposes an integration-ready realization prescription.
 
 ## Enterprise Objective
 
@@ -53,7 +54,7 @@ See:
 
 ## RM-ODP Engineering Service Specification
 
-The Service Contract and Service Guarantees are assured through five RM-ODP
+The Service Contract and Service Guarantees are specified through five RM-ODP
 viewpoint specifications:
 
 1. [Enterprise Specification](specification/enterprise.md)
@@ -64,15 +65,75 @@ viewpoint specifications:
 
 The Service Guarantees remain authoritative across these specifications.
 
-## Lifecycle Boundary
+## Specification Assurance
 
-This public surface contains Product 1 only.
+The preservation of the authoritative Service Guarantees across the Product 1
+specification chain is made explicit through:
 
-Executable realization, qualification, qualified runtime identity, delivery,
-delivery qualification and independent operation belong to subsequent lifecycle
-products and are not part of this public Product 1 specification.
+- correspondence and refinement mappings between successive RM-ODP viewpoints;
+- Specification Proof Obligations derived from those mappings.
 
-## Next Lifecycle Products
+See:
 
-Qualified Runtime and Qualified Delivery are separate lifecycle products and
-may be provided through controlled engineering engagements.
+- [Specification Proof Obligations](assurance/SPECIFICATION_PROOF_OBLIGATIONS.md)
+
+## UML Projections
+
+The authoritative RM-ODP textual specifications have corresponding UML
+projections for engineering communication and integration:
+
+1. [Enterprise UML](uml/enterprise.puml)
+2. [Information UML](uml/information.puml)
+3. [Computational UML](uml/computational.puml)
+4. [Engineering UML](uml/engineering.puml)
+5. [Technology UML](uml/technology.puml)
+
+The UML projections do not introduce additional Service Guarantees or lifecycle
+stages.
+
+## Integration Readiness
+
+Product 1 exposes the realization prescription required by an independent
+integrator to derive a conforming implementation while preserving the upstream
+Service Contract and Service Guarantees.
+
+See:
+
+- [Product 1 Realization Mapping](realization/PRODUCT1_REALIZATION_MAPPING.md)
+
+## Product 1 Boundary
+
+Product 1 includes specification assurance and realization mapping.
+
+It does not include:
+
+- an executable realization;
+- executable qualification;
+- Qualified Runtime;
+- delivery qualification;
+- Qualified Delivery;
+- independent client operation.
+
+Those concerns belong to subsequent lifecycle products.
+
+## Product 1 Chain
+
+    Service Contract
+        ->
+    Authoritative Service Guarantees
+        ->
+    RM-ODP Specifications
+        <->
+    UML Projections
+
+    RM-ODP Specifications
+        ->
+    Correspondence / Refinement Mappings
+        ->
+    Specification Proof Obligations
+        ->
+    Specification Assurance
+        ->
+    Product 1 Realization Mapping
+        ->
+    Assured Integration-Ready Engineering Service Specification

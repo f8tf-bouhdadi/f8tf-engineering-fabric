@@ -1,0 +1,62 @@
+@startuml
+title COM1-ES — RM-ODP Enterprise Viewpoint Projection
+
+left to right direction
+
+actor "Service Consumer\nENT-ROLE-01" as Consumer
+actor "Service Operator\nENT-ROLE-03" as Operator
+
+rectangle "Bounded Framed Interaction Community\nENT-COMM-01" {
+
+  usecase "Submit Framed Interaction\nENT-ACT-01" as Submit
+  usecase "Admit Framed Interaction\nENT-ACT-02" as Admit
+  usecase "Complete Framed Interaction\nENT-ACT-03" as Complete
+  usecase "Produce Interaction Response\nENT-ACT-04" as Respond
+  usecase "Isolate Failed Interaction\nENT-ACT-05" as Isolate
+
+  rectangle "Framed Interaction Service\nENT-ROLE-02" as Service
+}
+
+Consumer --> Submit
+Submit --> Service
+
+Service --> Admit
+Service --> Complete
+Service --> Respond
+Service --> Isolate
+
+Operator --> Service
+
+note right of Service
+ENT-OBJ-01
+Establish Bounded Framed
+Message Interaction
+end note
+
+note bottom of Admit
+ENT-POL-01
+Bounded Admission
+end note
+
+note bottom of Complete
+ENT-POL-02
+Complete Reception
+end note
+
+note bottom of Respond
+ENT-POL-03
+Response Eligibility
+end note
+
+note bottom of Isolate
+ENT-POL-04
+Interaction Failure Isolation
+end note
+
+note right of Submit
+ENT-PROC-01
+Execute Bounded
+Framed Interaction
+end note
+
+@enduml
