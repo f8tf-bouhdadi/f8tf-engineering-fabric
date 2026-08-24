@@ -4,7 +4,7 @@
 
 - Service ID: `COM1-ES`
 - Engineering Asset: `COM1_Framing_Logs`
-- Lifecycle Product: `Product 1 — Engineering Service Specification`
+- Lifecycle Product: `Product 1 — Assured Integration-Ready Engineering Service Specification`
 
 ## Enterprise Objective
 

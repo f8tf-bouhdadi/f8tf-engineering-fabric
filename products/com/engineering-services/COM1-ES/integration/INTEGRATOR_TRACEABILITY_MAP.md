@@ -15,14 +15,14 @@ Obligation or realization responsibility.
 
 The authoritative sources remain:
 
-- `../SERVICE_CONTRACT.md`
-- `../specification/enterprise.md`
-- `../specification/information.md`
-- `../specification/computational.md`
-- `../specification/engineering.md`
-- `../specification/technology.md`
-- `../assurance/SPECIFICATION_PROOF_OBLIGATIONS.md`
-- `../realization/PRODUCT1_REALIZATION_MAPPING.md`
+- [Service Contract](../SERVICE_CONTRACT.md)
+- [Enterprise Specification](../specification/enterprise.md)
+- [Information Specification](../specification/information.md)
+- [Computational Specification](../specification/computational.md)
+- [Engineering Specification](../specification/engineering.md)
+- [Technology Specification](../specification/technology.md)
+- [Specification Proof Obligations](../assurance/SPECIFICATION_PROOF_OBLIGATIONS.md)
+- [Product 1 Realization Mapping](../realization/PRODUCT1_REALIZATION_MAPPING.md)
 
 ---
 
