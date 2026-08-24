@@ -1,5 +1,27 @@
 # COM1-ES — Bounded Framed Message Interaction Engineering Service
 
+## When COM1-ES Is Relevant
+
+COM1-ES is intended for systems in which application messages are exchanged
+over a stream-oriented communication environment and message boundaries,
+complete reception and interaction-failure isolation must be explicit
+contractual properties.
+
+Typical situations include:
+
+- length-prefixed TCP application protocols;
+- integration gateways receiving framed messages;
+- industrial or legacy socket-based services;
+- communication boundaries where incomplete or oversized messages must not
+  enter normal application processing.
+
+COM1-ES is not merely a framing implementation.
+
+It is an Engineering Service Specification that makes the required interaction
+guarantees explicit and traces their realization across the five RM-ODP
+viewpoints.
+
+
 ## Public Product
 
 This public surface exposes:
@@ -49,3 +71,8 @@ This public surface contains Product 1 only.
 Executable realization, qualification, qualified runtime identity, delivery,
 delivery qualification and independent operation belong to subsequent lifecycle
 products and are not part of this public Product 1 specification.
+
+## Next Lifecycle Products
+
+Qualified Runtime and Qualified Delivery are separate lifecycle products and
+may be provided through controlled engineering engagements.
