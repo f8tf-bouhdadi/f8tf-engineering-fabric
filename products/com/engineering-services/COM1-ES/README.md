@@ -32,10 +32,16 @@ Product 2 documentation:
 
 ### Product 3 — Qualified Delivery
 
+**Public qualified-delivery documentation**
+
 Product 3 extends Product 2 through the delivery boundary and establishes an
 independently verifiable and operable Qualified Delivery.
 
-Its public presentation is handled separately from Product 2 and does not alter
+Product 3 documentation:
+
+- [Product 3 — Qualified Delivery](products/product3-qualified-delivery/README.md)
+
+Its public presentation remains separate from Product 2 and does not alter
 the Product 1 or Product 2 engineering boundaries.
 
 The authoritative COM1-ES Service Guarantees are not redefined between these
