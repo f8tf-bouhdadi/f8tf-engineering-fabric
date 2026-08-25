@@ -1,6 +1,47 @@
 # COM1-ES — Bounded Framed Message Interaction Engineering Service
 
-## Public Product
+## Engineering Service Products
+
+COM1-ES is provided through three successive lifecycle products governed by
+the same authoritative Service Guarantees.
+
+### Product 1 — Assured Integration-Ready Engineering Service Specification
+
+**Public documentation available**
+
+Product 1 defines and assures the COM1-ES specification and provides the
+integration-ready realization prescription.
+
+The Product 1 documentation is exposed directly through this COM1-ES public
+surface.
+
+### Product 2 — Qualified Runtime
+
+**Public qualification documentation**
+
+Product 2 extends Product 1 through executable realization, executable
+qualification and Qualified Runtime Identity.
+
+Public Product 2 documentation exposes qualification and runtime-identity
+information without publishing the private development source tree or the
+runtime executable itself.
+
+Product 2 documentation:
+
+- [Product 2 — Qualified Runtime](products/product2-qualified-runtime/README.md)
+
+### Product 3 — Qualified Delivery
+
+Product 3 extends Product 2 through the delivery boundary and establishes an
+independently verifiable and operable Qualified Delivery.
+
+Its public presentation is handled separately from Product 2 and does not alter
+the Product 1 or Product 2 engineering boundaries.
+
+The authoritative COM1-ES Service Guarantees are not redefined between these
+three products.
+
+## Product 1 — Public Specification Surface
 
 This public surface exposes:
 
