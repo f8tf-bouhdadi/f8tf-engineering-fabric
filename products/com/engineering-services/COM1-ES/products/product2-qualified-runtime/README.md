@@ -70,6 +70,21 @@ See:
 This identity corresponds to the runtime binaries qualified by the captured V1
 qualification execution.
 
+## Access
+
+The Product 2 qualification documentation and Qualified Runtime Identity are
+publicly available through this repository.
+
+The Qualified Runtime identified by the published SHA-256 identity is provided
+separately from this public documentation surface.
+
+A recipient of the Qualified Runtime can use the published identity to establish
+that the obtained runtime corresponds to the executable realization for which
+the published qualification result applies.
+
+Product 3 extends this capability by providing the Qualified Delivery boundary
+required for independent client verification and operation.
+
 ## Product 2 Boundary
 
 Product 2 establishes the qualified executable realization and its identity.
