@@ -85,6 +85,17 @@ the published qualification result applies.
 Product 3 extends this capability by providing the Qualified Delivery boundary
 required for independent client verification and operation.
 
+### Request Product 2 Access
+
+Organizations or integrators interested in obtaining the Qualified Runtime may
+open a request through the public repository:
+
+- [Request COM1-ES Product 2 Access](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/issues/new)
+
+The request may identify the intended integration context and required
+qualification scope. Access to the Qualified Runtime is handled separately from
+the public engineering documentation.
+
 ## Product 2 Boundary
 
 Product 2 establishes the qualified executable realization and its identity.

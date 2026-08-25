@@ -119,6 +119,17 @@ not part of this public product surface.
 The distributable Qualified Delivery may therefore be provided independently
 of the private engineering repository and its internal production mechanisms.
 
+### Request Product 3 Access
+
+Organizations interested in evaluating or obtaining the COM1-ES Qualified
+Delivery may open a request through the public repository:
+
+- [Request COM1-ES Product 3 Access](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/issues/new)
+
+The request may identify the intended operating or integration context. The
+Qualified Delivery is provided separately from the public engineering
+documentation.
+
 ## Lifecycle Position
 
     Product 1
