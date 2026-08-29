@@ -98,17 +98,13 @@ The standard DATA1 client journey is:
    boundary is required.
 4. **Assess suitability** - determine whether DATA1-ES satisfies the intended
    deterministic audit-query requirement.
-5. **Request the commercial Qualified Runtime Delivery** - when executable
-   deployment, integration or operational use is required.
-6. **Obtain the authorized delivery** - receive the identified qualified
-   Runtime Delivery through the controlled commercial delivery channel.
-7. **Verify independently** - verify archive integrity, qualified delivery
+5. **Verify independently** - verify archive integrity, qualified delivery
    identity, qualified runtime identity and documented runtime behaviour.
-8. **Operate within the qualified scope** - execute the contractual
+6. **Operate within the qualified scope** - execute the contractual
    registration and deterministic audit-query operations.
 
-The public Standard Qualified Delivery supports service review and
-qualification assessment. It does not contain the commercial DATA1 runtime.
+The public Standard Qualified Delivery supports independent service review and
+qualification assessment.
 
 ### Standard Qualified Delivery
 
@@ -120,8 +116,7 @@ The delivery contains the qualified Service Contract, evidence covering
 schemas, samples, migrations, integrity information and an offline client
 verification procedure.
 
-It is an audit and verification delivery. It does not include the commercial
-DATA1 Runtime Delivery.
+It is an audit and verification delivery for the qualified DATA1 service boundary.
 
 [Download DATA1 Standard Qualified Delivery 1.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data1-standard-qualified-delivery-v1.0/F8TF_DATA1_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz)
 
@@ -129,7 +124,7 @@ DATA1 Runtime Delivery.
 
 [Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data1-standard-qualified-delivery-v1.0)
 
-### Commercial Qualified Runtime Delivery
+### Qualified Runtime Realization
 
 DATA1-ES is realized by a qualified executable audit-query runtime implementing
 the declared DATA1 Service Contract within the currently qualified scope.
@@ -137,16 +132,13 @@ the declared DATA1 Service Contract within the currently qualified scope.
 The runtime is an Engineering Asset realizing DATA1-ES; it is not the
 Engineering Service itself.
 
-The DATA1 Qualified Runtime Delivery is a controlled commercial delivery for
-authorized customers and engineering engagements. It is not publicly
-distributed.
+DATA1-ES has a qualified executable runtime realization within the declared
+qualified scope. The runtime implementation itself is not part of the public
+Standard Qualified Delivery.
 
-An authorized recipient receives the identified qualified delivery together
-with its integrity and qualification evidence. The recipient can independently
-verify:
+The qualification evidence documents
+the qualified runtime realization, including:
 
-- the received archive integrity;
-- the complete qualified Runtime Delivery identity;
 - the qualified DATA1 runtime identity;
 - the qualification binding;
 - the documented runtime behaviour;
@@ -156,11 +148,13 @@ verify:
 The runtime implementation and operational delivery assets are not distributed
 as part of the public DATA1 Engineering Service description.
 
-[Request DATA1 Qualified Runtime Delivery](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/discussions/1)
+Access to the qualified runtime implementation may be requested through GitHub Discussions.
+
+[Request implementation access or discuss DATA1](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/discussions)
 
 ### Evaluation
 
-A DATA1 Engineering PoC evaluates deterministic audit-query scenarios against
+DATA1-ES evaluation may assess deterministic audit-query scenarios against
 explicit acceptance criteria.
 
 The evaluation may verify:
@@ -171,6 +165,6 @@ The evaluation may verify:
 - stable interfaces;
 - audit-ready evidence generation.
 
-**Interested in evaluating DATA1 for your system?** Contact F8TF at `m.bouhdadi@um5r.ac.ma`.
+**Interested in DATA1?** Share technical feedback through GitHub Discussions.
 
 ---

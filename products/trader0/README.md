@@ -80,7 +80,7 @@ Current evidence may include:
 
 ### Evaluation
 
-A TRADER0 Engineering PoC evaluates governed publication and service discovery
+TRADER0-ES evaluation may assess governed publication and service discovery
 against explicit acceptance criteria.
 
 The evaluation may verify:

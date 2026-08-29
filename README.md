@@ -78,11 +78,10 @@ Explore the current F8TF Engineering Services and service families.
 
 ---
 
-## Evaluation and Acquisition
+## Evaluation
 
 Some Qualified Runtime Deliveries are publicly available.
 
-Others are supplied through controlled evaluation or commercial delivery.
 
 [Start an evaluation](evaluation/)
 
@@ -112,7 +111,7 @@ F8TF develops qualified Engineering Services for open distributed systems.
 
 ## Contact
 
-For technical evaluation, acquisition or engineering discussions:
+For technical feedback and engineering discussions:
 
 `m.bouhdadi@um5r.ac.ma`
 

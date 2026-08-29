@@ -17,7 +17,6 @@ Service Offers follow the TRADER0 model and declare:
 - evaluation path;
 - selection conditions;
 - Binding Plan target;
-- commercial continuation where applicable.
 
 TRADER0 governs Service Offer publication, discovery, query and selection.
 Binding realization is delegated to NET0.

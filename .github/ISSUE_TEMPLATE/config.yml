@@ -3,6 +3,6 @@ contact_links:
   - name: Review DATA0-ES
     url: https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/tree/main/products/data
     about: Review the DATA0 service scope, guarantees, evidence and limitations before submitting a request.
-  - name: Review the Engineering PoC process
-    url: https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/tree/main/engineering-pocs
-    about: Understand the governed F8TF Engineering PoC process.
+  - name: Review the Engineering Service evaluation process
+    url: https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/tree/main/evaluation
+    about: Understand the F8TF Engineering Service evaluation process.

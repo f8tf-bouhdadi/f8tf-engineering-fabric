@@ -12,7 +12,7 @@ assets and may declare:
 - qualified Service Guarantees;
 - a declared qualification scope;
 - explicit limitations;
-- a customer evaluation and acquisition path.
+- a customer evaluation path.
 
 Current publicly described Communication Engineering Services:
 

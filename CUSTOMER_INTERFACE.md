@@ -30,7 +30,6 @@ Products
 
 ↓
 
-Engineering PoCs
 
 ↓
 
@@ -65,7 +64,6 @@ Public repository:
 - Solutions
 - Engineering Capabilities
 - Products
-- Engineering PoCs
 - Public documentation
 - Public guarantees
 - Evaluation journey

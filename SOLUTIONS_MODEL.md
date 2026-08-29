@@ -19,5 +19,4 @@ Each solution must:
 - describe the desired outcome;
 - introduce the corresponding Engineering Capability;
 - point to the Engineering Product;
-- lead naturally to an Engineering PoC.
 

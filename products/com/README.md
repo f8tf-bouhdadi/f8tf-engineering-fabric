@@ -53,9 +53,9 @@ qualified runtime identity before operating COM1.
 
 [Explore Communication Engineering Services](engineering-services/)
 
-### Evaluation and Acquisition
+### Evaluation
 
-For COM1-ES evaluation or acquisition:
+For COM1-ES evaluation and technical feedback:
 
 `m.bouhdadi@um5r.ac.ma`
 

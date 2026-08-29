@@ -7,8 +7,7 @@ engineering evidence.
 Evaluation starts from the published Engineering Service definition.
 
 The purpose of evaluation is to determine whether an existing qualified
-Engineering Service satisfies a prospective client's bounded need and, when
-necessary, whether an additional controlled engineering engagement is required.
+Engineering Service satisfies a prospective client's bounded need.
 
 ---
 
@@ -36,7 +35,7 @@ For each service, examine:
 Some F8TF Engineering Services provide a publicly available qualified delivery.
 
 When a public qualified delivery is available, you can evaluate the service
-without requesting a custom engagement.
+directly from the published qualified delivery.
 
 The standard evaluation path is:
 
@@ -66,7 +65,6 @@ A controlled evaluation may be appropriate when:
 - the prospective client's need is not fully covered by the standard qualified
   scope;
 - additional acceptance criteria must be considered;
-- client-specific adaptation may be required;
 - or several Engineering Services may need to be composed.
 
 A controlled evaluation request should identify, without confidential
@@ -98,9 +96,6 @@ The assessment may conclude that:
 
 - the existing qualified Engineering Service is sufficient;
 - a controlled evaluation delivery is appropriate;
-- client-specific adaptation is required;
-- composition with complementary Engineering Services is required;
-- a scoped Engineering PoC or integration engagement should be considered;
 - or the requested need is outside the currently qualified scope.
 
 F8TF does not claim support for a requirement that cannot be justified by the
@@ -129,35 +124,11 @@ Service and delivery.
 
 ## 6. Possible Next Steps
 
-An evaluation may conclude that the prospective client's bounded need is
-already satisfied by the existing Engineering Service.
+An evaluation may conclude that the selected Engineering Service satisfies the
+intended bounded need, does not satisfy it, or requires further technical
+evaluation.
 
-When additional engineering is required, possible next steps include:
-
-- controlled Runtime Delivery;
-- scoped Engineering PoC;
-- client-specific adaptation;
-- integration engagement;
-- composition with other F8TF Engineering Services;
-- or a commercial delivery and support discussion.
-
-An Engineering PoC is therefore a possible continuation of an evaluation when
-additional engineering validation is required. It is not a prerequisite for
-evaluating an already qualified standard delivery.
-
----
-
-## 7. Commercial Boundary
-
-Submitting an evaluation request does not create a contract or commercial
-engagement.
-
-Any client-specific engineering activity, controlled delivery, PoC,
-adaptation, integration, support or commercial delivery requires an explicitly
-agreed scope and applicable terms.
-
-Public qualified deliveries remain subject to the scope and conditions stated
-by their respective Engineering Services and releases.
+For further engineering discussion, use GitHub Discussions.
 
 ---
 
@@ -167,9 +138,9 @@ First identify the Engineering Service that most closely addresses your need:
 
 [Browse Engineering Services](../products/)
 
-For a controlled evaluation, acquisition or engineering discussion, contact:
+For technical feedback or engineering discussion, use GitHub Discussions:
 
-`m.bouhdadi@um5r.ac.ma`
+[GitHub Discussions](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/discussions)
 
 Please include the target Engineering Service and a short non-confidential
 description of the engineering need and intended environment.

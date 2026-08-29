@@ -4,7 +4,7 @@ F8TF uses explicit guarantees to make engineering claims clearer, bounded and
 verifiable.
 
 A guarantee describes an expected property of an Engineering Capability,
-Product or PoC within a defined scope.
+Product or qualified delivery within a defined scope.
 
 ## Why Guarantees Matter
 

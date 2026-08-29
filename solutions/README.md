@@ -105,7 +105,6 @@ Engineering Concern
 → F8TF Solution
 → Engineering Capability
 → Engineering Product
-→ Engineering PoC
 → Guarantees
 → Evidence
 → Customer Decision

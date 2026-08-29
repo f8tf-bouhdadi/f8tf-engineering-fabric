@@ -75,7 +75,7 @@ Engineering Services.
 
 ---
 
-## Evaluation and Acquisition
+## Evaluation
 
 Each Engineering Service defines its own scope, guarantees, qualification
 status and delivery conditions.
@@ -83,8 +83,7 @@ status and delivery conditions.
 A public listing does not imply that every runtime realization is publicly
 downloadable.
 
-Review the individual Engineering Service before making an evaluation or
-acquisition decision.
+Review the individual Engineering Service before making an evaluation
 
 [Start an evaluation](../evaluation/)
 

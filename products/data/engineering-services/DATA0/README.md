@@ -128,8 +128,7 @@ review of the Service Contract, guarantees, qualification evidence and package
 integrity, while the Qualified Runtime Delivery additionally enables the client
 to operate and verify the qualified executable realization.
 
-Client-specific adaptation, integration and Engineering PoC engagements remain
-separate commercial activities.
+Client-specific engineering services remain outside the public standard delivery.
 
 ### Obtain the DATA0 Qualified Runtime Delivery
 
@@ -192,17 +191,14 @@ The standard DATA0 client journey is:
    evidence using the client verification procedure.
 7. **Assess suitability** — determine whether the standard DATA0 service fits
    the intended use.
-8. **Request a custom engagement if needed** — request a scoped PoC,
-   adaptation, integration discussion or commercial proposal only when the
-   standard delivery does not fully cover the intended context.
+8. **Contact F8TF if needed** — contact F8TF when the standard delivery does
+   not fully cover the intended context.
 
 Possible outcomes include:
 
 - the standard DATA0 delivery is sufficient;
-- integration support is required;
-- a client-specific adaptation is required;
-- DATA0 must be composed with other F8TF Engineering Services;
-- or the intended use is outside the currently qualified scope.
+- the intended use is outside the currently qualified scope;
+- or further technical evaluation is required.
 
 ### Obtain the DATA0 Standard Delivery
 
@@ -229,30 +225,6 @@ The qualified DATA0 Standard Delivery 1.0 is publicly available at no cost.
 
 [Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data0-standard-qualified-delivery-v1.0)
 
-### Custom Engineering Engagement
-
-A custom engineering engagement is separate from the standard qualified
-delivery.
-
-It may be requested when a prospective client needs:
-
-- a scoped Engineering PoC;
-- a client-specific adaptation;
-- an integration discussion;
-- or a commercial proposal.
-
-Such engagements may require a bounded client context, target environment and
-specific acceptance criteria.
-
-[Review the DATA0 Custom Engineering Engagement Assessment Process](../../engineering-pocs/DATA0_EVALUATION_PROCESS.md)
-
-[Review the DATA0 Engineering Service Execution Process](../../engineering-pocs/DATA0_SERVICE_EXECUTION_PROCESS.md)
-
-**Interested in evaluating DATA0 for your system?** Contact F8TF at `m.bouhdadi@um5r.ac.ma`.
-
-Requests must not contain confidential, personal or security-sensitive
-information. Submission does not create a commercial contract.
-
 ## Portfolio Progression
 
 DATA0-ES provides the foundational persistence layer.
@@ -269,9 +241,3 @@ Additional F8TF Data Engineering Services progressively address:
 - replication;
 - sharding;
 - and idempotency.
-
-Continue your journey:
-
-[Explore F8TF Engineering PoCs](../../engineering-pocs/)
-
----

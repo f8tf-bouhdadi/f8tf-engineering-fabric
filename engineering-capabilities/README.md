@@ -73,7 +73,7 @@ Capabilities include:
 ## Capability Realization
 
 Each capability is realized by one or more Engineering Products and may be
-evaluated through an Engineering PoC before adoption.
+evaluated before adoption.
 
 Continue your journey:
 

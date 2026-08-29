@@ -124,8 +124,7 @@ service, execute the documented interactions, verify its contractual runtime
 behaviour and remove the installation.
 
 The public Qualified Runtime Delivery is a standard realization of DATA0-ES
-within the currently qualified scope. Client-specific adaptation, integration
-and Engineering PoC engagements remain separate commercial activities.
+within the currently qualified scope. Client-specific engineering services remain outside the public standard delivery.
 
 ### Obtain the DATA0 Qualified Runtime Delivery
 
@@ -188,17 +187,14 @@ The standard DATA0 client journey is:
    evidence using the client verification procedure.
 7. **Assess suitability** — determine whether the standard DATA0 service fits
    the intended use.
-8. **Request a custom engagement if needed** — request a scoped PoC,
-   adaptation, integration discussion or commercial proposal only when the
-   standard delivery does not fully cover the intended context.
+8. **Contact F8TF if needed** — contact F8TF when the standard delivery does
+   not fully cover the intended context.
 
 Possible outcomes include:
 
 - the standard DATA0 delivery is sufficient;
-- integration support is required;
-- a client-specific adaptation is required;
-- DATA0 must be composed with other F8TF Engineering Services;
-- or the intended use is outside the currently qualified scope.
+- the intended use is outside the currently qualified scope;
+- or further technical evaluation is required.
 
 ### Obtain the DATA0 Standard Delivery
 
@@ -225,29 +221,6 @@ The qualified DATA0 Standard Delivery 1.0 is publicly available.
 
 [Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data0-standard-qualified-delivery-v1.0)
 
-### Custom Engineering Engagement
-
-A custom engineering engagement is separate from the standard qualified
-delivery.
-
-It may be requested when a prospective client needs:
-
-- a scoped Engineering PoC;
-- a client-specific adaptation;
-- an integration discussion;
-- or a commercial proposal.
-
-Such engagements may require a bounded client context, target environment and
-specific acceptance criteria.
-
-[Review the DATA0 Custom Engineering Engagement Assessment Process](../../engineering-pocs/DATA0_EVALUATION_PROCESS.md)
-
-[Review the DATA0 Engineering Service Execution Process](../../engineering-pocs/DATA0_SERVICE_EXECUTION_PROCESS.md)
-
-**Interested in evaluating DATA0 for your system?** Contact F8TF at `m.bouhdadi@um5r.ac.ma`.
-
-Requests must not contain confidential, personal or security-sensitive
-information. Submission does not create a commercial contract.
 
 ## Portfolio Progression
 
@@ -265,10 +238,6 @@ Additional F8TF Data Engineering Services progressively address:
 - replication;
 - sharding;
 - and idempotency.
-
-Continue your journey:
-
-[Explore F8TF Engineering PoCs](../../engineering-pocs/)
 
 ---
 
@@ -372,17 +341,13 @@ The standard DATA1 client journey is:
    boundary is required.
 4. **Assess suitability** - determine whether DATA1-ES satisfies the intended
    deterministic audit-query requirement.
-5. **Request the commercial Qualified Runtime Delivery** - when executable
-   deployment, integration or operational use is required.
-6. **Obtain the authorized delivery** - receive the identified qualified
-   Runtime Delivery through the controlled commercial delivery channel.
-7. **Verify independently** - verify archive integrity, qualified delivery
+5. **Verify independently** - verify archive integrity, qualified delivery
    identity, qualified runtime identity and documented runtime behaviour.
-8. **Operate within the qualified scope** - execute the contractual
+6. **Operate within the qualified scope** - execute the contractual
    registration and deterministic audit-query operations.
 
-The public Standard Qualified Delivery supports service review and
-qualification assessment. It does not contain the commercial DATA1 runtime.
+The public Standard Qualified Delivery supports independent service review and
+qualification assessment.
 
 ### Standard Qualified Delivery
 
@@ -394,8 +359,7 @@ The delivery contains the qualified Service Contract, evidence covering
 schemas, samples, migrations, integrity information and an offline client
 verification procedure.
 
-It is an audit and verification delivery. It does not include the commercial
-DATA1 Runtime Delivery.
+It is an audit and verification delivery for the qualified DATA1 service boundary.
 
 [Download DATA1 Standard Qualified Delivery 1.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/data1-standard-qualified-delivery-v1.0/F8TF_DATA1_STANDARD_QUALIFIED_DELIVERY_1.0.tar.gz)
 
@@ -403,7 +367,7 @@ DATA1 Runtime Delivery.
 
 [Review the GitHub Release](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/data1-standard-qualified-delivery-v1.0)
 
-### Commercial Qualified Runtime Delivery
+### Qualified Runtime Realization
 
 DATA1-ES is realized by a qualified executable audit-query runtime implementing
 the declared DATA1 Service Contract within the currently qualified scope.
@@ -411,16 +375,13 @@ the declared DATA1 Service Contract within the currently qualified scope.
 The runtime is an Engineering Asset realizing DATA1-ES; it is not the
 Engineering Service itself.
 
-The DATA1 Qualified Runtime Delivery is a controlled commercial delivery for
-authorized customers and engineering engagements. It is not publicly
-distributed.
+DATA1-ES has a qualified executable runtime realization within the declared
+qualified scope. The runtime implementation itself is not part of the public
+Standard Qualified Delivery.
 
-An authorized recipient receives the identified qualified delivery together
-with its integrity and qualification evidence. The recipient can independently
-verify:
+The qualification evidence documents
+the qualified runtime realization, including:
 
-- the received archive integrity;
-- the complete qualified Runtime Delivery identity;
 - the qualified DATA1 runtime identity;
 - the qualification binding;
 - the documented runtime behaviour;
@@ -430,11 +391,13 @@ verify:
 The runtime implementation and operational delivery assets are not distributed
 as part of the public DATA1 Engineering Service description.
 
-[Request DATA1 Qualified Runtime Delivery](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/discussions/1)
+Access to the qualified runtime implementation may be requested through GitHub Discussions.
+
+[Request implementation access or discuss DATA1](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/discussions)
 
 ### Evaluation
 
-A DATA1 Engineering PoC evaluates deterministic audit-query scenarios against
+DATA1-ES evaluation may assess deterministic audit-query scenarios against
 explicit acceptance criteria.
 
 The evaluation may verify:
@@ -445,7 +408,7 @@ The evaluation may verify:
 - stable interfaces;
 - audit-ready evidence generation.
 
-**Interested in evaluating DATA1 for your system?** Contact F8TF at `m.bouhdadi@um5r.ac.ma`.
+**Interested in DATA1?** Share technical feedback through GitHub Discussions.
 
 ---
 
@@ -530,7 +493,7 @@ Available evidence may include:
 
 ### Evaluation
 
-A DATA2 Engineering PoC evaluates contractual document-management scenarios
+DATA2-ES evaluation may assess contractual document-management scenarios
 against explicit acceptance criteria.
 
 The evaluation may verify:
@@ -622,7 +585,7 @@ presented as completed assurance.
 
 ### Evaluation
 
-A DATA3 Engineering PoC evaluates versioned index scenarios against explicit
+DATA3-ES evaluation may assess versioned index scenarios against explicit
 acceptance criteria.
 
 The evaluation may verify:
@@ -720,7 +683,7 @@ Formal Event-B modelling and proof remain deferred to V2.
 
 ### Evaluation
 
-A DATA4 Engineering PoC evaluates a bounded two-node distributed-data scenario
+DATA4-ES evaluation may assess a bounded two-node distributed-data scenario
 against explicit acceptance criteria.
 
 The evaluation may verify:
@@ -826,7 +789,7 @@ Formal Event-B modelling and proof remain deferred to V2.
 
 ### Evaluation
 
-A DATA5 Engineering PoC evaluates a bounded workflow scenario against explicit
+DATA5-ES evaluation may assess a bounded workflow scenario against explicit
 acceptance criteria.
 
 The evaluation may verify:
@@ -944,7 +907,7 @@ Formal Event-B modelling and proof remain deferred to V2.
 
 ### Evaluation
 
-A DATA6 Engineering PoC evaluates a bounded observability scenario against
+DATA6-ES evaluation may assess a bounded observability scenario against
 explicit acceptance criteria.
 
 The evaluation may verify:
@@ -1067,7 +1030,7 @@ Formal Event-B modelling and proof remain deferred to V2.
 
 ### Evaluation
 
-A DATA7 Engineering PoC evaluates a bounded interaction-identity scenario
+DATA7-ES evaluation may assess a bounded interaction-identity scenario
 against explicit acceptance criteria.
 
 The evaluation may verify:
@@ -1186,7 +1149,7 @@ Formal Event-B modelling and proof remain deferred to V2.
 
 ### Evaluation
 
-A DATA8 Engineering PoC evaluates a bounded replication-policy scenario against
+DATA8-ES evaluation may assess a bounded replication-policy scenario against
 explicit acceptance criteria.
 
 The evaluation may verify:
@@ -1319,7 +1282,7 @@ Formal Event-B modelling and proof remain deferred to V2.
 
 ### Evaluation
 
-A DATA9 Engineering PoC evaluates a bounded deterministic shard-routing
+DATA9-ES evaluation may assess a bounded deterministic shard-routing
 scenario against explicit acceptance criteria.
 
 The evaluation may verify:

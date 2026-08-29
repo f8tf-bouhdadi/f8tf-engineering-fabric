@@ -13,7 +13,6 @@ Every public page should use this vocabulary consistently.
 - Engineering Discipline
 - Engineering Capability
 - Engineering Product
-- Engineering PoC
 - Engineering Guarantee
 - Engineering Evidence
 - Customer Decision
@@ -27,7 +26,6 @@ Use:
 - Engineering Discipline
 - Engineering Guarantee
 - Engineering Evidence
-- Engineering PoC
 
 Avoid replacing them with generic synonyms.
 

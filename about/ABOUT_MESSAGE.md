@@ -12,7 +12,7 @@ confidence throughout their entire lifecycle.
 - These characteristics create new engineering challenges.
 - Engineering confidence requires explicit guarantees.
 - F8TF addresses these challenges through Engineering Services.
-- Customers evaluate F8TF through Engineering PoCs before adoption.
+- Customers can evaluate F8TF Engineering Services before adoption.
 
 ## Transition
 

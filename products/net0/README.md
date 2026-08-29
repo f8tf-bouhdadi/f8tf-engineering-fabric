@@ -97,7 +97,7 @@ presented as completed assurance.
 
 ### Evaluation
 
-A NET0 Engineering PoC can evaluate a bounded distributed Fabric scenario
+NET0-ES evaluation may assess a bounded distributed Fabric scenario
 against explicit acceptance criteria.
 
 The evaluation may verify:
@@ -124,5 +124,3 @@ It does not currently claim:
 - formal proving before V2.
 
 Continue your journey:
-
-[Explore F8TF Engineering PoCs](../../engineering-pocs/)

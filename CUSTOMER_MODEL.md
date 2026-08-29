@@ -25,7 +25,6 @@ Engineering Product
 
 ↓
 
-Engineering PoC
 
 ↓
 
@@ -64,10 +63,6 @@ Engineering Products realize one or more Engineering Capabilities.
 Products package Engineering Services, contracts, guarantees, verification
 and evidence into coherent offerings.
 
-## Engineering PoC
-
-Engineering PoCs allow customers to evaluate bounded capabilities before
-adoption.
 
 ## Engineering Guarantees
 

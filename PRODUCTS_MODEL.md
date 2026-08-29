@@ -25,7 +25,6 @@ Reference the dominant engineering concerns.
 
 ### 4. How is it evaluated?
 
-Reference the Engineering PoC.
 
 ### 5. Where is the evidence?
 
@@ -37,7 +36,6 @@ Engineering Concern
 → Engineering Solution
 → Engineering Capability
 → Engineering Product
-→ Engineering PoC
 → Engineering Guarantees
 → Engineering Evidence
 
