@@ -5,31 +5,38 @@ left to right direction
 
 rectangle "COM1 Engineering Service Boundary\nENG-BND-01" as Boundary {
 
-  component "Interaction Processing Capsule\nENG-CAP-01" as Processing
-  component "Admission Capsule\nENG-CAP-02" as Admission
-  component "Completion Capsule\nENG-CAP-03" as Completion
-  component "Response Capsule\nENG-CAP-04" as Response
-  component "Failure Isolation Capsule\nENG-CAP-05" as Isolation
+  rectangle "COM1 Interaction Processing Capsule\nENG-CAP-01" as Capsule {
 
-  interface "External Interaction Engineering Interface\nENG-IF-01" as IF1
-  interface "Admission Engineering Interface\nENG-IF-02" as IF2
-  interface "Completion Engineering Interface\nENG-IF-03" as IF3
-  interface "Response Engineering Interface\nENG-IF-04" as IF4
-  interface "Failure Isolation Engineering Interface\nENG-IF-05" as IF5
+    rectangle "COM1 Interaction Processing Cluster\nENG-CLUSTER-01" as Cluster {
 
-  IF1 -- Processing
+      component "Interaction Processing Basic Engineering Object\nENG-BEO-01" as Processing
+      component "Admission Basic Engineering Object\nENG-BEO-02" as Admission
+      component "Completion Basic Engineering Object\nENG-BEO-03" as Completion
+      component "Response Basic Engineering Object\nENG-BEO-04" as Response
+      component "Failure Isolation Basic Engineering Object\nENG-BEO-05" as Isolation
 
-  Processing --> IF2
-  IF2 --> Admission
+      interface "Admission Engineering Interface\nENG-IF-02" as IF2
+      interface "Completion Engineering Interface\nENG-IF-03" as IF3
+      interface "Response Engineering Interface\nENG-IF-04" as IF4
+      interface "Failure Isolation Engineering Interface\nENG-IF-05" as IF5
 
-  Processing --> IF3
-  IF3 --> Completion
+      Processing --> IF2
+      IF2 --> Admission
 
-  Processing --> IF4
-  IF4 --> Response
+      Processing --> IF3
+      IF3 --> Completion
 
-  Processing --> IF5
-  IF5 --> Isolation
+      Processing --> IF4
+      IF4 --> Response
+
+      Processing --> IF5
+      IF5 --> Isolation
+    }
+
+    interface "External Interaction Engineering Interface\nENG-IF-01" as IF1
+
+    IF1 -- Processing
+  }
 }
 
 actor "Invoking Environment" as Invoker
@@ -46,7 +53,7 @@ ENG-CH-01
 Service Interaction Channel
 end note
 
-note bottom of Processing
+note bottom of Cluster
 ENG-CH-02
 Internal Interaction
 Processing Channel

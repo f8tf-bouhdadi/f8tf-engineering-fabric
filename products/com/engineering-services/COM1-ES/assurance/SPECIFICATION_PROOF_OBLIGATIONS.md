@@ -21,9 +21,9 @@ They do not evaluate an executable realization.
 - `G-COM1-RESPONSE`
 - `G-COM1-ISOLATION`
 
-## Product 1 Specification Structure
+## Product 1 Construction Progression
 
-The Product 1 construction order is:
+The F8TF Product 1 construction progression is:
 
     Enterprise
         ->
@@ -37,12 +37,18 @@ The Product 1 construction order is:
         ->
     Product 1 Realization Mapping
 
-This construction order does not define the RM-ODP correspondence graph.
+This progression is an engineering construction order. It does not define or
+restrict the RM-ODP inter-viewpoint correspondence graph.
 
-Applicable RM-ODP correspondences establish cross-viewpoint consistency.
-The Specification Preservation Obligations defined below establish whether the
-authoritative Service Guarantees remain preserved across the Product 1
-specification structure.
+COM1 Product 1 assurance distinguishes two mutually traceable axes:
+
+- RM-ODP viewpoint correspondence relates applicable terms and structures
+  between viewpoint specifications;
+- F8TF Service Guarantee preservation relates each authoritative Service
+  Guarantee to the specification elements and obligations that preserve it.
+
+Specification Proof Obligations evaluate the second axis while relying on the
+applicable viewpoint correspondences as supporting traceability.
 
 ---
 
@@ -82,7 +88,7 @@ Computational:
 
 Engineering:
 
-- `ENG-CAP-02`
+- `ENG-BEO-02`
 - `ENG-IF-02`
 - `ENG-BIND-02`
 - `ENG-INV-02`
@@ -95,11 +101,17 @@ Technology:
 - `TECH-MECH-03`
 - `TECH-INV-02`
 
-### Required Disposition
+### Disposition
 
-The Product 1 specification structure shall preserve the condition that an interaction is
-admitted only when its declared payload extent satisfies the selected supported
-bound.
+`SATISFIED`
+
+Specification justification:
+
+The bounded-admission requirement is represented consistently by the identified
+Enterprise policy and action, Information objects and invariants, Computational
+responsibility and rule, Engineering interface/binding/invariant structure, and
+Technology mechanisms and invariant. No downstream Product 1 specification
+permits an out-of-bound interaction to become an admitted interaction.
 
 ---
 
@@ -138,7 +150,7 @@ Computational:
 
 Engineering:
 
-- `ENG-CAP-03`
+- `ENG-BEO-03`
 - `ENG-IF-03`
 - `ENG-BIND-03`
 - `ENG-INV-03`
@@ -150,10 +162,18 @@ Technology:
 - `TECH-MECH-04`
 - `TECH-INV-03`
 
-### Required Disposition
+### Disposition
 
-The Product 1 specification structure shall preserve the condition that a complete admitted
-message exists only after the complete declared payload has been received.
+`SATISFIED`
+
+Specification justification:
+
+The complete-reception requirement is preserved by the identified Enterprise
+policy and action, Information completion conditions and invariants,
+Computational completion responsibility, Engineering completion structure, and
+Technology exact-reconstruction mechanism. No downstream Product 1
+specification permits incomplete input to establish a complete admitted
+message.
 
 ---
 
@@ -189,7 +209,7 @@ Computational:
 
 Engineering:
 
-- `ENG-CAP-04`
+- `ENG-BEO-04`
 - `ENG-IF-04`
 - `ENG-BIND-04`
 - `ENG-INV-04`
@@ -200,11 +220,18 @@ Technology:
 - `TECH-MECH-05`
 - `TECH-INV-04`
 
-### Required Disposition
+### Disposition
 
-The Product 1 specification structure shall preserve the condition that a successful
-response is produced only after a complete admissible interaction has been
-established.
+`SATISFIED`
+
+Specification justification:
+
+The response-eligibility requirement is represented consistently by the
+identified Enterprise policy and action, Information response invariant,
+Computational response responsibility and rule, Engineering response
+interface/binding/invariant structure, and Technology response mechanism and
+invariant. Successful response production remains conditional on complete
+admissible input throughout Product 1.
 
 ---
 
@@ -240,7 +267,7 @@ Computational:
 
 Engineering:
 
-- `ENG-CAP-05`
+- `ENG-BEO-05`
 - `ENG-IF-05`
 - `ENG-BIND-05`
 - `ENG-INV-05`
@@ -251,11 +278,19 @@ Technology:
 - `TECH-MECH-06`
 - `TECH-INV-05`
 
-### Required Disposition
+### Disposition
 
-The Product 1 specification structure shall preserve the condition that failure of one
-interaction does not prevent subsequent independent interactions from being
-processed.
+`SATISFIED`
+
+Specification justification:
+
+The interaction-failure-isolation requirement is represented consistently by
+the identified Enterprise policy and action, Information isolation invariant,
+Computational failure-isolation responsibility, Engineering isolation
+interface/binding/invariant structure, and Technology isolation mechanism and
+invariant. No downstream Product 1 specification makes failure of one
+interaction terminate the service capability for subsequent independent
+interactions.
 
 ---
 
@@ -268,11 +303,19 @@ COM1 Product 1 specification assurance requires:
 - `SPO-COM1-03`
 - `SPO-COM1-04`
 
-to remain traceable to the authoritative correspondence mappings and Service
-Guarantees.
+to remain traceable to the authoritative Service Guarantees, their
+preservation bases and the applicable RM-ODP viewpoint correspondences.
 
-These Specification Proof Obligations establish specification-preservation
-requirements.
+Current Product 1 specification disposition:
+
+- `SPO-COM1-01` — `SATISFIED`
+- `SPO-COM1-02` — `SATISFIED`
+- `SPO-COM1-03` — `SATISFIED`
+- `SPO-COM1-04` — `SATISFIED`
+
+These dispositions establish COM1 specification-assurance closure for the
+declared Service Guarantees. They do not constitute executable proof or runtime
+qualification.
 
 Executable Proof Obligations belong to executable qualification and are
 therefore outside this Product 1 artifact.

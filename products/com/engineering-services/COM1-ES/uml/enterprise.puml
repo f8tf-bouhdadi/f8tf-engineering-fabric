@@ -6,19 +6,30 @@ left to right direction
 actor "Service Consumer\nENT-ROLE-01" as Consumer
 actor "Service Operator\nENT-ROLE-03" as Operator
 
-rectangle "Bounded Framed Interaction Community\nENT-COMM-01" {
+rectangle "Bounded Framed Interaction Service Boundary\nENT-BND-01" as EnterpriseBoundary {
 
-  usecase "Submit Framed Interaction\nENT-ACT-01" as Submit
-  usecase "Admit Framed Interaction\nENT-ACT-02" as Admit
-  usecase "Complete Framed Interaction\nENT-ACT-03" as Complete
-  usecase "Produce Interaction Response\nENT-ACT-04" as Respond
-  usecase "Isolate Failed Interaction\nENT-ACT-05" as Isolate
+  rectangle "Bounded Framed Interaction Community\nENT-COMM-01" {
 
-  rectangle "Framed Interaction Service\nENT-ROLE-02" as Service
+    usecase "Submit Framed Interaction\nENT-ACT-01" as Submit
+    usecase "Admit Framed Interaction\nENT-ACT-02" as Admit
+    usecase "Complete Framed Interaction\nENT-ACT-03" as Complete
+    usecase "Produce Interaction Response\nENT-ACT-04" as Respond
+    usecase "Isolate Failed Interaction\nENT-ACT-05" as Isolate
+
+    rectangle "Framed Interaction Service\nENT-ROLE-02" as Service
+  }
 }
 
 Consumer --> Submit
 Submit --> Service
+
+note on link
+ENT-INTER-01
+Bounded Framed Message Interaction
+ENT-ROLE-01 <-> ENT-ROLE-02
+through ENT-ACT-01..05 and ENT-PROC-01
+within ENT-BND-01
+end note
 
 Service --> Admit
 Service --> Complete
@@ -28,7 +39,7 @@ Service --> Isolate
 Operator --> Service
 
 note right of Service
-ENT-OBJ-01
+ENT-OBJECTIVE-01
 Establish Bounded Framed
 Message Interaction
 end note

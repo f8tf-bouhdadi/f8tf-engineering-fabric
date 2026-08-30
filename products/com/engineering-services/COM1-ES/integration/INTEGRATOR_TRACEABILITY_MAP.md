@@ -21,6 +21,7 @@ The authoritative sources remain:
 - [Computational Specification](../specification/computational.md)
 - [Engineering Specification](../specification/engineering.md)
 - [Technology Specification](../specification/technology.md)
+- [RM-ODP Correspondence Specifications](../specification/COM1_ODP_CORRESPONDENCE_SPECIFICATIONS.md)
 - [Specification Proof Obligations](../assurance/SPECIFICATION_PROOF_OBLIGATIONS.md)
 - [Product 1 Realization Mapping](../realization/PRODUCT1_REALIZATION_MAPPING.md)
 
@@ -50,7 +51,7 @@ Computational:
 
 Engineering:
 
-- `ENG-CAP-02`
+- `ENG-BEO-02`
 - `ENG-IF-02`
 - `ENG-BIND-02`
 - `ENG-INV-02`
@@ -99,7 +100,7 @@ Computational:
 
 Engineering:
 
-- `ENG-CAP-03`
+- `ENG-BEO-03`
 - `ENG-IF-03`
 - `ENG-BIND-03`
 - `ENG-INV-03`
@@ -143,7 +144,7 @@ Computational:
 
 Engineering:
 
-- `ENG-CAP-04`
+- `ENG-BEO-04`
 - `ENG-IF-04`
 - `ENG-BIND-04`
 - `ENG-INV-04`
@@ -185,7 +186,7 @@ Computational:
 
 Engineering:
 
-- `ENG-CAP-05`
+- `ENG-BEO-05`
 - `ENG-IF-05`
 - `ENG-BIND-05`
 - `ENG-INV-05`

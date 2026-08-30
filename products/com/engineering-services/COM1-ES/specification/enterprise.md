@@ -21,7 +21,7 @@ inadmissible or incomplete framed inputs from being treated as valid messages.
 
 ---
 
-## ENT-OBJ-01 — Establish Bounded Framed Message Interaction
+## ENT-OBJECTIVE-01 — Establish Bounded Framed Message Interaction
 
 Enable bounded application-message interaction over a stream-oriented
 transport so that message boundaries are explicit, inadmissible or incomplete
@@ -63,6 +63,27 @@ individual interaction failure.
 The boundary does not prescribe the concrete transport, encoding,
 implementation technology or deployment mechanism, and does not define the
 application-specific meaning or processing of the carried message payload.
+
+---
+
+## Enterprise Interaction
+
+### ENT-INTER-01 — Bounded Framed Message Interaction
+
+Represents the enterprise interaction between:
+
+- `ENT-ROLE-01` — Service Consumer;
+- `ENT-ROLE-02` — Framed Interaction Service.
+
+The interaction expresses one bounded framed-message exchange through:
+
+- `ENT-ACT-01` through `ENT-ACT-05`;
+- `ENT-PROC-01`.
+
+It applies to every COM1 bounded framed interaction within `ENT-BND-01`.
+
+It does not prescribe a Computational binding object, Engineering channel
+technology, transport protocol or implementation mechanism.
 
 ---
 
@@ -212,17 +233,16 @@ mappings.
 
 ---
 
-## Viewpoint Correspondence and Realization Obligations
+## Viewpoint Correspondence and Realization Obligation
 
-The Information and Computational viewpoint specifications shall preserve the
-applicable enterprise concepts, policies and Service Guarantees through
-explicit viewpoint correspondences where applicable.
+The Information and Computational specifications shall preserve and express the
+applicable Enterprise concepts through explicit RM-ODP correspondence
+specifications.
 
-The Engineering and Technology viewpoint specifications shall define the
-technical realization of the applicable computational concerns while
-preserving traceability to the authoritative Service Guarantees.
+Engineering and Technology specifications shall define the applicable realization
+structures while preserving the authoritative Service Guarantees.
 
-Applicable RM-ODP correspondence specifications shall preserve cross-viewpoint
-traceability. The Product 1 realization mapping shall separately preserve
-traceability from the Technology Viewpoint Specification to the
-executable-realization boundary.
+Explicit RM-ODP correspondence specifications shall preserve traceability between
+the applicable viewpoint specifications. The Product 1 realization mapping
+separately maps Technology Specification responsibilities to implementation
+responsibilities.

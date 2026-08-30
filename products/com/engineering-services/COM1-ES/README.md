@@ -133,13 +133,14 @@ The Service Guarantees remain authoritative across these specifications.
 ## Specification Assurance
 
 The preservation of the authoritative Service Guarantees across the Product 1
-specification chain is made explicit through:
+specification and correspondence structure is made explicit through:
 
 - applicable correspondence mappings between RM-ODP viewpoint specifications;
 - Specification Proof Obligations derived from those mappings.
 
 See:
 
+- [RM-ODP Correspondence Specifications](specification/COM1_ODP_CORRESPONDENCE_SPECIFICATIONS.md)
 - [Specification Proof Obligations](assurance/SPECIFICATION_PROOF_OBLIGATIONS.md)
 
 ## UML Projections
@@ -152,9 +153,15 @@ projections for engineering communication and integration:
 3. [Computational UML](uml/computational.puml)
 4. [Engineering UML](uml/engineering.puml)
 5. [Technology UML](uml/technology.puml)
+6. [RM-ODP / UML4ODP Correspondence UML](uml/correspondences.puml)
 
-The UML projections do not introduce additional Service Guarantees or lifecycle
-stages.
+The five viewpoint UML projections and the transversal correspondence UML
+projection do not introduce additional Service Guarantees, RM-ODP viewpoints or
+lifecycle stages.
+
+See also:
+
+- [RM-ODP / UML Index](specification/ODP_UML_Index.md)
 
 ## Integration Readiness
 

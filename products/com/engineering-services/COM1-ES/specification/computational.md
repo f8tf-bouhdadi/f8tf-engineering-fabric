@@ -312,16 +312,38 @@ collapsing RM-ODP viewpoint semantics:
 | Enterprise element | Computational correspondence |
 |---|---|
 | `ENT-COMM-01` | community whose operational service is represented by `COMP-OBJ-01` and `COMP-IF-01` |
-| `ENT-OBJ-01` | realized operationally by `COMP-IF-01`, `COMP-OP-01` and `COMP-RULE-02` through `COMP-RULE-05` |
 | `ENT-ROLE-01` | external invoker of `COMP-IF-01` / `COMP-OP-01` |
 | `ENT-ROLE-02` | `COMP-OBJ-01` — COM1 Framed Interaction Service Object |
-| `ENT-ROLE-03` | enterprise operational role; does not define an additional Computational operation |
+| `ENT-ROLE-03` | operational/Delivery role; does not define an additional Computational operation |
 | `ENT-PROC-01` | realized by one invocation of `COMP-OP-01` and its internal responsibility sequence |
+| `ENT-INTER-01` | `COMP-IF-01`, `COMP-OP-01`; applies to every occurrence of the COM1 bounded framed interaction |
 
 Enterprise roles remain Enterprise concepts.
 
 Their correspondence to Computational entities does not redefine them as
 Computational objects.
+
+---
+
+## Enterprise Policy and Role Correspondence
+
+The Enterprise policies constrain the behaviour choices of the
+`ENT-ROLE-02` Framed Interaction Service through the following Computational
+object types and rules:
+
+| Enterprise policy | Affected Enterprise role | Computational correspondence |
+|---|---|---|
+| `ENT-POL-01` | `ENT-ROLE-02` | `COMP-OBJ-02`, `COMP-RULE-02` |
+| `ENT-POL-02` | `ENT-ROLE-02` | `COMP-OBJ-03`, `COMP-RULE-03` |
+| `ENT-POL-03` | `ENT-ROLE-02` | `COMP-OBJ-04`, `COMP-RULE-04` |
+| `ENT-POL-04` | `ENT-ROLE-02` | `COMP-OBJ-05`, `COMP-RULE-05` |
+
+No separate Computational binding object is specified for the interaction
+between `ENT-ROLE-01` and `ENT-ROLE-02`.
+
+COM1 does not define an independently identified Computational stream for
+`ENT-INTER-01`; the offered interaction is specified by `COMP-IF-01` and
+`COMP-OP-01`.
 
 ---
 
@@ -375,6 +397,8 @@ The following are not additional offered Computational operations:
 - log inspection;
 - runtime configuration;
 - packaging;
+- qualification execution;
 - evidence persistence.
 
-Those concerns are outside the offered Computational interface.
+Those concerns belong to Engineering, Technology, Qualification, Delivery or
+Operation.

@@ -61,76 +61,146 @@ boundary.
 
 ---
 
-## Engineering Capsules
+## Engineering Capsule
 
-### ENG-CAP-01 — Interaction Processing Capsule
+### ENG-CAP-01 — COM1 Interaction Processing Capsule
 
-Supports the engineering realization of:
+The COM1 Engineering Capsule provides the enclosing technology-independent
+Engineering context for the COM1 interaction-processing structure.
 
+It supports:
+
+- `COMP-OBJ-01` through `COMP-OBJ-05`;
 - `COMP-IF-01`;
 - `COMP-OP-01`.
 
+The capsule contains:
+
+- `ENG-CLUSTER-01`.
+
+It preserves the Engineering Service Boundary and the declared Service
+Guarantees.
+
+It does not prescribe a process, runtime, deployment unit or concrete
+communication technology.
+
+---
+
+## Engineering Cluster
+
+### ENG-CLUSTER-01 — COM1 Interaction Processing Cluster
+
+The COM1 Interaction Processing Cluster groups the Basic Engineering Objects
+that jointly support one bounded framed interaction.
+
+It contains:
+
+- `ENG-BEO-01`;
+- `ENG-BEO-02`;
+- `ENG-BEO-03`;
+- `ENG-BEO-04`;
+- `ENG-BEO-05`.
+
+It is contained within:
+
+- `ENG-CAP-01`.
+
+The Engineering Viewpoint does not prescribe whether the cluster is realized
+in one process or across several processes.
+
+---
+
+## Basic Engineering Objects
+
+The following Basic Engineering Objects provide the explicit RM-ODP
+Engineering structures supporting the non-binding Computational objects.
+
+For COM1, each Basic Engineering Object belongs to `ENG-CLUSTER-01`.
+
+`ENG-CLUSTER-01` is contained within `ENG-CAP-01`.
+
+The Basic Engineering Objects provide the Engineering objects used for the
+Computational–Engineering object correspondence.
+
+### ENG-BEO-01 — Interaction Processing Basic Engineering Object
+
+Contained in:
+
+- `ENG-CLUSTER-01`.
+
+Corresponds to:
+
+- `COMP-OBJ-01`.
+
 Responsibilities:
 
-- receive one candidate interaction;
-- coordinate internal interaction processing;
-- propagate either a successful response or an explicit failure outcome;
-- preserve the Computational contract at the service boundary.
+- support the externally offered Computational interaction;
+- coordinate the Engineering interactions required for one invocation;
+- preserve the Computational contract and explicit outcome semantics.
 
-### ENG-CAP-02 — Admission Capsule
+### ENG-BEO-02 — Admission Basic Engineering Object
 
-Realizes:
+Contained in:
 
-- `COMP-OBJ-02` — Admission Responsibility.
+- `ENG-CLUSTER-01`.
 
-Responsibilities:
+Corresponds to:
 
-- obtain the declared message extent;
-- evaluate the applicable supported bound;
-- classify the candidate interaction as admitted or rejected;
-- prevent rejected interactions from entering successful completion processing.
-
-### ENG-CAP-03 — Completion Capsule
-
-Realizes:
-
-- `COMP-OBJ-03` — Completion Responsibility.
+- `COMP-OBJ-02`.
 
 Responsibilities:
 
-- accumulate message information belonging to one admitted interaction;
-- preserve payload ordering;
-- determine when the complete declared message has been received;
-- prevent incomplete information from being exposed as a complete admitted
-  message.
+- evaluate declared extent against the supported bound;
+- establish admission or rejection;
+- prevent rejected interaction state from entering successful completion.
 
-### ENG-CAP-04 — Response Capsule
+### ENG-BEO-03 — Completion Basic Engineering Object
 
-Realizes:
+Contained in:
 
-- `COMP-OBJ-04` — Response Responsibility.
+- `ENG-CLUSTER-01`.
 
-Responsibilities:
+Corresponds to:
 
-- receive one complete admitted message;
-- invoke the applicable application processing responsibility;
-- establish one successful response only when the response conditions are
-  satisfied;
-- propagate the response toward the service boundary.
-
-### ENG-CAP-05 — Failure Isolation Capsule
-
-Realizes:
-
-- `COMP-OBJ-05` — Failure-Isolation Responsibility.
+- `COMP-OBJ-03`.
 
 Responsibilities:
 
-- terminate or reject the current failed interaction;
-- prevent its failure state from redefining independent subsequent interaction
-  state;
-- preserve the ability of the service boundary to support subsequent
-  interactions.
+- accumulate admitted interaction information;
+- preserve required ordering;
+- establish completion only after complete declared reception.
+
+### ENG-BEO-04 — Response Basic Engineering Object
+
+Contained in:
+
+- `ENG-CLUSTER-01`.
+
+Corresponds to:
+
+- `COMP-OBJ-04`.
+
+Responsibilities:
+
+- accept one complete admitted message;
+- support response production;
+- propagate success only when response eligibility conditions hold.
+
+### ENG-BEO-05 — Failure Isolation Basic Engineering Object
+
+Contained in:
+
+- `ENG-CLUSTER-01`.
+
+Corresponds to:
+
+- `COMP-OBJ-05`.
+
+Responsibilities:
+
+- contain interaction-specific failure;
+- terminate or reject the affected interaction;
+- preserve subsequent independent interaction capability.
 
 ---
 
@@ -157,7 +227,7 @@ Required properties:
 
 ### ENG-IF-02 — Admission Engineering Interface
 
-Connects the Interaction Processing Capsule to the Admission Capsule.
+Connects `ENG-BEO-01` to `ENG-BEO-02` within `ENG-CLUSTER-01`.
 
 Carries the information required to evaluate:
 
@@ -174,7 +244,7 @@ Required properties:
 
 ### ENG-IF-03 — Completion Engineering Interface
 
-Connects the Interaction Processing Capsule to the Completion Capsule.
+Connects `ENG-BEO-01` to `ENG-BEO-03` within `ENG-CLUSTER-01`.
 
 Carries the information required to establish:
 
@@ -192,7 +262,7 @@ Required properties:
 
 ### ENG-IF-04 — Response Engineering Interface
 
-Connects the Interaction Processing Capsule to the Response Capsule.
+Connects `ENG-BEO-01` to `ENG-BEO-04` within `ENG-CLUSTER-01`.
 
 Carries:
 
@@ -209,7 +279,7 @@ Required properties:
 ### ENG-IF-05 — Failure Isolation Engineering Interface
 
 Supports propagation of interaction-specific failure information to the
-Failure Isolation Capsule.
+`ENG-BEO-05`.
 
 Required properties:
 
@@ -247,8 +317,8 @@ Required properties:
 
 Connects:
 
-- `ENG-CAP-01`;
-- `ENG-CAP-02`.
+- `ENG-BEO-01`;
+- `ENG-BEO-02`.
 
 Purpose:
 
@@ -264,8 +334,8 @@ Required properties:
 
 Connects:
 
-- `ENG-CAP-01`;
-- `ENG-CAP-03`.
+- `ENG-BEO-01`;
+- `ENG-BEO-03`.
 
 Purpose:
 
@@ -282,8 +352,8 @@ Required properties:
 
 Connects:
 
-- `ENG-CAP-01`;
-- `ENG-CAP-04`.
+- `ENG-BEO-01`;
+- `ENG-BEO-04`.
 
 Purpose:
 
@@ -299,7 +369,7 @@ Required properties:
 
 Connects failed interaction processing to:
 
-- `ENG-CAP-05`.
+- `ENG-BEO-05` within `ENG-CLUSTER-01`.
 
 Purpose:
 
@@ -333,11 +403,13 @@ The Technology Viewpoint determines the concrete communication mechanism.
 
 Supports the internal engineering interactions among:
 
-- `ENG-CAP-01`;
-- `ENG-CAP-02`;
-- `ENG-CAP-03`;
-- `ENG-CAP-04`;
-- `ENG-CAP-05`.
+- `ENG-BEO-01`;
+- `ENG-BEO-02`;
+- `ENG-BEO-03`;
+- `ENG-BEO-04`;
+- `ENG-BEO-05`;
+
+within `ENG-CLUSTER-01`.
 
 The Engineering Viewpoint does not prescribe whether these responsibilities are
 realized:
@@ -391,17 +463,76 @@ The Engineering realization shall preserve the ordering of message information
 within one interaction where that ordering is required by the Information
 contract.
 
+## Enterprise–Engineering Correspondence
+
+There are no additional COM1 Engineering structures introduced solely to
+represent Enterprise concepts.
+
+The following correspondence statements identify the Engineering support
+provided for the applicable Enterprise specification.
+
+### Enterprise Interaction Correspondence
+
+| Enterprise element | Engineering support |
+|---|---|
+| `ENT-INTER-01` | `ENG-IF-01`, `ENG-BIND-01`, `ENG-CH-01`, supported within `ENG-BND-01` and `ENG-CAP-01` |
+
+`ENT-INTER-01` applies to every COM1 bounded framed interaction.
+
+The service-side Engineering support for that interaction is provided by
+`ENG-CAP-01`, containing `ENG-CLUSTER-01` and its Basic Engineering Objects.
+
+COM1 does not prescribe an Engineering node or nucleus for this support.
+
+COM1 does not independently specify a distinct Engineering stub, binder,
+protocol object or interceptor for `ENT-INTER-01`.
+
+Those concepts shall not be inferred merely from the existence of
+`ENG-BIND-01` or `ENG-CH-01`.
+
+---
+
 ## Computational–Engineering Correspondence
 
-| Computational element | Engineering realization |
+### Computational Object Correspondence
+
+| Computational object | Basic Engineering Object | Supporting Engineering structure |
+|---|---|---|
+| `COMP-OBJ-01` | `ENG-BEO-01` | `ENG-BND-01`, `ENG-CLUSTER-01`, `ENG-CAP-01` |
+| `COMP-OBJ-02` | `ENG-BEO-02` | `ENG-CLUSTER-01`, `ENG-IF-02`, `ENG-BIND-02`, `ENG-CAP-01` |
+| `COMP-OBJ-03` | `ENG-BEO-03` | `ENG-CLUSTER-01`, `ENG-IF-03`, `ENG-BIND-03`, `ENG-CAP-01` |
+| `COMP-OBJ-04` | `ENG-BEO-04` | `ENG-CLUSTER-01`, `ENG-IF-04`, `ENG-BIND-04`, `ENG-CAP-01` |
+| `COMP-OBJ-05` | `ENG-BEO-05` | `ENG-CLUSTER-01`, `ENG-IF-05`, `ENG-BIND-05`, `ENG-CAP-01` |
+
+### Computational Interface and Operation Correspondence
+
+| Computational element | Engineering correspondence |
 |---|---|
-| `COMP-OBJ-01` | `ENG-BND-01`, `ENG-CAP-01` |
-| `COMP-IF-01` | `ENG-BND-01`, `ENG-IF-01`, `ENG-BIND-01`, `ENG-CH-01` |
-| `COMP-OP-01` | `ENG-CAP-01`, `ENG-BIND-01` |
-| `COMP-OBJ-02` | `ENG-CAP-02`, `ENG-IF-02`, `ENG-BIND-02` |
-| `COMP-OBJ-03` | `ENG-CAP-03`, `ENG-IF-03`, `ENG-BIND-03` |
-| `COMP-OBJ-04` | `ENG-CAP-04`, `ENG-IF-04`, `ENG-BIND-04` |
-| `COMP-OBJ-05` | `ENG-CAP-05`, `ENG-IF-05`, `ENG-BIND-05` |
+| `COMP-IF-01` | `ENG-IF-01`, supported by `ENG-BND-01`, `ENG-BIND-01`, `ENG-CH-01` |
+| `COMP-OP-01` | interaction initiated through `ENG-IF-01` and `ENG-BIND-01`, coordinated by `ENG-BEO-01` |
+
+The interaction corresponding to one execution of `COMP-OP-01` is supported by
+an Engineering interaction chain beginning at `ENG-IF-01` / `ENG-BIND-01`,
+passing through the applicable internal Engineering interfaces and bindings,
+and terminating in either successful response propagation or explicit
+interaction-failure propagation.
+
+`ENG-CH-01` supports the service-boundary portion of that interaction chain.
+
+`ENG-CH-02` supports the internal Engineering interactions among the Basic
+Engineering Objects within `ENG-CLUSTER-01`, contained in `ENG-CAP-01`.
+
+The Technology Viewpoint selects the concrete mechanisms that realize these
+channels and interactions.
+
+COM1 does not introduce a separate Computational binding object in its current
+Computational Specification. Therefore no correspondence to an independently
+identified Computational binding object is asserted here.
+
+### Computational Rule Correspondence
+
+| Computational rule | Engineering correspondence |
+|---|---|
 | `COMP-RULE-01` | `ENG-INV-01` |
 | `COMP-RULE-02` | `ENG-INV-02` |
 | `COMP-RULE-03` | `ENG-INV-03` |
@@ -416,10 +547,10 @@ contract.
 
 | Service Guarantee | Engineering elements |
 |---|---|
-| `G-COM1-BOUNDED` | `ENG-CAP-02`, `ENG-BIND-02`, `ENG-INV-02` |
-| `G-COM1-COMPLETE` | `ENG-CAP-03`, `ENG-BIND-03`, `ENG-INV-03`, `ENG-INV-06` |
-| `G-COM1-RESPONSE` | `ENG-CAP-04`, `ENG-BIND-04`, `ENG-INV-04` |
-| `G-COM1-ISOLATION` | `ENG-CAP-05`, `ENG-BIND-05`, `ENG-INV-05` |
+| `G-COM1-BOUNDED` | `ENG-BEO-02`, `ENG-BIND-02`, `ENG-INV-02` |
+| `G-COM1-COMPLETE` | `ENG-BEO-03`, `ENG-BIND-03`, `ENG-INV-03`, `ENG-INV-06` |
+| `G-COM1-RESPONSE` | `ENG-BEO-04`, `ENG-BIND-04`, `ENG-INV-04` |
+| `G-COM1-ISOLATION` | `ENG-BEO-05`, `ENG-BIND-05`, `ENG-INV-05` |
 
 The Service Guarantees remain authoritative.
 

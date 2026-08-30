@@ -1,0 +1,687 @@
+@startuml
+
+title COM1-ES — RM-ODP / UML4ODP Correspondence Projection
+
+' Canonical source:
+' COM1_ODP_CORRESPONDENCE_SPECIFICATIONS.md
+'
+' The textual correspondence specifications are authoritative.
+' This UML artifact is a graphical projection only.
+'
+' RM-ODP correspondence is pairwise and non-transitive.
+' F8TF Service Guarantee preservation is a distinct assurance relation.
+
+hide empty members
+skinparam packageStyle rectangle
+
+title CS-COM1-EI — Enterprise–Information Correspondence Specification
+
+package "endpoint viewpoint 1: COM1 Enterprise Viewpoint Specification" as CS_COM1_EI_VP1 {
+}
+
+package "endpoint viewpoint 2: COM1 Information Viewpoint Specification" as CS_COM1_EI_VP2 {
+}
+
+package "CS-COM1-EI\nEnterprise–Information Correspondence Specification" as CS_COM1_EI <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM1-EI-01\nEnterprise Information Preservation Rule" as CR_COM1_EI_01 <<CorrespondenceRule>>
+
+class "CL-COM1-EI-01\nBounded Framed Interaction Information" as CL_COM1_EI_01 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-INTER-01`"
+  endPoint2 = "`INF-OBJ-01` through `INF-OBJ-07`\n`INF-INV-01` through `INF-INV-08`\n`INF-DYN-01` through `INF-DYN-06`"
+}
+
+class "CL-COM1-EI-02\nSubmit Interaction" as CL_COM1_EI_02 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-ACT-01`"
+  endPoint2 = "`INF-OBJ-01`\n`INF-DYN-01`"
+}
+
+class "CL-COM1-EI-03\nAdmission" as CL_COM1_EI_03 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-ACT-02`"
+  endPoint2 = "`INF-OBJ-02`\n`INF-OBJ-04`\n`INF-DYN-02`"
+}
+
+class "CL-COM1-EI-04\nCompletion" as CL_COM1_EI_04 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-ACT-03`"
+  endPoint2 = "`INF-OBJ-03`\n`INF-OBJ-05`\n`INF-DYN-03`\n`INF-DYN-04`"
+}
+
+class "CL-COM1-EI-05\nResponse" as CL_COM1_EI_05 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-ACT-04`"
+  endPoint2 = "`INF-OBJ-06`\n`INF-DYN-05`"
+}
+
+class "CL-COM1-EI-06\nFailure Isolation" as CL_COM1_EI_06 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-ACT-05`"
+  endPoint2 = "`INF-OBJ-07`\n`INF-DYN-06`"
+}
+
+class "CL-COM1-EI-07\nBounded Admission Policy" as CL_COM1_EI_07 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-POL-01`"
+  endPoint2 = "`INF-INV-01`\n`INF-INV-02`\n`INF-INV-06`"
+}
+
+class "CL-COM1-EI-08\nComplete Reception Policy" as CL_COM1_EI_08 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-POL-02`"
+  endPoint2 = "`INF-INV-03`\n`INF-INV-04`\n`INF-INV-05`"
+}
+
+class "CL-COM1-EI-09\nResponse Eligibility Policy" as CL_COM1_EI_09 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-POL-03`"
+  endPoint2 = "`INF-INV-07`\n`INF-DYN-05`"
+}
+
+class "CL-COM1-EI-10\nFailure Isolation Policy" as CL_COM1_EI_10 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-POL-04`"
+  endPoint2 = "`INF-INV-08`\n`INF-DYN-06`"
+}
+
+}
+
+CS_COM1_EI ..> CS_COM1_EI_VP1 : <<CorrespondingSpecification>>
+CS_COM1_EI ..> CS_COM1_EI_VP2 : <<CorrespondingSpecification>>
+
+CR_COM1_EI_01 .. CL_COM1_EI_01 : constrains
+CR_COM1_EI_01 .. CL_COM1_EI_02 : constrains
+CR_COM1_EI_01 .. CL_COM1_EI_03 : constrains
+CR_COM1_EI_01 .. CL_COM1_EI_04 : constrains
+CR_COM1_EI_01 .. CL_COM1_EI_05 : constrains
+CR_COM1_EI_01 .. CL_COM1_EI_06 : constrains
+CR_COM1_EI_01 .. CL_COM1_EI_07 : constrains
+CR_COM1_EI_01 .. CL_COM1_EI_08 : constrains
+CR_COM1_EI_01 .. CL_COM1_EI_09 : constrains
+CR_COM1_EI_01 .. CL_COM1_EI_10 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+newpage
+
+title CS-COM1-EC — Enterprise–Computational Correspondence Specification
+
+package "endpoint viewpoint 1: COM1 Enterprise Viewpoint Specification" as CS_COM1_EC_VP1 {
+}
+
+package "endpoint viewpoint 2: COM1 Computational Viewpoint Specification" as CS_COM1_EC_VP2 {
+}
+
+package "CS-COM1-EC\nEnterprise–Computational Correspondence Specification" as CS_COM1_EC <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM1-EC-01\nEnterprise Computational Realization Rule" as CR_COM1_EC_01 <<CorrespondenceRule>>
+
+class "CL-COM1-EC-01\nBounded Framed Interaction Community" as CL_COM1_EC_01 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-COMM-01`"
+  endPoint2 = "`COMP-OBJ-01`\n`COMP-IF-01`"
+}
+
+class "CL-COM1-EC-02\nService Consumer Role" as CL_COM1_EC_02 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-ROLE-01`"
+  endPoint2 = "`COMP-IF-01`\n`COMP-OP-01`"
+}
+
+class "CL-COM1-EC-03\nFramed Interaction Service Role" as CL_COM1_EC_03 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-ROLE-02`"
+  endPoint2 = "`COMP-OBJ-01`"
+}
+
+class "CL-COM1-EC-04\nEnterprise Process" as CL_COM1_EC_04 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-PROC-01`"
+  endPoint2 = "`COMP-OP-01`"
+}
+
+class "CL-COM1-EC-05\nBounded Framed Interaction" as CL_COM1_EC_05 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-INTER-01`"
+  endPoint2 = "`COMP-IF-01`\n`COMP-OP-01`"
+}
+
+class "CL-COM1-EC-06\nSubmit Interaction Action" as CL_COM1_EC_06 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-ACT-01`"
+  endPoint2 = "`COMP-IF-01`\n`COMP-OP-01`"
+}
+
+class "CL-COM1-EC-07\nAdmission Action" as CL_COM1_EC_07 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-ACT-02`"
+  endPoint2 = "`COMP-OBJ-02`\n`COMP-RULE-02`"
+}
+
+class "CL-COM1-EC-08\nCompletion Action" as CL_COM1_EC_08 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-ACT-03`"
+  endPoint2 = "`COMP-OBJ-03`\n`COMP-RULE-03`"
+}
+
+class "CL-COM1-EC-09\nResponse Action" as CL_COM1_EC_09 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-ACT-04`"
+  endPoint2 = "`COMP-OBJ-04`\n`COMP-RULE-04`"
+}
+
+class "CL-COM1-EC-10\nFailure Isolation Action" as CL_COM1_EC_10 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-ACT-05`"
+  endPoint2 = "`COMP-OBJ-05`\n`COMP-RULE-05`"
+}
+
+class "CL-COM1-EC-11\nBounded Admission Policy" as CL_COM1_EC_11 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-POL-01`\n`ENT-ROLE-02`"
+  endPoint2 = "`COMP-OBJ-02`\n`COMP-RULE-02`"
+}
+
+class "CL-COM1-EC-12\nComplete Reception Policy" as CL_COM1_EC_12 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-POL-02`\n`ENT-ROLE-02`"
+  endPoint2 = "`COMP-OBJ-03`\n`COMP-RULE-03`"
+}
+
+class "CL-COM1-EC-13\nResponse Eligibility Policy" as CL_COM1_EC_13 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-POL-03`\n`ENT-ROLE-02`"
+  endPoint2 = "`COMP-OBJ-04`\n`COMP-RULE-04`"
+}
+
+class "CL-COM1-EC-14\nFailure Isolation Policy" as CL_COM1_EC_14 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-POL-04`\n`ENT-ROLE-02`"
+  endPoint2 = "`COMP-OBJ-05`\n`COMP-RULE-05`"
+}
+
+}
+
+CS_COM1_EC ..> CS_COM1_EC_VP1 : <<CorrespondingSpecification>>
+CS_COM1_EC ..> CS_COM1_EC_VP2 : <<CorrespondingSpecification>>
+
+CR_COM1_EC_01 .. CL_COM1_EC_01 : constrains
+CR_COM1_EC_01 .. CL_COM1_EC_02 : constrains
+CR_COM1_EC_01 .. CL_COM1_EC_03 : constrains
+CR_COM1_EC_01 .. CL_COM1_EC_04 : constrains
+CR_COM1_EC_01 .. CL_COM1_EC_05 : constrains
+CR_COM1_EC_01 .. CL_COM1_EC_06 : constrains
+CR_COM1_EC_01 .. CL_COM1_EC_07 : constrains
+CR_COM1_EC_01 .. CL_COM1_EC_08 : constrains
+CR_COM1_EC_01 .. CL_COM1_EC_09 : constrains
+CR_COM1_EC_01 .. CL_COM1_EC_10 : constrains
+CR_COM1_EC_01 .. CL_COM1_EC_11 : constrains
+CR_COM1_EC_01 .. CL_COM1_EC_12 : constrains
+CR_COM1_EC_01 .. CL_COM1_EC_13 : constrains
+CR_COM1_EC_01 .. CL_COM1_EC_14 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+newpage
+
+title CS-COM1-EENG — Enterprise–Engineering Correspondence Specification
+
+package "COM1 Enterprise Viewpoint Specification" as CS_COM1_EENG_VP1 {
+}
+
+package "COM1 Engineering Viewpoint Specification" as CS_COM1_EENG_VP2 {
+}
+
+package "CS-COM1-EENG\nEnterprise–Engineering Correspondence Specification" as CS_COM1_EENG <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM1-EENG-01\nEnterprise Engineering Support Rule" as CR_COM1_EENG_01 <<CorrespondenceRule>>
+
+class "CL-COM1-EENG-01\nBounded Framed Interaction Engineering Support" as CL_COM1_EENG_01 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-INTER-01`"
+  endPoint2 = "`ENG-IF-01`\n`ENG-BIND-01`\n`ENG-CH-01`\n`ENG-BND-01`\n`ENG-CAP-01`"
+}
+
+}
+
+CS_COM1_EENG ..> CS_COM1_EENG_VP1 : <<CorrespondingSpecification>>
+CS_COM1_EENG ..> CS_COM1_EENG_VP2 : <<CorrespondingSpecification>>
+
+CR_COM1_EENG_01 .. CL_COM1_EENG_01 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+newpage
+
+title CS-COM1-IC — Information–Computational Correspondence Specification
+
+package "COM1 Information Viewpoint Specification" as CS_COM1_IC_VP1 {
+}
+
+package "COM1 Computational Viewpoint Specification" as CS_COM1_IC_VP2 {
+}
+
+package "CS-COM1-IC\nInformation–Computational Correspondence Specification" as CS_COM1_IC <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM1-IC-01\nInformation Computational Realization Rule" as CR_COM1_IC_01 <<CorrespondenceRule>>
+
+class "CL-COM1-IC-01\nCandidate Framed Interaction" as CL_COM1_IC_01 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-01`"
+  endPoint2 = "`COMP-IF-01`\n`COMP-OP-01`\n`CandidateFramedInteraction`"
+}
+
+class "CL-COM1-IC-02\nDeclared Message Extent" as CL_COM1_IC_02 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-02`"
+  endPoint2 = "`COMP-OBJ-02`\n`COMP-RULE-02`"
+}
+
+class "CL-COM1-IC-03\nMessage Payload" as CL_COM1_IC_03 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-03`"
+  endPoint2 = "`COMP-OP-01`\n`COMP-OBJ-03`"
+}
+
+class "CL-COM1-IC-04\nAdmission Outcome" as CL_COM1_IC_04 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-04`"
+  endPoint2 = "`COMP-OBJ-02`\n`COMP-RULE-02`"
+}
+
+class "CL-COM1-IC-05\nComplete Admitted Message" as CL_COM1_IC_05 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-05`"
+  endPoint2 = "`COMP-OBJ-03`\n`COMP-RULE-03`"
+}
+
+class "CL-COM1-IC-06\nInteraction Response" as CL_COM1_IC_06 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-06`"
+  endPoint2 = "`COMP-IF-01`\n`COMP-OP-01`\n`InteractionResponse`"
+}
+
+class "CL-COM1-IC-07\nInteraction Failure Outcome" as CL_COM1_IC_07 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-07`"
+  endPoint2 = "`COMP-IF-01`\n`COMP-OP-01`\n`InteractionFailureOutcome`\n`COMP-OBJ-05`"
+}
+
+class "CL-COM1-IC-08\nInitial Interaction Context" as CL_COM1_IC_08 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INIT-01`"
+  endPoint2 = "`COMP-OP-01`"
+}
+
+class "CL-COM1-IC-09\nSubmission Dynamic Schema" as CL_COM1_IC_09 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-DYN-01`"
+  endPoint2 = "`COMP-OP-01`"
+}
+
+class "CL-COM1-IC-10\nAdmission Dynamic Schema" as CL_COM1_IC_10 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-DYN-02`"
+  endPoint2 = "`COMP-OBJ-02`\n`COMP-RULE-02`"
+}
+
+class "CL-COM1-IC-11\nCompletion Dynamic Schema" as CL_COM1_IC_11 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-DYN-03`"
+  endPoint2 = "`COMP-OBJ-03`\n`COMP-RULE-03`"
+}
+
+class "CL-COM1-IC-12\nComplete Reception Dynamic Schema" as CL_COM1_IC_12 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-DYN-04`"
+  endPoint2 = "`COMP-OBJ-03`\n`COMP-RULE-03`"
+}
+
+class "CL-COM1-IC-13\nResponse Dynamic Schema" as CL_COM1_IC_13 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-DYN-05`"
+  endPoint2 = "`COMP-OBJ-04`\n`COMP-RULE-04`"
+}
+
+class "CL-COM1-IC-14\nFailure Dynamic Schema" as CL_COM1_IC_14 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-DYN-06`"
+  endPoint2 = "`COMP-OBJ-05`\n`COMP-RULE-05`"
+}
+
+class "CL-COM1-IC-15\nInformation Invariant 01" as CL_COM1_IC_15 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-01`"
+  endPoint2 = "`COMP-RULE-02`"
+}
+
+class "CL-COM1-IC-16\nInformation Invariant 02" as CL_COM1_IC_16 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-02`"
+  endPoint2 = "`COMP-RULE-02`"
+}
+
+class "CL-COM1-IC-17\nInformation Invariant 03" as CL_COM1_IC_17 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-03`"
+  endPoint2 = "`COMP-RULE-03`"
+}
+
+class "CL-COM1-IC-18\nInformation Invariant 04" as CL_COM1_IC_18 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-04`"
+  endPoint2 = "`COMP-RULE-03`"
+}
+
+class "CL-COM1-IC-19\nInformation Invariant 05" as CL_COM1_IC_19 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-05`"
+  endPoint2 = "`COMP-RULE-03`"
+}
+
+class "CL-COM1-IC-20\nInformation Invariant 06" as CL_COM1_IC_20 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-06`"
+  endPoint2 = "`COMP-RULE-02`\n`COMP-RULE-06`"
+}
+
+class "CL-COM1-IC-21\nInformation Invariant 07" as CL_COM1_IC_21 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-07`"
+  endPoint2 = "`COMP-RULE-04`"
+}
+
+class "CL-COM1-IC-22\nInformation Invariant 08" as CL_COM1_IC_22 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-08`"
+  endPoint2 = "`COMP-RULE-05`"
+}
+
+}
+
+CS_COM1_IC ..> CS_COM1_IC_VP1 : <<CorrespondingSpecification>>
+CS_COM1_IC ..> CS_COM1_IC_VP2 : <<CorrespondingSpecification>>
+
+CR_COM1_IC_01 .. CL_COM1_IC_01 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_02 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_03 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_04 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_05 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_06 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_07 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_08 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_09 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_10 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_11 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_12 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_13 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_14 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_15 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_16 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_17 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_18 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_19 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_20 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_21 : constrains
+CR_COM1_IC_01 .. CL_COM1_IC_22 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+newpage
+
+title CS-COM1-CENG — Computational–Engineering Correspondence Specification
+
+package "COM1 Computational Viewpoint Specification" as CS_COM1_CENG_VP1 {
+}
+
+package "COM1 Engineering Viewpoint Specification" as CS_COM1_CENG_VP2 {
+}
+
+package "CS-COM1-CENG\nComputational–Engineering Correspondence Specification" as CS_COM1_CENG <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM1-CENG-01\nComputational Engineering Realization Rule" as CR_COM1_CENG_01 <<CorrespondenceRule>>
+
+class "CL-COM1-CENG-01\nFramed Interaction Service Object" as CL_COM1_CENG_01 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBJ-01`"
+  endPoint2 = "`ENG-BEO-01`\n`ENG-BND-01`\n`ENG-CLUSTER-01`\n`ENG-CAP-01`"
+}
+
+class "CL-COM1-CENG-02\nAdmission Responsibility" as CL_COM1_CENG_02 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBJ-02`"
+  endPoint2 = "`ENG-BEO-02`\n`ENG-CLUSTER-01`\n`ENG-IF-02`\n`ENG-BIND-02`\n`ENG-CAP-01`"
+}
+
+class "CL-COM1-CENG-03\nCompletion Responsibility" as CL_COM1_CENG_03 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBJ-03`"
+  endPoint2 = "`ENG-BEO-03`\n`ENG-CLUSTER-01`\n`ENG-IF-03`\n`ENG-BIND-03`\n`ENG-CAP-01`"
+}
+
+class "CL-COM1-CENG-04\nResponse Responsibility" as CL_COM1_CENG_04 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBJ-04`"
+  endPoint2 = "`ENG-BEO-04`\n`ENG-CLUSTER-01`\n`ENG-IF-04`\n`ENG-BIND-04`\n`ENG-CAP-01`"
+}
+
+class "CL-COM1-CENG-05\nFailure-Isolation Responsibility" as CL_COM1_CENG_05 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBJ-05`"
+  endPoint2 = "`ENG-BEO-05`\n`ENG-CLUSTER-01`\n`ENG-IF-05`\n`ENG-BIND-05`\n`ENG-CAP-01`"
+}
+
+class "CL-COM1-CENG-06\nBounded Framed Interaction Interface" as CL_COM1_CENG_06 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-IF-01`"
+  endPoint2 = "`ENG-IF-01`\n`ENG-BND-01`\n`ENG-BIND-01`\n`ENG-CH-01`"
+}
+
+class "CL-COM1-CENG-07\nSubmit Interaction Operation" as CL_COM1_CENG_07 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OP-01`"
+  endPoint2 = "`ENG-IF-01`\n`ENG-BIND-01`\n`ENG-BEO-01`"
+}
+
+class "CL-COM1-CENG-08\nInformation Contract Preservation Rule" as CL_COM1_CENG_08 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-RULE-01`"
+  endPoint2 = "`ENG-INV-01`"
+}
+
+class "CL-COM1-CENG-09\nBounded Admission Preservation Rule" as CL_COM1_CENG_09 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-RULE-02`"
+  endPoint2 = "`ENG-INV-02`"
+}
+
+class "CL-COM1-CENG-10\nComplete Reception Preservation Rule" as CL_COM1_CENG_10 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-RULE-03`"
+  endPoint2 = "`ENG-INV-03`"
+}
+
+class "CL-COM1-CENG-11\nResponse Eligibility Preservation Rule" as CL_COM1_CENG_11 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-RULE-04`"
+  endPoint2 = "`ENG-INV-04`"
+}
+
+class "CL-COM1-CENG-12\nFailure Isolation Rule" as CL_COM1_CENG_12 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-RULE-05`"
+  endPoint2 = "`ENG-INV-05`"
+}
+
+class "CL-COM1-CENG-13\nExplicit Outcome Rule" as CL_COM1_CENG_13 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-RULE-06`"
+  endPoint2 = "`ENG-INV-01`\n`ENG-IF-01`"
+}
+
+}
+
+CS_COM1_CENG ..> CS_COM1_CENG_VP1 : <<CorrespondingSpecification>>
+CS_COM1_CENG ..> CS_COM1_CENG_VP2 : <<CorrespondingSpecification>>
+
+CR_COM1_CENG_01 .. CL_COM1_CENG_01 : constrains
+CR_COM1_CENG_01 .. CL_COM1_CENG_02 : constrains
+CR_COM1_CENG_01 .. CL_COM1_CENG_03 : constrains
+CR_COM1_CENG_01 .. CL_COM1_CENG_04 : constrains
+CR_COM1_CENG_01 .. CL_COM1_CENG_05 : constrains
+CR_COM1_CENG_01 .. CL_COM1_CENG_06 : constrains
+CR_COM1_CENG_01 .. CL_COM1_CENG_07 : constrains
+CR_COM1_CENG_01 .. CL_COM1_CENG_08 : constrains
+CR_COM1_CENG_01 .. CL_COM1_CENG_09 : constrains
+CR_COM1_CENG_01 .. CL_COM1_CENG_10 : constrains
+CR_COM1_CENG_01 .. CL_COM1_CENG_11 : constrains
+CR_COM1_CENG_01 .. CL_COM1_CENG_12 : constrains
+CR_COM1_CENG_01 .. CL_COM1_CENG_13 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+newpage
+
+title CS-COM1-ENGT — Engineering–Technology Correspondence Specification
+
+package "COM1 Engineering Viewpoint Specification" as CS_COM1_ENGT_VP1 {
+}
+
+package "COM1 Technology Viewpoint Specification" as CS_COM1_ENGT_VP2 {
+}
+
+package "CS-COM1-ENGT\nEngineering–Technology Correspondence Specification" as CS_COM1_ENGT <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM1-ENGT-01\nEngineering Technology Realization Rule" as CR_COM1_ENGT_01 <<CorrespondenceRule>>
+
+class "CL-COM1-ENGT-01\nEngineering Boundary" as CL_COM1_ENGT_01 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-BND-01`"
+  endPoint2 = "`TECH-COMP-04`\n`TECH-MECH-01`\n`TECH-MECH-07`"
+}
+
+class "CL-COM1-ENGT-02\nInteraction Processing Capsule" as CL_COM1_ENGT_02 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-CAP-01`"
+  endPoint2 = "`TECH-COMP-02`\n`TECH-COMP-03`\n`TECH-COMP-04`"
+}
+
+class "CL-COM1-ENGT-03\nInteraction Processing Cluster" as CL_COM1_ENGT_03 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-CLUSTER-01`"
+  endPoint2 = "`TECH-COMP-02`\n`TECH-COMP-03`\n`TECH-COMP-04`"
+}
+
+class "CL-COM1-ENGT-04\nInteraction Processing BEO" as CL_COM1_ENGT_04 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-BEO-01`"
+  endPoint2 = "`TECH-COMP-02`\n`TECH-COMP-04`"
+}
+
+class "CL-COM1-ENGT-05\nAdmission BEO" as CL_COM1_ENGT_05 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-BEO-02`"
+  endPoint2 = "`TECH-COMP-02`\n`TECH-COMP-03`\n`TECH-MECH-03`"
+}
+
+class "CL-COM1-ENGT-06\nCompletion BEO" as CL_COM1_ENGT_06 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-BEO-03`"
+  endPoint2 = "`TECH-COMP-03`\n`TECH-MECH-04`"
+}
+
+class "CL-COM1-ENGT-07\nResponse BEO" as CL_COM1_ENGT_07 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-BEO-04`"
+  endPoint2 = "`TECH-COMP-04`\n`TECH-MECH-05`"
+}
+
+class "CL-COM1-ENGT-08\nFailure Isolation BEO" as CL_COM1_ENGT_08 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-BEO-05`"
+  endPoint2 = "`TECH-COMP-04`\n`TECH-MECH-06`"
+}
+
+class "CL-COM1-ENGT-09\nService Engineering Interface" as CL_COM1_ENGT_09 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-IF-01`"
+  endPoint2 = "`TECH-COMP-04`\n`TECH-MECH-01`\n`TECH-MECH-02`\n`TECH-MECH-05`"
+}
+
+class "CL-COM1-ENGT-10\nAdmission Engineering Interface" as CL_COM1_ENGT_10 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-IF-02`"
+  endPoint2 = "`TECH-COMP-02`\n`TECH-COMP-03`\n`TECH-MECH-03`"
+}
+
+class "CL-COM1-ENGT-11\nCompletion Engineering Interface" as CL_COM1_ENGT_11 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-IF-03`"
+  endPoint2 = "`TECH-COMP-03`\n`TECH-MECH-04`"
+}
+
+class "CL-COM1-ENGT-12\nResponse Engineering Interface" as CL_COM1_ENGT_12 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-IF-04`"
+  endPoint2 = "`TECH-COMP-04`\n`TECH-MECH-05`"
+}
+
+class "CL-COM1-ENGT-13\nFailure Isolation Engineering Interface" as CL_COM1_ENGT_13 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-IF-05`"
+  endPoint2 = "`TECH-COMP-04`\n`TECH-MECH-06`"
+}
+
+class "CL-COM1-ENGT-14\nService Engineering Binding" as CL_COM1_ENGT_14 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-BIND-01`"
+  endPoint2 = "`TECH-COMP-04`\n`TECH-MECH-01`"
+}
+
+class "CL-COM1-ENGT-15\nAdmission Engineering Binding" as CL_COM1_ENGT_15 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-BIND-02`"
+  endPoint2 = "`TECH-COMP-02`\n`TECH-COMP-03`"
+}
+
+class "CL-COM1-ENGT-16\nCompletion Engineering Binding" as CL_COM1_ENGT_16 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-BIND-03`"
+  endPoint2 = "`TECH-COMP-03`\n`TECH-MECH-04`"
+}
+
+class "CL-COM1-ENGT-17\nResponse Engineering Binding" as CL_COM1_ENGT_17 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-BIND-04`"
+  endPoint2 = "`TECH-COMP-04`\n`TECH-MECH-05`"
+}
+
+class "CL-COM1-ENGT-18\nFailure Isolation Engineering Binding" as CL_COM1_ENGT_18 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-BIND-05`"
+  endPoint2 = "`TECH-COMP-04`\n`TECH-MECH-06`"
+}
+
+class "CL-COM1-ENGT-19\nService Interaction Channel" as CL_COM1_ENGT_19 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-CH-01`"
+  endPoint2 = "`TECH-MECH-01`\n`TECH-MECH-02`"
+}
+
+class "CL-COM1-ENGT-20\nEngineering Invariant 01" as CL_COM1_ENGT_20 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-INV-01`"
+  endPoint2 = "`TECH-INV-01`"
+}
+
+class "CL-COM1-ENGT-21\nEngineering Invariant 02" as CL_COM1_ENGT_21 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-INV-02`"
+  endPoint2 = "`TECH-INV-02`"
+}
+
+class "CL-COM1-ENGT-22\nEngineering Invariant 03" as CL_COM1_ENGT_22 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-INV-03`"
+  endPoint2 = "`TECH-INV-03`"
+}
+
+class "CL-COM1-ENGT-23\nEngineering Invariant 04" as CL_COM1_ENGT_23 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-INV-04`"
+  endPoint2 = "`TECH-INV-04`"
+}
+
+class "CL-COM1-ENGT-24\nEngineering Invariant 05" as CL_COM1_ENGT_24 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-INV-05`"
+  endPoint2 = "`TECH-INV-05`"
+}
+
+class "CL-COM1-ENGT-25\nEngineering Invariant 06" as CL_COM1_ENGT_25 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-INV-06`"
+  endPoint2 = "`TECH-MECH-04`"
+}
+
+}
+
+CS_COM1_ENGT ..> CS_COM1_ENGT_VP1 : <<CorrespondingSpecification>>
+CS_COM1_ENGT ..> CS_COM1_ENGT_VP2 : <<CorrespondingSpecification>>
+
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_01 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_02 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_03 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_04 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_05 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_06 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_07 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_08 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_09 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_10 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_11 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_12 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_13 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_14 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_15 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_16 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_17 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_18 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_19 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_20 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_21 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_22 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_23 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_24 : constrains
+CR_COM1_ENGT_01 .. CL_COM1_ENGT_25 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+@enduml

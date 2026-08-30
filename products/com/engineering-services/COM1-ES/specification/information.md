@@ -350,6 +350,10 @@ Corresponds to:
 
 | Enterprise element | Information realization |
 |---|---|
+| `ENT-ROLE-01` | no distinct Information object type is introduced for the Service Consumer role |
+| `ENT-ROLE-02` | no distinct Information object type is introduced for the Framed Interaction Service role |
+| `ENT-ROLE-03` | no distinct Information object type is introduced for the Service Operator role |
+| `ENT-INTER-01` | represented by the Information objects, invariants and dynamic schemata governing one bounded framed interaction |
 | `ENT-ACT-01` | `INF-OBJ-01`, `INF-DYN-01` |
 | `ENT-ACT-02` | `INF-OBJ-02`, `INF-OBJ-04`, `INF-DYN-02` |
 | `ENT-ACT-03` | `INF-OBJ-03`, `INF-OBJ-05`, `INF-DYN-03`, `INF-DYN-04` |
