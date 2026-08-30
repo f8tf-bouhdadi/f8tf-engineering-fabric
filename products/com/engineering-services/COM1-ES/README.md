@@ -1,5 +1,20 @@
 # COM1-ES — Bounded Framed Message Interaction Engineering Service
 
+COM1-ES is a reusable communication engineering brick with explicit Service
+Guarantees and three successive assurance products designed to reduce risk
+across specification, realization and delivery:
+
+- **Product 1 — Assured Integration-Ready Engineering Service Specification**
+  reduces **Specification & Integration Risk**;
+- **Product 2 — Qualified Runtime**
+  reduces **Realization & Qualification Risk**;
+- **Product 3 — Qualified Delivery**
+  reduces **Delivery & Acquisition Risk**.
+
+The complete public engineering surface remains inspectable from the Service
+Contract and Service Guarantees through specification, integration,
+qualification and independent client verification.
+
 ## Engineering Service Products
 
 COM1-ES is provided through three successive lifecycle products governed by
@@ -117,7 +132,7 @@ The Service Guarantees remain authoritative across these specifications.
 The preservation of the authoritative Service Guarantees across the Product 1
 specification chain is made explicit through:
 
-- correspondence and refinement mappings between successive RM-ODP viewpoints;
+- applicable correspondence mappings between RM-ODP viewpoint specifications;
 - Specification Proof Obligations derived from those mappings.
 
 See:
@@ -180,7 +195,7 @@ Those concerns belong to subsequent lifecycle products.
 
     RM-ODP Specifications
         ->
-    Correspondence / Refinement Mappings
+    RM-ODP Correspondence Mappings
         ->
     Specification Proof Obligations
         ->
