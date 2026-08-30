@@ -38,8 +38,11 @@ Product 2 extends Product 1 through executable realization, executable
 qualification and Qualified Runtime Identity.
 
 Public Product 2 documentation exposes qualification and runtime-identity
-information without publishing the private development source tree or the
-runtime executable itself.
+information without publishing the private development source tree.
+
+The qualified executable delivery is published as:
+
+- [COM1 Qualified Runtime Delivery 1.0.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/com1-qualified-runtime-delivery-v1.0.0)
 
 Product 2 documentation:
 
