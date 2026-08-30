@@ -1,0 +1,47 @@
+# COM1 Product1 — Assured Integration-Ready Engineering Service Specification
+
+Service:
+
+COM1-ES — Bounded Framed Message Interaction Engineering Service
+
+Version:
+
+1.0.0
+
+## Purpose
+
+This package provides the assured integration-ready specification of COM1-ES.
+
+It is intended for system architects, engineering teams and integrators that
+need to derive or integrate a realization of COM1-ES while preserving its
+authoritative Service Contract and Service Guarantees.
+
+## Authoritative Service Guarantees
+
+- G-COM1-BOUNDED
+- G-COM1-COMPLETE
+- G-COM1-RESPONSE
+- G-COM1-ISOLATION
+
+## Product Boundary
+
+This Product1 package covers LCS-01 through LCS-07.
+
+It contains the Service Contract, RM-ODP viewpoint specifications,
+inter-viewpoint correspondence specifications, UML projections,
+Specification Proof Obligations, integrator traceability and the Product1
+realization mapping.
+
+It does not contain an executable realization, executable qualification,
+Qualified Runtime or Qualified Delivery.
+
+## Independent Verification
+
+From the extracted package root run:
+
+    bash ./VERIFY_CLIENT.sh
+
+A PASS establishes that the expected Product1 package is complete and that
+its delivered files match the integrity manifest.
+
+It does not constitute executable qualification.

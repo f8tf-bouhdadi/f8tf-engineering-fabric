@@ -1,0 +1,18 @@
+schema = "F8TF_PRODUCT_IDENTITY_V1"
+
+service_id = "COM1-ES"
+service_name = "Bounded Framed Message Interaction Engineering Service"
+
+product = "Product1"
+product_name = "Assured Integration-Ready Engineering Service Specification"
+version = "1.0.0"
+
+lifecycle_start = "LCS-01"
+lifecycle_end = "LCS-07"
+
+canonical_content_files = 17
+
+executable_included = false
+runtime_qualification_included = false
+qualified_runtime_included = false
+qualified_delivery_included = false
