@@ -4,7 +4,7 @@
 
 This document defines the Specification Proof Obligations required to establish
 that the COM1 Product 1 Engineering Service Specification preserves its
-authoritative Service Guarantees across the RM-ODP refinement chain.
+authoritative Service Guarantees across the Product 1 specification and correspondence structure.
 
 These obligations belong to:
 
@@ -21,9 +21,9 @@ They do not evaluate an executable realization.
 - `G-COM1-RESPONSE`
 - `G-COM1-ISOLATION`
 
-## Refinement Chain
+## Product 1 Specification Structure
 
-The specification refinement chain is:
+The Product 1 construction order is:
 
     Enterprise
         ->
@@ -37,8 +37,12 @@ The specification refinement chain is:
         ->
     Product 1 Realization Mapping
 
-Each correspondence shall preserve the Service Contract and the Service
-Guarantees supported by the upstream specification.
+This construction order does not define the RM-ODP correspondence graph.
+
+Applicable RM-ODP correspondences establish cross-viewpoint consistency.
+The Specification Preservation Obligations defined below establish whether the
+authoritative Service Guarantees remain preserved across the Product 1
+specification structure.
 
 ---
 
@@ -54,7 +58,7 @@ The bounded-admission obligation established by the Enterprise Specification
 shall remain preserved through the Information, Computational, Engineering and
 Technology specifications.
 
-### Refinement Basis
+### Preservation Basis
 
 Enterprise:
 
@@ -93,7 +97,7 @@ Technology:
 
 ### Required Disposition
 
-The correspondence chain shall preserve the condition that an interaction is
+The Product 1 specification structure shall preserve the condition that an interaction is
 admitted only when its declared payload extent satisfies the selected supported
 bound.
 
@@ -110,7 +114,7 @@ bound.
 The complete-reception obligation established by the Enterprise Specification
 shall remain preserved through all subsequent Product 1 specifications.
 
-### Refinement Basis
+### Preservation Basis
 
 Enterprise:
 
@@ -148,7 +152,7 @@ Technology:
 
 ### Required Disposition
 
-The correspondence chain shall preserve the condition that a complete admitted
+The Product 1 specification structure shall preserve the condition that a complete admitted
 message exists only after the complete declared payload has been received.
 
 ---
@@ -165,7 +169,7 @@ The response-eligibility obligation established by the Enterprise
 Specification shall remain preserved through all subsequent Product 1
 specifications.
 
-### Refinement Basis
+### Preservation Basis
 
 Enterprise:
 
@@ -198,7 +202,7 @@ Technology:
 
 ### Required Disposition
 
-The correspondence chain shall preserve the condition that a successful
+The Product 1 specification structure shall preserve the condition that a successful
 response is produced only after a complete admissible interaction has been
 established.
 
@@ -216,7 +220,7 @@ The interaction-failure-isolation obligation established by the Enterprise
 Specification shall remain preserved through all subsequent Product 1
 specifications.
 
-### Refinement Basis
+### Preservation Basis
 
 Enterprise:
 
@@ -249,7 +253,7 @@ Technology:
 
 ### Required Disposition
 
-The correspondence chain shall preserve the condition that failure of one
+The Product 1 specification structure shall preserve the condition that failure of one
 interaction does not prevent subsequent independent interactions from being
 processed.
 

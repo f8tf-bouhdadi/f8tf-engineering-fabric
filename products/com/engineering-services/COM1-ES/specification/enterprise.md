@@ -212,14 +212,17 @@ mappings.
 
 ---
 
-## Refinement Obligation
+## Viewpoint Correspondence and Realization Obligations
 
-The Information and Computational viewpoints shall refine the enterprise
-concepts defined here.
+The Information and Computational viewpoint specifications shall preserve the
+applicable enterprise concepts, policies and Service Guarantees through
+explicit viewpoint correspondences where applicable.
 
-Subsequent Engineering and Technology viewpoints shall define how the
-computational specification is realized.
+The Engineering and Technology viewpoint specifications shall define the
+technical realization of the applicable computational concerns while
+preserving traceability to the authoritative Service Guarantees.
 
-Explicit correspondence specifications shall preserve traceability between
-these viewpoints and between the Technology Viewpoint and the Product 1 realization
-mapping.
+Applicable RM-ODP correspondence specifications shall preserve cross-viewpoint
+traceability. The Product 1 realization mapping shall separately preserve
+traceability from the Technology Viewpoint Specification to the
+executable-realization boundary.
