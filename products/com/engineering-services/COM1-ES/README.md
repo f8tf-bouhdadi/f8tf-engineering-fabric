@@ -22,13 +22,18 @@ the same authoritative Service Guarantees.
 
 ### Product 1 — Assured Integration-Ready Engineering Service Specification
 
-**Public documentation available**
+**Public downloadable product**
 
 Product 1 defines and assures the COM1-ES specification and provides the
 integration-ready realization prescription.
 
-The Product 1 documentation is exposed directly through this COM1-ES public
-surface.
+The assured specification is published as:
+
+- [COM1 Assured Integration-Ready Specification 1.0.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/com1-assured-integration-ready-specification-v1.0.0)
+
+Product 1 documentation:
+
+- [Product 1 — Assured Integration-Ready Engineering Service Specification](products/product1-assured-integration-ready-specification/README.md)
 
 ### Product 2 — Qualified Runtime
 
