@@ -22,7 +22,7 @@ Product 1 establishes the Service Contract, authoritative Service Guarantees,
 RM-ODP specifications, applicable correspondences, specification assurance and
 integration-ready realization responsibilities.
 
-- [Review Product 1](SERVICE_CONTRACT.md)
+- [Review Product 1 — Assured Specification](products/product1-assured-integration-ready-specification/)
 
 ### Product 2 — Qualified Runtime
 

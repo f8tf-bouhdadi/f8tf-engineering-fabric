@@ -23,6 +23,30 @@ authoritative Service Contract and Service Guarantees.
 - G-COM2-03 — Interaction Identity Preservation
 - G-COM2-04 — Optional Interaction Information
 
+## Download — Assured Specification 1.0.0
+
+COM2-ES Product 1 is publicly downloadable.
+
+Release:
+
+https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/com2-assured-integration-ready-specification-v1.0.0
+
+Assured Specification archive:
+
+https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/com2-assured-integration-ready-specification-v1.0.0/F8TF_COM2_ASSURED_INTEGRATION_READY_SPECIFICATION_1.0.0.tar.gz
+
+Archive SHA-256 file:
+
+https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/com2-assured-integration-ready-specification-v1.0.0/F8TF_COM2_ASSURED_INTEGRATION_READY_SPECIFICATION_1.0.0.tar.gz.sha256
+
+Published archive SHA-256:
+
+`657227c8ba270dfb516266720f46fc9c46fb0cf9fd9dfa8f0b81c539001822dd`
+
+The package contains the complete COM2-ES Product1 specification surface for
+LCS-01 through LCS-07 together with Product identity, integrity manifest and
+recipient-side verification.
+
 ## Product Boundary
 
 This Product1 package covers LCS-01 through LCS-07.
