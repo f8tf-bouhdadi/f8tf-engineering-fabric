@@ -89,6 +89,30 @@ See:
 - [Qualification Summary](qualification/QUALIFICATION_SUMMARY.md)
 - [Integration Contract](integration/INTEGRATION_CONTRACT.md)
 
+## Download — Qualified Delivery 1.0.0
+
+COM2-ES Product 3 is publicly downloadable.
+
+Release:
+
+https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/com2-qualified-delivery-v1.0.0
+
+Sealed Delivery archive:
+
+https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/com2-qualified-delivery-v1.0.0/F8TF_COM2_SEALED_DELIVERY_1.0.0.tar.gz
+
+Archive SHA-256 file:
+
+https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/com2-qualified-delivery-v1.0.0/F8TF_COM2_SEALED_DELIVERY_1.0.0.tar.gz.sha256
+
+Published sealed archive SHA-256:
+
+`4ae3945f81739a6956c579108fc04ea996ddf8d3d1f4fe74f22253030a6b2d4a`
+
+The published archive is the exact sealed COM2 Qualified Delivery established
+by LCS-15 and subsequently exercised through LCS-16 Independent Client
+Verification and Operation.
+
 ## Product 3 Boundary
 
 Product 3 establishes:

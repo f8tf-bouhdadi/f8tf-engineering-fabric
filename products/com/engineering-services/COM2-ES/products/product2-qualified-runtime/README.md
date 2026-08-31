@@ -63,6 +63,29 @@ The identity allows a recipient of the corresponding runtime to establish that
 the obtained executable is the realization to which the published qualification
 result applies.
 
+## Download — Qualified Runtime 1.0.0
+
+COM2-ES Product 2 is publicly downloadable.
+
+Release:
+
+https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/com2-qualified-runtime-v1.0.0
+
+Qualified Runtime archive:
+
+https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/com2-qualified-runtime-v1.0.0/F8TF_COM2_QUALIFIED_RUNTIME_1.0.0.tar.gz
+
+Archive SHA-256 file:
+
+https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/com2-qualified-runtime-v1.0.0/F8TF_COM2_QUALIFIED_RUNTIME_1.0.0.tar.gz.sha256
+
+Published archive SHA-256:
+
+`0cfa86eb835571e10dd8f67f7e7a98934020418e8d987c5552cf92292153391a`
+
+The archive contains the six executable components identified by the published
+Qualified Runtime Identity together with recipient-side identity verification.
+
 ## Product 2 Boundary
 
 Product 2 establishes:
