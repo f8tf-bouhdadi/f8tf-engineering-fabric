@@ -1,6 +1,6 @@
-# F8TF Data Engineering Services
+# F8TF Data Services
 
-F8TF Data Engineering Services address recurring concerns related to
+F8TF Data Services address recurring concerns related to
 persistence, traceability, deterministic state management and auditability.
 
 The portfolio is introduced progressively, starting with the foundational need
@@ -226,7 +226,7 @@ The qualified DATA0 Standard Delivery 1.0 is publicly available.
 
 DATA0-ES provides the foundational persistence layer.
 
-Additional F8TF Data Engineering Services progressively address:
+Additional F8TF Data Services progressively address:
 
 - deterministic audit queries;
 - persistent document storage;

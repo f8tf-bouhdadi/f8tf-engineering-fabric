@@ -1,6 +1,6 @@
-# F8TF Communication Engineering Services
+# F8TF Communication Services
 
-F8TF Communication Engineering Services address explicit communication
+F8TF Communication Services address explicit communication
 requirements of open distributed systems through bounded Service Contracts,
 qualified guarantees and independently verifiable runtime realizations.
 
@@ -51,7 +51,7 @@ qualified runtime identity before operating COM1.
 
 [Review the complete COM1-ES public service definition](engineering-services/COM1-ES/)
 
-[Explore Communication Engineering Services](engineering-services/)
+[Explore Communication Services](engineering-services/)
 
 ### Evaluation
 
@@ -127,7 +127,7 @@ The three products are distinct:
 
 [Review the complete COM2-ES public Product 1 specification](engineering-services/COM2-ES/)
 
-[Explore Communication Engineering Services](engineering-services/)
+[Explore Communication Services](engineering-services/)
 
 ### Evaluation
 
