@@ -1,14 +1,16 @@
-# F8TF Engineering Services Catalog
+# F8TF Interaction Services Catalog
 
-F8TF provides Engineering Services for distributed systems through explicit
-Service Contracts, declared guarantees and verifiable engineering
-realizations.
+F8TF provides reusable Interaction Services for distributed systems.
+
+Each Interaction Service is an Engineering Service for a bounded form of
+interaction, defined by an explicit Service Contract and declared interaction
+guarantees.
 
 Start with the services currently presented for direct evaluation or use.
 
 ---
 
-## Featured Engineering Services
+## Featured Interaction Services
 
 ### DATA0-ES — Foundational Immutable Data Persistence
 
@@ -52,20 +54,20 @@ submissions with explicit outcomes and identity preservation.
 
 ---
 
-## Browse by Engineering Service Family
+## Browse by Interaction Service Family
 
-### Data Engineering Services
+### Data Services
 
-Engineering Services for persistent, deterministic, auditable and distributed
+Interaction Services for persistent, deterministic, auditable and distributed
 engineering data.
 
-[Browse Data Engineering Services](data/)
+[Browse Data Services](data/)
 
-### Communication Engineering Services
+### Communication Services
 
-Engineering Services for explicit and qualified communication interactions.
+Interaction Services for explicit and qualified communication interactions.
 
-[Browse Communication Engineering Services](com/)
+[Browse Communication Services](com/)
 
 ---
 

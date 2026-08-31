@@ -1,14 +1,18 @@
-# F8TF Engineering Services
+# F8TF Interaction Services
 
-Qualified engineering services for distributed systems.
+Reusable interaction services for distributed systems.
 
-F8TF provides ready-to-evaluate Engineering Services with explicit Service
-Contracts, qualified guarantees and independently verifiable runtime
-deliveries.
+An F8TF Interaction Service is a reusable Engineering Service for a bounded
+form of interaction in a distributed system, defined by an explicit Service
+Contract and declared interaction guarantees.
+
+F8TF provides ready-to-evaluate Interaction Services with assured designs,
+qualified runtimes and independently verifiable deliveries where those
+lifecycle products have been established.
 
 ---
 
-## Available Engineering Services
+## Available Interaction Services
 
 ### DATA0-ES — Foundational Immutable Data Persistence
 
@@ -84,7 +88,7 @@ submissions with explicit outcomes and identity preservation.
 
 ## How It Works
 
-1. Choose an Engineering Service.
+1. Choose an Interaction Service.
 2. Review its Service Contract, Service Guarantees and declared limitations.
 3. Evaluate the lifecycle product currently available for that service.
 4. When a Qualified Runtime or Qualified Delivery is available, verify it
@@ -94,11 +98,11 @@ submissions with explicit outcomes and identity preservation.
 
 ---
 
-## Browse Engineering Services
+## Browse Interaction Services
 
-Explore the current F8TF Engineering Services and service families.
+Explore the current F8TF Interaction Services and service families.
 
-[Browse Engineering Services](products/)
+[Browse Interaction Services](products/)
 
 ---
 
@@ -115,7 +119,7 @@ Some Qualified Runtime Deliveries are publicly available.
 
 F8TF does not ask customers merely to trust that an implementation works.
 
-Each qualified Engineering Service defines what it promises, the scope in
+Each qualified Interaction Service defines what it promises, the scope in
 which those promises apply, and how the corresponding runtime realization can
 be independently verified.
 
@@ -127,7 +131,7 @@ assessment.
 
 ## About F8TF
 
-F8TF develops qualified Engineering Services for open distributed systems.
+F8TF develops reusable Interaction Services for open distributed systems.
 
 [About F8TF](about/)
 
