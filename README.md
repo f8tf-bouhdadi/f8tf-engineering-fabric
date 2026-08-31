@@ -139,8 +139,8 @@ groups, including:
 - Repository Functions
 - Security Functions
 
-Formal engineering mechanisms, including Event-B refinement and proof
-obligations, support specification, realization qualification and evidence.
+Engineering assurance mechanisms support specification assurance,
+realization qualification and evidence.
 
 These engineering concerns identify the scope in which F8TF services are
 developed and classified. They do not imply that every transparency or

@@ -89,7 +89,6 @@ Current evidence may include:
 - audit packages;
 - RM-ODP specifications;
 - UML models;
-- documentary Event-B formalization;
 - traceable Channel and Binding decisions.
 
 Formal proof evidence remains a future qualification target and is not

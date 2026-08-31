@@ -679,7 +679,6 @@ DATA4-ES is qualified through:
 - an audit-ready DATA4 package at V1;
 - integrity and gate reports.
 
-Formal Event-B modelling and proof remain deferred to V2.
 
 ### Evaluation
 
@@ -785,7 +784,6 @@ DATA5-ES is qualified through:
 - a reproducible V1 audit package;
 - execution logs, gate reports and a SHA-256 integrity manifest.
 
-Formal Event-B modelling and proof remain deferred to V2.
 
 ### Evaluation
 
@@ -903,7 +901,6 @@ DATA6-ES is qualified through:
 - a reproducible V1 audit package;
 - a SHA-256 integrity manifest.
 
-Formal Event-B modelling and proof remain deferred to V2.
 
 ### Evaluation
 
@@ -1026,7 +1023,6 @@ DATA7-ES is qualified through:
 - a reproducible V1 audit package;
 - a SHA-256 integrity manifest.
 
-Formal Event-B modelling and proof remain deferred to V2.
 
 ### Evaluation
 
@@ -1145,7 +1141,6 @@ DATA8-ES is qualified through:
 - gate reports and execution logs;
 - reproducible V0 and V1 integrity manifests.
 
-Formal Event-B modelling and proof remain deferred to V2.
 
 ### Evaluation
 
@@ -1278,7 +1273,6 @@ DATA9-ES is qualified through:
 Observation of both logical shards in the qualified two-shard sample does not
 establish a general statistical balancing guarantee.
 
-Formal Event-B modelling and proof remain deferred to V2.
 
 ### Evaluation
 
