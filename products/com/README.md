@@ -1,138 +1,95 @@
 # F8TF Communication Services
 
-F8TF Communication Services address explicit communication
-requirements of open distributed systems through bounded Service Contracts,
-qualified guarantees and independently verifiable runtime realizations.
+F8TF Communication Services provide reusable Interaction Services for recurring
+distributed-system concerns involving message exchange, interaction admission,
+protocol behavior and communication guarantees.
+
+Each Interaction Service defines a bounded communication need together with its
+declared guarantees and available lifecycle products.
+
+## Available Communication Services
+
+### COM1-ES — Bounded Framed Message Interaction
+
+**Need**
+
+Carry complete application messages over a byte-stream transport while
+preventing malformed, oversized or incomplete framed inputs from being treated
+as valid messages.
+
+**Interaction promise**
+
+Establish bounded message interactions with explicit frame boundaries,
+complete payload reconstruction and controlled handling of invalid framed
+interactions.
+
+**Useful for**
+
+Stream protocols, message framing, protocol gateways and bounded
+request/response interactions.
+
+**Availability**
+
+Public service specification available. Qualified runtime realization exists
+within the declared qualified scope.
+
+[Explore COM1-ES](engineering-services/COM1-ES/)
 
 ---
 
-## COM1-ES — Bounded Framed Message Interaction Engineering Service
+### COM2-ES — Controlled Interaction Admission
 
-### Engineering Promise
+**Need**
 
-Establish bounded message interactions over a byte-stream transport through
-explicit frame boundaries, complete payload reconstruction and controlled
-handling of malformed or incomplete framed interactions.
+Receive structured interaction units through an explicit admission boundary
+before they enter normal system processing.
 
-### Customer Need
+**Interaction promise**
 
-Use COM1-ES when a stream-oriented transport must carry complete application
-messages while preventing malformed, oversized or incomplete framed inputs from
-being processed as valid messages.
+Every evaluated submission receives an explicit outcome, inadmissible
+submissions are not accepted, and interaction identity is preserved on
+acceptance.
 
-### Qualified V1 Guarantees
+**Useful for**
 
-COM1-ES currently qualifies four Service Guarantees:
+API boundaries, message admission, structured protocol inputs, validation and
+interaction identity preservation.
 
-- `G-COM1-BOUNDED` — Bounded Frame Acceptance;
-- `G-COM1-COMPLETE` — Complete Frame Reception;
-- `G-COM1-RESPONSE` — Response After Complete Admissible Input;
-- `G-COM1-ISOLATION` — Client Interaction Failure Isolation.
+**Availability**
 
-### Qualification
+Public Assured Design, Qualified Runtime and Verifiable Delivery lifecycle
+products are available.
 
-COM1-ES is V1 runtime-qualified within its declared Service Contract scope.
+[Explore COM2-ES](engineering-services/COM2-ES/)
 
-Qualification is performed against the real structured COM1 runtime and
-requires all four declared Service Guarantees to be satisfied.
+## Communication Service Portfolio
 
-### Qualified Runtime Delivery
+F8TF Communication Services are developed progressively around bounded
+interaction protocols and explicit communication guarantees.
 
-The executable realization is packaged as:
+Additional Communication Services may address recurring distributed-system
+interaction needs while preserving their own explicit service boundaries and
+guarantees.
 
-`F8TF_COM1_QUALIFIED_RUNTIME_DELIVERY_1.0.0`
+## Engineering and Technical Depth
 
-The Qualified Runtime Delivery is controlled and is not publicly distributed.
+An established F8TF Interaction Service may expose technical material including:
 
-Authorized recipients can independently verify the delivered package and
-qualified runtime identity before operating COM1.
+- its Customer Need and Engineering Promise;
+- its explicit Service Contract;
+- bounded communication guarantees;
+- RM-ODP engineering specifications;
+- qualification and verification material;
+- reproducible evidence;
+- Assured Design, Qualified Runtime or Verifiable Delivery products where
+  available.
 
-### Learn More
+Technical depth remains attached to the individual Interaction Service rather
+than to this family navigation page.
 
-[Review the complete COM1-ES public service definition](engineering-services/COM1-ES/)
+## Explore
 
-[Explore Communication Services](engineering-services/)
-
-### Evaluation
-
-For COM1-ES evaluation and technical feedback:
-
-`m.bouhdadi@um5r.ac.ma`
-
----
-
-## COM2-ES — Controlled Interaction Admission Engineering Service
-
-### Engineering Promise
-
-Establish a controlled admission boundary for structured interaction
-submissions so that every evaluated submission receives an explicit outcome,
-inadmissible submissions are not accepted, and interaction identity is
-preserved on acceptance.
-
-### Customer Need
-
-Use COM2-ES when a system receives structured interaction units and needs an
-explicit contractual admission decision before those interactions enter normal
-processing.
-
-### Product 1 Service Guarantees
-
-COM2-ES defines four authoritative Service Guarantees:
-
-- `G-COM2-01` — Controlled Interaction Admission;
-- `G-COM2-02` — Explicit Admission Outcome;
-- `G-COM2-03` — Interaction Identity Preservation;
-- `G-COM2-04` — Optional Interaction Information.
-
-### Public Lifecycle Products
-
-COM2-ES now exposes three distinct public lifecycle product surfaces.
-
-**Product 1 — Assured Integration-Ready Engineering Service Specification**
-
-`LCS-01` through `LCS-07`
-
-Establishes the Service Contract, Service Guarantees, RM-ODP specification,
-applicable correspondence, specification assurance and integration-ready
-realization responsibilities.
-
-[Review COM2 Product 1](engineering-services/COM2-ES/)
-
-**Product 2 — Qualified Runtime**
-
-`LCS-08` through `LCS-10`
-
-Establishes the executable realization, qualification against the four
-authoritative COM2-ES Service Guarantees and the exact Qualified Runtime
-Identity.
-
-[Review COM2 Product 2 — Qualified Runtime](engineering-services/COM2-ES/products/product2-qualified-runtime/)
-
-**Product 3 — Qualified Delivery**
-
-`LCS-11` through `LCS-16`
-
-Establishes the Operator Contract, Runtime Delivery, Delivery Verification,
-Qualified Delivery Identity, Sealed Delivery and Independent Client
-Verification and Operation.
-
-[Review COM2 Product 3 — Qualified Delivery](engineering-services/COM2-ES/products/product3-qualified-delivery/)
-
-The three products are distinct:
-
-**Assured Specification → Qualified Runtime → Qualified Delivery**
-
-### Learn More
-
-[Review the complete COM2-ES public Product 1 specification](engineering-services/COM2-ES/)
-
-[Explore Communication Services](engineering-services/)
-
-### Evaluation
-
-For COM2-ES evaluation and technical feedback:
-
-`m.bouhdadi@um5r.ac.ma`
-
----
+- [COM1-ES — Bounded Framed Message Interaction](engineering-services/COM1-ES/)
+- [COM2-ES — Controlled Interaction Admission](engineering-services/COM2-ES/)
+- [F8TF Interaction Services Catalog](../)
+- [F8TF Data Services](../data/)
