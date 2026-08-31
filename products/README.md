@@ -41,6 +41,17 @@ transport with explicit qualified framing guarantees.
 
 ---
 
+### COM2-ES — Controlled Interaction Admission
+
+Establish a controlled admission boundary for structured interaction
+submissions with explicit outcomes and identity preservation.
+
+**Availability:** Public Product 1 / Product 2 / Product 3
+
+[Explore COM2-ES](com/engineering-services/COM2-ES/)
+
+---
+
 ## Browse by Engineering Service Family
 
 ### Data Engineering Services
