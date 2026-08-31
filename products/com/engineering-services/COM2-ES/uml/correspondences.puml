@@ -1,0 +1,387 @@
+@startuml
+
+title COM2-ES — RM-ODP / UML4ODP Correspondence Projection
+
+' Canonical source:
+' COM2_ODP_CORRESPONDENCE_SPECIFICATIONS.md
+'
+' The textual correspondence specifications are authoritative.
+' This UML artifact is a graphical projection only.
+'
+' RM-ODP correspondence is pairwise and non-transitive.
+' F8TF Service Guarantee preservation is a distinct assurance relation.
+
+hide empty members
+skinparam packageStyle rectangle
+
+title CS-COM2-EI — Enterprise–Information Correspondence Specification
+
+package "endpoint viewpoint 1: COM2 Enterprise Viewpoint Specification" as CS_COM2_EI_VP1 {
+}
+
+package "endpoint viewpoint 2: COM2 Information Viewpoint Specification" as CS_COM2_EI_VP2 {
+}
+
+package "CS-COM2-EI\nEnterprise–Information Correspondence Specification" as CS_COM2_EI <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM2-EI-01\nEnterprise Information Preservation Rule" as CR_COM2_EI_01 <<CorrespondenceRule>>
+
+class "CL-COM2-EI-01\nSubmit Interaction for Admission" as CL_COM2_EI_01 <<CorrespondenceLink>> {
+  endPoint1 = "`UC-COM2-01`"
+  endPoint2 = "`INF-DYN-COM2-01`"
+}
+
+class "CL-COM2-EI-02\nControlled Admission Policy" as CL_COM2_EI_02 <<CorrespondenceLink>> {
+  endPoint1 = "`POL-COM2-01`"
+  endPoint2 = "`INF-INV-01`\n`INF-INV-02`\n`INF-INV-03`\n`INF-DYN-COM2-01`"
+}
+
+class "CL-COM2-EI-03\nExplicit Admission Outcome Policy" as CL_COM2_EI_03 <<CorrespondenceLink>> {
+  endPoint1 = "`POL-COM2-02`"
+  endPoint2 = "`INF-INV-06`\n`INF-INV-07`\n`INF-DYN-COM2-01`"
+}
+
+class "CL-COM2-EI-04\nInteraction Identity Preservation Policy" as CL_COM2_EI_04 <<CorrespondenceLink>> {
+  endPoint1 = "`POL-COM2-03`"
+  endPoint2 = "`INF-COR-COM2-01`\n`INF-INV-04`"
+}
+
+class "CL-COM2-EI-05\nOptional Interaction Information Policy" as CL_COM2_EI_05 <<CorrespondenceLink>> {
+  endPoint1 = "`POL-COM2-04`"
+  endPoint2 = "`INF-INV-05`"
+}
+
+}
+
+CS_COM2_EI ..> CS_COM2_EI_VP1 : <<CorrespondingSpecification>>
+CS_COM2_EI ..> CS_COM2_EI_VP2 : <<CorrespondingSpecification>>
+
+CR_COM2_EI_01 .. CL_COM2_EI_01 : constrains
+CR_COM2_EI_01 .. CL_COM2_EI_02 : constrains
+CR_COM2_EI_01 .. CL_COM2_EI_03 : constrains
+CR_COM2_EI_01 .. CL_COM2_EI_04 : constrains
+CR_COM2_EI_01 .. CL_COM2_EI_05 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+newpage
+
+title CS-COM2-EC — Enterprise–Computational Correspondence Specification
+
+package "endpoint viewpoint 1: COM2 Enterprise Viewpoint Specification" as CS_COM2_EC_VP1 {
+}
+
+package "endpoint viewpoint 2: COM2 Computational Viewpoint Specification" as CS_COM2_EC_VP2 {
+}
+
+package "CS-COM2-EC\nEnterprise–Computational Correspondence Specification" as CS_COM2_EC <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM2-EC-01\nEnterprise Computational Realization Rule" as CR_COM2_EC_01 <<CorrespondenceRule>>
+
+class "CL-COM2-EC-01\nSubmit Interaction Operation" as CL_COM2_EC_01 <<CorrespondenceLink>> {
+  endPoint1 = "`UC-COM2-01`"
+  endPoint2 = "`COMP-OP-COM2-01`"
+}
+
+}
+
+CS_COM2_EC ..> CS_COM2_EC_VP1 : <<CorrespondingSpecification>>
+CS_COM2_EC ..> CS_COM2_EC_VP2 : <<CorrespondingSpecification>>
+
+CR_COM2_EC_01 .. CL_COM2_EC_01 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+newpage
+
+title CS-COM2-EENG — Enterprise–Engineering Correspondence Specification
+
+package "endpoint viewpoint 1: COM2 Enterprise Viewpoint Specification" as CS_COM2_EENG_VP1 {
+}
+
+package "endpoint viewpoint 2: COM2 Engineering Viewpoint Specification" as CS_COM2_EENG_VP2 {
+}
+
+package "CS-COM2-EENG\nEnterprise–Engineering Correspondence Specification" as CS_COM2_EENG <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM2-EENG-01\nEnterprise Engineering Support Rule" as CR_COM2_EENG_01 <<CorrespondenceRule>>
+
+class "CL-COM2-EENG-01\nInteraction Admission Engineering Support" as CL_COM2_EENG_01 <<CorrespondenceLink>> {
+  endPoint1 = "`UC-COM2-01`"
+  endPoint2 = "`ENG-CH-COM2-01`"
+}
+
+}
+
+CS_COM2_EENG ..> CS_COM2_EENG_VP1 : <<CorrespondingSpecification>>
+CS_COM2_EENG ..> CS_COM2_EENG_VP2 : <<CorrespondingSpecification>>
+
+CR_COM2_EENG_01 .. CL_COM2_EENG_01 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+newpage
+
+title CS-COM2-IC — Information–Computational Correspondence Specification
+
+package "endpoint viewpoint 1: COM2 Information Viewpoint Specification" as CS_COM2_IC_VP1 {
+}
+
+package "endpoint viewpoint 2: COM2 Computational Viewpoint Specification" as CS_COM2_IC_VP2 {
+}
+
+package "CS-COM2-IC\nInformation–Computational Correspondence Specification" as CS_COM2_IC <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM2-IC-01\nInformation Computational Realization Rule" as CR_COM2_IC_01 <<CorrespondenceRule>>
+
+class "CL-COM2-IC-01\nSubmit Interaction Dynamic Schema" as CL_COM2_IC_01 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-DYN-COM2-01`"
+  endPoint2 = "`COMP-OP-COM2-01`"
+}
+
+class "CL-COM2-IC-02\nInteraction Submission" as CL_COM2_IC_02 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-01`"
+  endPoint2 = "`COMP-OP-COM2-01`\n`COMP-ACT-COM2-01`"
+}
+
+class "CL-COM2-IC-03\nEnvelope" as CL_COM2_IC_03 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-02`"
+  endPoint2 = "`COMP-ACT-COM2-01`\n`COMP-ACT-COM2-02`"
+}
+
+class "CL-COM2-IC-04\nAdmission Outcome" as CL_COM2_IC_04 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-03`"
+  endPoint2 = "`COMP-OP-COM2-01`\n`COMP-ACT-COM2-03`"
+}
+
+class "CL-COM2-IC-05\nAcceptance Outcome" as CL_COM2_IC_05 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-04`"
+  endPoint2 = "`COMP-OP-COM2-01`\n`COMP-ACT-COM2-03`"
+}
+
+class "CL-COM2-IC-06\nInvalid Request" as CL_COM2_IC_06 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-05`"
+  endPoint2 = "`COMP-OP-COM2-01`\n`COMP-ACT-COM2-03`"
+}
+
+class "CL-COM2-IC-07\nSubmission Envelope Identity Correspondence" as CL_COM2_IC_07 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-COR-COM2-01`"
+  endPoint2 = "`COMP-ACT-COM2-01`"
+}
+
+class "CL-COM2-IC-08\nAdmitted Identity Presence" as CL_COM2_IC_08 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-01`"
+  endPoint2 = "`COMP-ACT-COM2-02`"
+}
+
+class "CL-COM2-IC-09\nAdmitted Kind Presence" as CL_COM2_IC_09 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-02`"
+  endPoint2 = "`COMP-ACT-COM2-02`"
+}
+
+class "CL-COM2-IC-10\nAdmitted Payload Presence" as CL_COM2_IC_10 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-03`"
+  endPoint2 = "`COMP-ACT-COM2-02`"
+}
+
+class "CL-COM2-IC-11\nAccepted Identity Preservation" as CL_COM2_IC_11 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-04`"
+  endPoint2 = "`COMP-ACT-COM2-03`"
+}
+
+class "CL-COM2-IC-12\nOptional Meta Information" as CL_COM2_IC_12 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-05`"
+  endPoint2 = "`COMP-ACT-COM2-01`\n`COMP-ACT-COM2-02`"
+}
+
+class "CL-COM2-IC-13\nExplicit Evaluation Outcome" as CL_COM2_IC_13 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-06`"
+  endPoint2 = "`COMP-ACT-COM2-03`"
+}
+
+class "CL-COM2-IC-14\nExclusive Outcome" as CL_COM2_IC_14 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-07`"
+  endPoint2 = "`COMP-ACT-COM2-03`"
+}
+
+}
+
+CS_COM2_IC ..> CS_COM2_IC_VP1 : <<CorrespondingSpecification>>
+CS_COM2_IC ..> CS_COM2_IC_VP2 : <<CorrespondingSpecification>>
+
+CR_COM2_IC_01 .. CL_COM2_IC_01 : constrains
+CR_COM2_IC_01 .. CL_COM2_IC_02 : constrains
+CR_COM2_IC_01 .. CL_COM2_IC_03 : constrains
+CR_COM2_IC_01 .. CL_COM2_IC_04 : constrains
+CR_COM2_IC_01 .. CL_COM2_IC_05 : constrains
+CR_COM2_IC_01 .. CL_COM2_IC_06 : constrains
+CR_COM2_IC_01 .. CL_COM2_IC_07 : constrains
+CR_COM2_IC_01 .. CL_COM2_IC_08 : constrains
+CR_COM2_IC_01 .. CL_COM2_IC_09 : constrains
+CR_COM2_IC_01 .. CL_COM2_IC_10 : constrains
+CR_COM2_IC_01 .. CL_COM2_IC_11 : constrains
+CR_COM2_IC_01 .. CL_COM2_IC_12 : constrains
+CR_COM2_IC_01 .. CL_COM2_IC_13 : constrains
+CR_COM2_IC_01 .. CL_COM2_IC_14 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+newpage
+
+title CS-COM2-CENG — Computational–Engineering Correspondence Specification
+
+package "endpoint viewpoint 1: COM2 Computational Viewpoint Specification" as CS_COM2_CENG_VP1 {
+}
+
+package "endpoint viewpoint 2: COM2 Engineering Viewpoint Specification" as CS_COM2_CENG_VP2 {
+}
+
+package "CS-COM2-CENG\nComputational–Engineering Correspondence Specification" as CS_COM2_CENG <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM2-CENG-01\nComputational Engineering Realization Rule" as CR_COM2_CENG_01 <<CorrespondenceRule>>
+
+class "CL-COM2-CENG-01\nCOM2 Admission Processor" as CL_COM2_CENG_01 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBJ-COM2-01`"
+  endPoint2 = "`ENG-BEO-COM2-01`"
+}
+
+class "CL-COM2-CENG-02\nInteraction Admission Interface" as CL_COM2_CENG_02 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-IF-COM2-01`"
+  endPoint2 = "`ENG-IF-COM2-01`"
+}
+
+class "CL-COM2-CENG-03\nSubmit Operation Engineering Support" as CL_COM2_CENG_03 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OP-COM2-01`"
+  endPoint2 = "`ENG-IF-COM2-01`\n`ENG-CH-COM2-01`"
+}
+
+class "CL-COM2-CENG-04\nInterpret Submission Activity" as CL_COM2_CENG_04 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-ACT-COM2-01`"
+  endPoint2 = "`ENG-MECH-COM2-01`\n`ENG-MECH-COM2-02`"
+}
+
+class "CL-COM2-CENG-05\nEvaluate Admission Activity" as CL_COM2_CENG_05 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-ACT-COM2-02`"
+  endPoint2 = "`ENG-CON-COM2-01`"
+}
+
+class "CL-COM2-CENG-06\nProduce Outcome Activity" as CL_COM2_CENG_06 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-ACT-COM2-03`"
+  endPoint2 = "`ENG-MECH-COM2-03`"
+}
+
+}
+
+CS_COM2_CENG ..> CS_COM2_CENG_VP1 : <<CorrespondingSpecification>>
+CS_COM2_CENG ..> CS_COM2_CENG_VP2 : <<CorrespondingSpecification>>
+
+CR_COM2_CENG_01 .. CL_COM2_CENG_01 : constrains
+CR_COM2_CENG_01 .. CL_COM2_CENG_02 : constrains
+CR_COM2_CENG_01 .. CL_COM2_CENG_03 : constrains
+CR_COM2_CENG_01 .. CL_COM2_CENG_04 : constrains
+CR_COM2_CENG_01 .. CL_COM2_CENG_05 : constrains
+CR_COM2_CENG_01 .. CL_COM2_CENG_06 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+newpage
+
+title CS-COM2-ENGT — Engineering–Technology Correspondence Specification
+
+package "endpoint viewpoint 1: COM2 Engineering Viewpoint Specification" as CS_COM2_ENGT_VP1 {
+}
+
+package "endpoint viewpoint 2: COM2 Technology Viewpoint Specification" as CS_COM2_ENGT_VP2 {
+}
+
+package "CS-COM2-ENGT\nEngineering–Technology Correspondence Specification" as CS_COM2_ENGT <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM2-ENGT-01\nEngineering Technology Realization Rule" as CR_COM2_ENGT_01 <<CorrespondenceRule>>
+
+class "CL-COM2-ENGT-01\nInteraction Admission Channel" as CL_COM2_ENGT_01 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-CH-COM2-01`"
+  endPoint2 = "`TECH-BIND-COM2-01`"
+}
+
+class "CL-COM2-ENGT-02\nSubmission Transfer" as CL_COM2_ENGT_02 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-MECH-COM2-01`"
+  endPoint2 = "`TECH-END-COM2-01`"
+}
+
+class "CL-COM2-ENGT-03\nSubmission Representation" as CL_COM2_ENGT_03 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-MECH-COM2-02`"
+  endPoint2 = "`TECH-REP-COM2-01`\n`TECH-CODEC-COM2-01`"
+}
+
+class "CL-COM2-ENGT-04\nOutcome Transfer" as CL_COM2_ENGT_04 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-MECH-COM2-03`"
+  endPoint2 = "`TECH-OUT-COM2-01`"
+}
+
+class "CL-COM2-ENGT-05\nAdmission Evaluation Constraint" as CL_COM2_ENGT_05 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-CON-COM2-01`"
+  endPoint2 = "`TECH-CON-COM2-01`"
+}
+
+class "CL-COM2-ENGT-06\nExplicit Outcome Constraint" as CL_COM2_ENGT_06 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-CON-COM2-02`"
+  endPoint2 = "`TECH-CON-COM2-02`"
+}
+
+class "CL-COM2-ENGT-07\nIdentity Preservation Constraint" as CL_COM2_ENGT_07 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-CON-COM2-03`"
+  endPoint2 = "`TECH-CON-COM2-03`"
+}
+
+class "CL-COM2-ENGT-08\nOptional Meta Constraint" as CL_COM2_ENGT_08 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-CON-COM2-04`"
+  endPoint2 = "`TECH-CON-COM2-04`"
+}
+
+}
+
+CS_COM2_ENGT ..> CS_COM2_ENGT_VP1 : <<CorrespondingSpecification>>
+CS_COM2_ENGT ..> CS_COM2_ENGT_VP2 : <<CorrespondingSpecification>>
+
+CR_COM2_ENGT_01 .. CL_COM2_ENGT_01 : constrains
+CR_COM2_ENGT_01 .. CL_COM2_ENGT_02 : constrains
+CR_COM2_ENGT_01 .. CL_COM2_ENGT_03 : constrains
+CR_COM2_ENGT_01 .. CL_COM2_ENGT_04 : constrains
+CR_COM2_ENGT_01 .. CL_COM2_ENGT_05 : constrains
+CR_COM2_ENGT_01 .. CL_COM2_ENGT_06 : constrains
+CR_COM2_ENGT_01 .. CL_COM2_ENGT_07 : constrains
+CR_COM2_ENGT_01 .. CL_COM2_ENGT_08 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+@enduml

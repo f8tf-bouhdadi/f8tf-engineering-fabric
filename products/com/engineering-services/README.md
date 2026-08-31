@@ -17,6 +17,7 @@ assets and may declare:
 Current publicly described Communication Engineering Services:
 
 - [COM1-ES — Bounded Framed Message Interaction Engineering Service](COM1-ES/)
+- [COM2-ES — Controlled Interaction Admission Engineering Service](COM2-ES/)
 
 Implementation source and controlled executable Runtime Deliveries are not
 part of this public service-definition surface unless explicitly stated.

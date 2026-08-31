@@ -1,0 +1,40 @@
+@startuml COM2_Technology_Sequence_UC01
+
+title COM2 — Technology Viewpoint — Reference Binding for submit
+
+actor "Interaction Submitter" as Submitter
+participant "HTTP POST /send" as Endpoint
+participant "System.Text.Json" as Codec
+participant "COM2 Admission Processor" as Processor
+
+Submitter -> Endpoint : HTTP POST\nJSON interaction submission
+
+Endpoint -> Codec : interpret JSON
+
+alt representation failure
+  Codec --> Endpoint : interpretation failure
+  Endpoint --> Submitter : HTTP 400\nrejected outcome
+
+else representation established
+  Codec --> Endpoint : Envelope-compatible information
+  Endpoint -> Processor : submit-compatible interaction
+
+  alt admission rejected
+    Processor --> Endpoint : InvalidRequest
+    Endpoint --> Submitter : HTTP 400\nrejected outcome
+
+  else admission accepted
+    Processor --> Endpoint : AcceptanceOutcome
+    Endpoint --> Submitter : HTTP 200\naccepted + id + receivedAt
+  end
+end
+
+note right of Endpoint
+TECH-BIND-COM2-01
+TECH-END-COM2-01
+
+realizes:
+ENG-CH-COM2-01
+end note
+
+@enduml

@@ -1,0 +1,68 @@
+@startuml COM2_Engineering_Classes
+
+title COM2 — Engineering Viewpoint — Interaction Structure
+
+skinparam classAttributeIconSize 0
+
+class "Interaction Submitter" as Submitter <<Engineering Role>>
+
+class "COM2 Admission Processor" as Processor <<Computational Object>>
+
+class "COM2 Admission Processing Basic Engineering Object" as BEO <<Basic Engineering Object>>
+
+interface "Interaction Admission Engineering Interface" as EngIF <<Engineering Interface>>
+
+class "Interaction Admission Channel" as Channel <<Engineering Channel>>
+
+class "Submission Transfer" as Transfer <<Engineering Mechanism>>
+
+class "Submission Representation" as Representation <<Engineering Mechanism>>
+
+class "Outcome Transfer" as Outcome <<Engineering Mechanism>>
+
+Submitter -- Channel : uses
+Channel -- EngIF : supports interaction through
+BEO -- EngIF : offers
+BEO ..> Processor : corresponds to
+
+Channel *-- Transfer
+Channel *-- Representation
+Channel *-- Outcome
+
+note right of BEO
+ENG-BEO-COM2-01
+
+corresponds to:
+COMP-OBJ-COM2-01
+end note
+
+note right of EngIF
+ENG-IF-COM2-01
+
+corresponds to:
+COMP-IF-COM2-01
+
+supports:
+COMP-OP-COM2-01
+end note
+
+note right of Channel
+ENG-CH-COM2-01
+
+supports:
+COMP-OP-COM2-01
+end note
+
+note bottom of Transfer
+ENG-MECH-COM2-01
+end note
+
+note bottom of Representation
+ENG-MECH-COM2-02
+end note
+
+note bottom of Outcome
+ENG-MECH-COM2-03
+end note
+
+@enduml

@@ -1,0 +1,42 @@
+@startuml COM2_Enterprise_Classes
+
+title COM2 — Enterprise Viewpoint — Service Structure
+
+left to right direction
+skinparam classAttributeIconSize 0
+
+class "Interaction Submitter" as Submitter <<Enterprise Role>>
+
+class "COM2 Service" as Service <<Service>>
+
+class "Enterprise Service Contract" as Contract <<Service Contract>>
+
+class "G-COM2-01\nControlled Interaction Admission" as G1 <<Service Guarantee>>
+
+class "G-COM2-02\nExplicit Admission Outcome" as G2 <<Service Guarantee>>
+
+class "G-COM2-03\nInteraction Identity Preservation" as G3 <<Service Guarantee>>
+
+class "G-COM2-04\nOptional Interaction Information" as G4 <<Service Guarantee>>
+
+Submitter --> Service : uses
+
+Contract --> Service : governs
+
+Contract --> G1 : defines
+Contract --> G2 : defines
+Contract --> G3 : defines
+Contract --> G4 : defines
+
+G1 ..> Service : constrains
+G2 ..> Service : constrains
+G3 ..> Service : constrains
+G4 ..> Service : constrains
+
+note bottom of Service
+Enterprise use:
+UC-COM2-01
+Submit Interaction for Admission
+end note
+
+@enduml

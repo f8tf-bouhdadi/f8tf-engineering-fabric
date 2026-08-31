@@ -1,0 +1,75 @@
+@startuml COM2_Technology_Classes
+
+title COM2 — Technology Viewpoint — Structured Reference Architecture
+
+skinparam classAttributeIconSize 0
+
+class "Com2.Domain" as Domain <<Technology Component>> {
+  InteractionSubmission
+  Envelope
+  AdmissionOutcome
+}
+
+class "Com2.Application" as Application <<Technology Component>> {
+  AdmissionProcessor
+  IInteractionInterpreter
+  IClock
+}
+
+class "Com2.Platform" as Platform <<Technology Component>> {
+  JsonInteractionInterpreter
+  SystemClock
+}
+
+class "Com2.Api" as Api <<Technology Boundary Component>> {
+  HTTP request/response
+  POST /send
+}
+
+class "JSON Representation" as Json <<Technology Representation>>
+
+class "System.Text.Json" as Codec <<Technology Codec>>
+
+Domain <.. Application : depends on
+Application <.. Platform : implements ports for
+
+Api --> Application : invokes
+Api --> Platform : composes
+
+Api --> Json : receives / emits
+Platform --> Codec : uses
+Codec --> Domain : establishes Envelope
+
+note right of Domain
+TECH-ARCH-COM2-01
+TECH-COMP-COM2-01
+end note
+
+note right of Application
+TECH-ARCH-COM2-02
+TECH-COMP-COM2-02
+end note
+
+note right of Platform
+TECH-ARCH-COM2-03
+TECH-COMP-COM2-03
+end note
+
+note right of Api
+TECH-ARCH-COM2-04
+TECH-COMP-COM2-04
+
+TECH-BIND-COM2-01
+TECH-END-COM2-01
+TECH-OUT-COM2-01
+end note
+
+note bottom of Json
+TECH-REP-COM2-01
+end note
+
+note bottom of Codec
+TECH-CODEC-COM2-01
+end note
+
+@enduml

@@ -1,0 +1,67 @@
+@startuml COM2_Information_Dynamic_UC01
+
+title COM2 — Information Viewpoint — INF-DYN-COM2-01
+
+start
+
+:InteractionSubmission exists;
+
+:Evaluate submission for admission;
+
+if (Can establish Envelope?) then (no)
+
+  :Create InvalidRequest;
+
+  note right
+  Post:
+  no Envelope admitted
+  exactly one AdmissionOutcome exists
+  end note
+
+else (yes)
+
+  :Envelope established;
+
+  if (Admission conditions hold?) then (no)
+
+    :Reject Envelope;
+    :Create InvalidRequest;
+
+    note right
+    Post:
+    Envelope not admitted
+    exactly one AdmissionOutcome exists
+    end note
+
+  else (yes)
+
+    :Admit Envelope;
+    :Create AcceptanceOutcome;
+
+    note right
+    Post:
+    Accepted = true
+    AcceptanceOutcome.Id = Envelope.Id
+    exactly one AdmissionOutcome exists
+    end note
+
+  endif
+endif
+
+stop
+
+note left
+UC-COM2-01
+Submit Interaction for Admission
+
+Pre:
+InteractionSubmission exists
+
+Applicable guarantees:
+G-COM2-01
+G-COM2-02
+G-COM2-03
+G-COM2-04
+end note
+
+@enduml

@@ -1,0 +1,73 @@
+@startuml COM2_Information_Classes
+
+title COM2 — Information Viewpoint — Static Schema
+
+skinparam classAttributeIconSize 0
+
+class InteractionSubmission <<Information Object>>
+
+class Envelope <<Information Object>> {
+  +Id
+  +Kind
+  +Payload
+  +Meta [0..1]
+}
+
+abstract class AdmissionOutcome <<Information Object>>
+
+class AcceptanceOutcome <<Information Object>> {
+  +Accepted
+  +Id
+  +ReceivedAt
+}
+
+class InvalidRequest <<Information Object>> {
+  +Error
+  +Message
+}
+
+InteractionSubmission --> Envelope : may establish
+
+note on link
+INF-COR-COM2-01
+when Envelope is established:
+Envelope.Id =
+submitted interaction identity
+end note
+
+InteractionSubmission --> AdmissionOutcome : produces
+
+AdmissionOutcome <|-- AcceptanceOutcome
+AdmissionOutcome <|-- InvalidRequest
+
+Envelope --> AcceptanceOutcome : admitted with
+Envelope --> InvalidRequest : rejected with
+
+note right of Envelope
+INF-INV-01
+Id present and non-empty when admitted
+
+INF-INV-02
+Kind present and non-empty when admitted
+
+INF-INV-03
+Payload present and non-null when admitted
+
+INF-INV-05
+Meta optional
+end note
+
+note right of AdmissionOutcome
+INF-INV-06
+Exactly one outcome per evaluated submission
+
+INF-INV-07
+AcceptanceOutcome xor InvalidRequest
+end note
+
+note right of AcceptanceOutcome
+INF-INV-04
+AcceptanceOutcome.Id = Envelope.Id
+end note
+
+@enduml

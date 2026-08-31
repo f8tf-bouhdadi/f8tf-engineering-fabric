@@ -1,0 +1,78 @@
+@startuml COM2_Computational_Classes
+
+title COM2 — Computational Viewpoint — Processing Structure
+
+skinparam classAttributeIconSize 0
+
+class "COM2 Admission Processor" as Processor <<Computational Object>>
+
+interface "Interaction Admission Interface" as AdmissionIF <<Computational Interface>> {
+  +submit(InteractionSubmission) : AdmissionOutcome
+}
+
+class "Interpret Submission" as Interpret <<Internal Computational Activity>>
+
+class "Evaluate Admission" as Evaluate <<Internal Computational Activity>>
+
+class "Produce Outcome" as Produce <<Internal Computational Activity>>
+
+class InteractionSubmission <<Information Type>>
+class Envelope <<Information Type>>
+
+abstract class AdmissionOutcome <<Information Type>>
+class AcceptanceOutcome <<Information Type>>
+class InvalidRequest <<Information Type>>
+
+Processor -- AdmissionIF : offers
+
+Processor *-- Interpret : performs
+Processor *-- Evaluate : performs
+Processor *-- Produce : performs
+
+AdmissionIF ..> InteractionSubmission : input
+AdmissionIF ..> AdmissionOutcome : output
+
+Interpret ..> InteractionSubmission : input
+Interpret ..> Envelope : establishes
+
+Evaluate ..> Envelope : evaluates
+
+Produce ..> AdmissionOutcome : produces
+
+AdmissionOutcome <|-- AcceptanceOutcome
+AdmissionOutcome <|-- InvalidRequest
+
+Interpret -[hidden]-> Evaluate
+Evaluate -[hidden]-> Produce
+
+note right of AdmissionIF
+COMP-IF-COM2-01
+
+COMP-OP-COM2-01
+submit(...)
+
+PUBLIC
+end note
+
+note bottom of Interpret
+COMP-ACT-COM2-01
+internal
+end note
+
+note bottom of Evaluate
+COMP-ACT-COM2-02
+internal
+end note
+
+note bottom of Produce
+COMP-ACT-COM2-03
+internal
+end note
+
+note right of Produce
+COMP-OP-COM2-01 realizes:
+UC-COM2-01
+INF-DYN-COM2-01
+end note
+
+@enduml

@@ -1,0 +1,33 @@
+@startuml COM2_Engineering_Sequence_UC01
+
+title COM2 — Engineering Viewpoint — Interaction Admission Channel
+
+actor "Interaction Submitter" as Submitter
+participant "Interaction Admission Channel" as Channel
+participant "COM2 Admission Processor" as Processor
+
+Submitter -> Channel : interaction submission
+
+Channel -> Channel : ENG-MECH-COM2-01\nSubmission Transfer
+Channel -> Channel : ENG-MECH-COM2-02\nSubmission Representation
+
+Channel -> Processor : submit-compatible interaction
+
+Processor -> Processor : COMP-ACT-COM2-01
+Processor -> Processor : COMP-ACT-COM2-02
+Processor -> Processor : COMP-ACT-COM2-03
+
+Processor --> Channel : AdmissionOutcome
+
+Channel -> Channel : ENG-MECH-COM2-03\nOutcome Transfer
+
+Channel --> Submitter : explicit admission outcome
+
+note right of Channel
+ENG-CH-COM2-01
+
+realizes:
+COMP-OP-COM2-01
+end note
+
+@enduml

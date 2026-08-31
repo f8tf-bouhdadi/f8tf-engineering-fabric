@@ -1,0 +1,61 @@
+@startuml COM2_Computational_Sequence_UC01
+
+title COM2 — Computational Viewpoint — COMP-OP-COM2-01 Decomposition
+
+actor "Interaction Submitter" as Submitter
+participant "COM2 Admission Processor" as Processor
+participant "Interpret Submission" as Interpret
+participant "Evaluate Admission" as Evaluate
+participant "Produce Outcome" as Produce
+
+Submitter -> Processor : submit(InteractionSubmission)
+
+Processor -> Interpret : COMP-ACT-COM2-01\nInterpret Submission
+
+alt submission cannot establish Envelope
+
+  Interpret --> Processor : interpretation failure
+
+  Processor -> Produce : COMP-ACT-COM2-03\nProduce Outcome
+  Produce --> Processor : InvalidRequest
+
+else Envelope established
+
+  Interpret --> Processor : Envelope
+
+  Processor -> Evaluate : COMP-ACT-COM2-02\nEvaluate Admission
+
+  alt Envelope inadmissible
+
+    Evaluate --> Processor : inadmissible
+
+    Processor -> Produce : COMP-ACT-COM2-03\nProduce Outcome
+    Produce --> Processor : InvalidRequest
+
+  else Envelope admissible
+
+    Evaluate --> Processor : admissible
+
+    Processor -> Produce : COMP-ACT-COM2-03\nProduce Outcome
+    Produce --> Processor : AcceptanceOutcome
+
+  end
+end
+
+Processor --> Submitter : AdmissionOutcome
+
+note right of Processor
+Public:
+COMP-OP-COM2-01 submit
+
+Internal:
+COMP-ACT-COM2-01
+COMP-ACT-COM2-02
+COMP-ACT-COM2-03
+
+realizes:
+UC-COM2-01
+INF-DYN-COM2-01
+end note
+
+@enduml

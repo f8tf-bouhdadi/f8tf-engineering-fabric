@@ -60,13 +60,33 @@ transport.
 
 ---
 
+### COM2-ES — Controlled Interaction Admission
+
+Establish a controlled admission boundary for structured interaction
+submissions with explicit outcomes and identity preservation.
+
+**Use it when you need:**
+
+- controlled acceptance or rejection of structured interactions;
+- an explicit admission outcome;
+- interaction identity preservation on acceptance;
+- optional interaction information without accidental mandatory semantics.
+
+**Availability:** Public Product 1 — Assured Integration-Ready Specification
+
+[Explore COM2-ES](products/com/engineering-services/COM2-ES/)
+
+---
+
 ## How It Works
 
 1. Choose an Engineering Service.
-2. Review its Service Contract, qualified guarantees and declared limitations.
-3. Evaluate the corresponding Qualified Runtime Delivery.
-4. Verify the delivered runtime independently.
-5. Operate it in your own environment.
+2. Review its Service Contract, Service Guarantees and declared limitations.
+3. Evaluate the lifecycle product currently available for that service.
+4. When a Qualified Runtime or Qualified Delivery is available, verify it
+   independently.
+5. Use the service within the assurance and delivery scope that has actually
+   been established.
 
 ---
 
