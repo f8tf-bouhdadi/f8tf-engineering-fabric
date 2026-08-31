@@ -72,9 +72,13 @@ submissions with explicit outcomes and identity preservation.
 - interaction identity preservation on acceptance;
 - optional interaction information without accidental mandatory semantics.
 
-**Availability:** Public Product 1 — Assured Integration-Ready Specification
+**Availability:** Public Product 1 / Product 2 / Product 3
 
 [Explore COM2-ES](products/com/engineering-services/COM2-ES/)
+
+- [Product 1 — Assured Integration-Ready Specification](products/com/engineering-services/COM2-ES/)
+- [Product 2 — Qualified Runtime](products/com/engineering-services/COM2-ES/products/product2-qualified-runtime/)
+- [Product 3 — Qualified Delivery](products/com/engineering-services/COM2-ES/products/product3-qualified-delivery/)
 
 ---
 

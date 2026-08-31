@@ -6,9 +6,62 @@ of structured interaction submissions.
 Its Product 1 specification makes admission behaviour explicit before an
 integrator commits to a concrete executable realization.
 
+## Products
+
+COM2-ES is represented publicly through three distinct lifecycle products.
+
+### Product 1 — Assured Integration-Ready Engineering Service Specification
+
+**Lifecycle:** `LCS-01` through `LCS-07`
+
+Answers:
+
+**What shall the engineering brick guarantee?**
+
+Product 1 establishes the Service Contract, authoritative Service Guarantees,
+RM-ODP specifications, applicable correspondences, specification assurance and
+integration-ready realization responsibilities.
+
+- [Review Product 1](SERVICE_CONTRACT.md)
+
+### Product 2 — Qualified Runtime
+
+**Lifecycle:** `LCS-08` through `LCS-10`
+
+Answers:
+
+**Which exact executable realization has been qualified?**
+
+Product 2 establishes the executable realization, its qualification against the
+COM2-ES Service Guarantees and the exact Qualified Runtime Identity.
+
+- [Review Product 2 — Qualified Runtime](products/product2-qualified-runtime/)
+
+### Product 3 — Qualified Delivery
+
+**Lifecycle:** `LCS-11` through `LCS-16`
+
+Answers:
+
+**Which exact delivery can the recipient independently verify and operate?**
+
+Product 3 establishes the Operator Contract, Runtime Delivery, Delivery
+Verification, Qualified Delivery Identity, Sealed Delivery and Independent
+Client Verification and Operation.
+
+- [Review Product 3 — Qualified Delivery](products/product3-qualified-delivery/)
+
+The three products represent increasing engineering responsibility:
+
+    Product 1 — Assured Specification
+        ->
+    Product 2 — Qualified Runtime
+        ->
+    Product 3 — Qualified Delivery
+
 ## Product 1 — Assured Integration-Ready Engineering Service Specification
 
-The current public COM2-ES surface exposes:
+Product 1 establishes the assured specification layer of COM2-ES:
 
 **Product 1 — Assured Integration-Ready Engineering Service Specification**
 

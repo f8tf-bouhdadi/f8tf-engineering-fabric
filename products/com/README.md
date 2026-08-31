@@ -85,18 +85,43 @@ COM2-ES defines four authoritative Service Guarantees:
 - `G-COM2-03` — Interaction Identity Preservation;
 - `G-COM2-04` — Optional Interaction Information.
 
-### Product 1 Assurance
+### Public Lifecycle Products
 
-The current public COM2-ES lifecycle product is:
+COM2-ES now exposes three distinct public lifecycle product surfaces.
 
 **Product 1 — Assured Integration-Ready Engineering Service Specification**
 
-Its four Specification Proof Obligations have explicit `SATISFIED`
-dispositions.
+`LCS-01` through `LCS-07`
 
-This establishes specification assurance and an integration-ready realization
-prescription. It does not claim executable qualification, Qualified Runtime
-identity or Qualified Delivery.
+Establishes the Service Contract, Service Guarantees, RM-ODP specification,
+applicable correspondence, specification assurance and integration-ready
+realization responsibilities.
+
+[Review COM2 Product 1](engineering-services/COM2-ES/)
+
+**Product 2 — Qualified Runtime**
+
+`LCS-08` through `LCS-10`
+
+Establishes the executable realization, qualification against the four
+authoritative COM2-ES Service Guarantees and the exact Qualified Runtime
+Identity.
+
+[Review COM2 Product 2 — Qualified Runtime](engineering-services/COM2-ES/products/product2-qualified-runtime/)
+
+**Product 3 — Qualified Delivery**
+
+`LCS-11` through `LCS-16`
+
+Establishes the Operator Contract, Runtime Delivery, Delivery Verification,
+Qualified Delivery Identity, Sealed Delivery and Independent Client
+Verification and Operation.
+
+[Review COM2 Product 3 — Qualified Delivery](engineering-services/COM2-ES/products/product3-qualified-delivery/)
+
+The three products are distinct:
+
+**Assured Specification → Qualified Runtime → Qualified Delivery**
 
 ### Learn More
 
@@ -106,7 +131,7 @@ identity or Qualified Delivery.
 
 ### Evaluation
 
-For COM2-ES Product 1 evaluation and technical feedback:
+For COM2-ES evaluation and technical feedback:
 
 `m.bouhdadi@um5r.ac.ma`
 
