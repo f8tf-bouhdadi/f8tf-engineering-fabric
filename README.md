@@ -1,175 +1,61 @@
 # F8TF Interaction Services
 
-Reusable interaction services for distributed systems.
+Reusable Interaction Services for distributed systems.
 
-An F8TF Interaction Service is a reusable Engineering Service for a bounded
-form of interaction in a distributed system, defined by an explicit Service
-Contract and declared interaction guarantees.
+Each F8TF Interaction Service addresses a bounded interaction need with
+explicit guarantees.
 
-F8TF provides ready-to-evaluate Interaction Services with assured designs,
-qualified runtimes and independently verifiable deliveries where those
-lifecycle products have been established.
+## What interaction do you need to assure?
 
----
+### Communication Services
 
-## Available Interaction Services
+Reusable services for message exchange, interaction admission, protocol
+behavior and communication guarantees.
 
-### DATA0-ES — Foundational Immutable Data Persistence
+[Explore Communication Services](products/com/)
 
-Persist accepted data while preserving its established content.
+### Data Services
 
-**Use it when you need:**
+Reusable services for persistence, deterministic retrieval, traceability,
+state management and distributed data concerns.
 
-- controlled data persistence;
-- explicit persistence guarantees;
-- independently verifiable delivery and operation.
+[Explore Data Services](products/data/)
 
-**Availability:** Public Qualified Runtime Delivery
+## What can you obtain?
 
-[Explore DATA0-ES](products/data/engineering-services/DATA0/)
+### Assured Design
 
----
+An assured specification of the interaction, its Service Contract and its
+declared guarantees, ready for realization and integration.
 
-### DATA1-ES — Deterministic Audit Query
+### Qualified Runtime
 
-Obtain deterministic audit-query results over qualified engineering data.
+A qualified executable realization whose identity and qualified behavior are
+explicitly established.
 
-**Use it when you need:**
+### Verifiable Delivery
 
-- deterministic audit queries;
-- explicit query guarantees;
-- a qualified runtime realization that can be independently evaluated.
+A delivery that the client can independently verify and operate within its
+declared scope.
 
-**Availability:** Qualified Runtime Delivery
-
-[Explore DATA1-ES](products/data/engineering-services/DATA1/)
-
----
-
-### COM1-ES — Bounded Framed Message Interaction
-
-Establish bounded application-message interactions over a byte-stream
-transport.
-
-**Use it when you need:**
-
-- bounded frame acceptance;
-- complete frame reception;
-- response only after complete admissible input;
-- client interaction failure isolation.
-
-**Availability:** Controlled Qualified Runtime Delivery
-
-[Explore COM1-ES](products/com/engineering-services/COM1-ES/)
-
----
-
-### COM2-ES — Controlled Interaction Admission
-
-Establish a controlled admission boundary for structured interaction
-submissions with explicit outcomes and identity preservation.
-
-**Use it when you need:**
-
-- controlled acceptance or rejection of structured interactions;
-- an explicit admission outcome;
-- interaction identity preservation on acceptance;
-- optional interaction information without accidental mandatory semantics.
-
-**Availability:** Public Product 1 / Product 2 / Product 3
-
-[Explore COM2-ES](products/com/engineering-services/COM2-ES/)
-
-- [Product 1 — Assured Integration-Ready Specification](products/com/engineering-services/COM2-ES/)
-- [Product 2 — Qualified Runtime](products/com/engineering-services/COM2-ES/products/product2-qualified-runtime/)
-- [Product 3 — Qualified Delivery](products/com/engineering-services/COM2-ES/products/product3-qualified-delivery/)
-
----
-
-## How It Works
-
-1. Choose an Interaction Service.
-2. Review its Service Contract, Service Guarantees and declared limitations.
-3. Evaluate the lifecycle product currently available for that service.
-4. When a Qualified Runtime or Qualified Delivery is available, verify it
-   independently.
-5. Use the service within the assurance and delivery scope that has actually
-   been established.
-
----
-
-## Browse Interaction Services
-
-Explore the current F8TF Interaction Services and service families.
-
-[Browse Interaction Services](products/)
-
----
-
-## Evaluation
-
-Some Qualified Runtime Deliveries are publicly available.
-
-
-[Start an evaluation](evaluation/)
-
----
+Availability depends on the maturity of each Interaction Service.
 
 ## Why F8TF?
 
-F8TF does not ask customers merely to trust that an implementation works.
+- explicit interaction guarantees;
+- reusable engineering bricks;
+- qualified realizations where available;
+- independently verifiable delivery and operation;
+- technical depth available without overloading the discovery path.
 
-Each qualified Interaction Service defines what it promises, the scope in
-which those promises apply, and how the corresponding runtime realization can
-be independently verified.
+## Explore
 
-Engineering details, guarantees, qualification material and supporting
-documentation remain available for customers who need deeper technical
-assessment.
+[Browse the Interaction Services Catalog](products/)
 
----
+[Start an Evaluation](evaluation/)
 
-## About F8TF
-
-F8TF develops reusable Interaction Services for open distributed systems.
+[Technical Depth](products/#technical-depth)
 
 [About F8TF](about/)
 
----
-
-## Contact
-
-For technical feedback and engineering discussions:
-
-`m.bouhdadi@um5r.ac.ma`
-
----
-
-## RM-ODP Engineering Concerns
-
-F8TF engineering services address distributed-system concerns described
-through RM-ODP transparencies, including:
-
-- Access Transparency
-- Failure Transparency
-- Location Transparency
-- Migration Transparency
-- Persistence Transparency
-- Relocation Transparency
-- Replication Transparency
-- Transaction Transparency
-
-The repository also organizes engineering concerns around RM-ODP function
-groups, including:
-
-- Management Functions
-- Coordination Functions
-- Repository Functions
-- Security Functions
-
-Engineering assurance mechanisms support specification assurance,
-realization qualification and evidence.
-
-These engineering concerns identify the scope in which F8TF services are
-developed and classified. They do not imply that every transparency or
-function group is already realized or qualified by every published service.
+[Contact F8TF](mailto:m.bouhdadi@um5r.ac.ma)
