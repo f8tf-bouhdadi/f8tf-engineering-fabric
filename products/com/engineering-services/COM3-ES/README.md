@@ -50,8 +50,10 @@ Delivery surface for COM3-ES.
 
 - [Review Product 3 — Qualified Delivery](products/product3-qualified-delivery/)
 
-The public Product 3 engineering surface is established. The sealed
-downloadable release archive is not yet published.
+The public Product 3 engineering surface and sealed Qualified Delivery release
+are published.
+
+- [COM3-ES Product 3 — Qualified Delivery 1.0.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/com3-qualified-delivery-v1.0.0)
 
 ## When COM3-ES Is Relevant
 

@@ -222,4 +222,22 @@ Product 3 does not redefine:
 The COM3 Product 3 engineering surface is established by these public
 documentary artifacts.
 
-The sealed Product 3 archive is not published by this documentation step.
+The sealed Product 3 release is published as:
+
+- [COM3-ES Product 3 — Qualified Delivery 1.0.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/com3-qualified-delivery-v1.0.0)
+
+Release tag:
+
+`com3-qualified-delivery-v1.0.0`
+
+Published sealed archive:
+
+`F8TF_COM3_SEALED_DELIVERY_5567828347bccc0f.tar.gz`
+
+Published sealed archive SHA-256:
+
+`1f20ce58dd70dbf44c088efcbda672f6235799bdd2443f5bd8d04418af2b3de6`
+
+The published archive is the exact LCS-15 sealed archive previously established
+and independently verified through LCS-16. It is not rebuilt or transformed for
+publication.
