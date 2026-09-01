@@ -111,9 +111,29 @@ Those responsibilities belong to:
         ->
     Product 2 — Qualified Runtime
 
-## Publication Status
+## Download — Qualified Runtime 1.0.0
 
-The Qualified Runtime is established.
+COM3-ES Product 2 is publicly downloadable.
 
-The downloadable Product 2 release package is published separately from this
-engineering surface.
+Release:
+
+https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/com3-qualified-runtime-v1.0.0
+
+Qualified Runtime archive:
+
+https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/com3-qualified-runtime-v1.0.0/F8TF_COM3_QUALIFIED_RUNTIME_1.0.0.tar.gz
+
+Archive SHA-256 file:
+
+https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/download/com3-qualified-runtime-v1.0.0/F8TF_COM3_QUALIFIED_RUNTIME_1.0.0.tar.gz.sha256
+
+Published archive SHA-256:
+
+`32c8b40ce6578a963f37ecec0d00bae6013aa32cc227ea30ec74e716a039d9c3`
+
+The archive contains exactly the six executable components identified by the
+published Qualified Runtime Identity together with recipient-side identity
+verification.
+
+The archive SHA-256 is external to the archive and identifies the published
+release artifact itself.
