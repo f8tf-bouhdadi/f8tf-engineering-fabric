@@ -45,8 +45,13 @@ Identity.
 
 **Lifecycle:** `LCS-11` through `LCS-16`
 
-Product 3 is established for COM3-ES but is not yet published on this public
-service surface.
+Product 3 establishes the independently verifiable and operable Qualified
+Delivery surface for COM3-ES.
+
+- [Review Product 3 — Qualified Delivery](products/product3-qualified-delivery/)
+
+The public Product 3 engineering surface is established. The sealed
+downloadable release archive is not yet published.
 
 ## When COM3-ES Is Relevant
 
