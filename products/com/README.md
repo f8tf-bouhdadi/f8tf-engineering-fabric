@@ -86,9 +86,8 @@ Interrogation semantics.
 
 **Availability**
 
-Public Assured Integration-Ready Engineering Service Specification available.
-Qualified Runtime and Qualified Delivery lifecycle products are established and
-will be published separately.
+Public Assured Integration-Ready Engineering Service Specification, Qualified
+Runtime and Qualified Delivery lifecycle products are available.
 
 [Explore COM3-ES](engineering-services/COM3-ES/)
 

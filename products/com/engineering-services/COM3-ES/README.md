@@ -27,6 +27,8 @@ integration-ready realization responsibilities.
 
 - [Review Product 1 — Assured Specification](products/product1-assured-integration-ready-specification/)
 
+- [COM3-ES Product 1 — Assured Integration-Ready Specification 1.0.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/com3-assured-integration-ready-specification-v1.0.0)
+
 ### Product 2 — Qualified Runtime
 
 **Lifecycle:** `LCS-08` through `LCS-10`
@@ -40,6 +42,8 @@ seven authoritative COM3-ES Service Guarantees and the exact Qualified Runtime
 Identity.
 
 - [Review Product 2 — Qualified Runtime](products/product2-qualified-runtime/)
+
+- [COM3-ES Product 2 — Qualified Runtime 1.0.0](https://github.com/f8tf-bouhdadi/f8tf-engineering-fabric/releases/tag/com3-qualified-runtime-v1.0.0)
 
 ### Product 3 — Qualified Delivery
 
