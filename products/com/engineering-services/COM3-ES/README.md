@@ -31,15 +31,22 @@ integration-ready realization responsibilities.
 
 **Lifecycle:** `LCS-08` through `LCS-10`
 
-Product 2 is established for COM3-ES but is not published by this Product 1
-surface.
+Answers:
+
+**Which exact executable realization has been qualified against the COM3-ES Service Guarantees?**
+
+Product 2 establishes the executable realization, its qualification against all
+seven authoritative COM3-ES Service Guarantees and the exact Qualified Runtime
+Identity.
+
+- [Review Product 2 — Qualified Runtime](products/product2-qualified-runtime/)
 
 ### Product 3 — Qualified Delivery
 
 **Lifecycle:** `LCS-11` through `LCS-16`
 
-Product 3 is established for COM3-ES but is not published by this Product 1
-surface.
+Product 3 is established for COM3-ES but is not yet published on this public
+service surface.
 
 ## When COM3-ES Is Relevant
 
