@@ -1,0 +1,51 @@
+@startuml COM3_Enterprise_Classes
+
+title COM3 — Enterprise Viewpoint — Service Structure
+
+left to right direction
+skinparam classAttributeIconSize 0
+
+class "ENT-ROLE-COM3-01\nService Consumer" as Consumer <<Enterprise Role>>
+class "ENT-ROLE-COM3-02\nService Provider" as Provider <<Enterprise Role>>
+
+class "Assured Operation Interaction\nEngineering Service" as Service <<Service>>
+
+class "COM3 Service Contract" as Contract <<Service Contract>>
+
+class "G-COM3-01\nDeclared Operation Preservation" as G1 <<Service Guarantee>>
+class "G-COM3-02\nOperation Form Preservation" as G2 <<Service Guarantee>>
+class "G-COM3-03\nInvocation Conformance" as G3 <<Service Guarantee>>
+class "G-COM3-04\nAnnouncement Termination Independence" as G4 <<Service Guarantee>>
+class "G-COM3-05\nDeclared Termination Conformance" as G5 <<Service Guarantee>>
+class "G-COM3-06\nInvocation-Termination Association" as G6 <<Service Guarantee>>
+class "G-COM3-07\nSingle Termination Selection" as G7 <<Service Guarantee>>
+
+Consumer --> Service : uses
+Provider --> Service : participates in
+
+Contract --> Service : governs
+
+Contract --> G1 : defines
+Contract --> G2 : defines
+Contract --> G3 : defines
+Contract --> G4 : defines
+Contract --> G5 : defines
+Contract --> G6 : defines
+Contract --> G7 : defines
+
+G1 ..> Service : constrains
+G2 ..> Service : constrains
+G3 ..> Service : constrains
+G4 ..> Service : constrains
+G5 ..> Service : constrains
+G6 ..> Service : constrains
+G7 ..> Service : constrains
+
+note bottom of Service
+Authoritative Enterprise semantics:
+ENT-OBJ-COM3-01 Declared Operation
+ENT-OBJ-COM3-02 Operation Invocation
+ENT-OBJ-COM3-03 Operation Termination
+end note
+
+@enduml

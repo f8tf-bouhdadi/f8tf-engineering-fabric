@@ -1,0 +1,61 @@
+@startuml COM3_Technology_Classes
+
+title COM3 — Technology Viewpoint — Structured Reference Architecture
+
+skinparam classAttributeIconSize 0
+
+class "F8TF.COM3.Domain" as Domain <<Technology Component>> {
+  DeclaredOperation
+  InvocationSignature
+  TerminationType
+  OperationInvocation
+  OperationTermination
+}
+
+class "F8TF.COM3.Application" as Application <<Technology Component>> {
+  Operation interaction processing
+}
+
+class "F8TF.COM3.Platform" as Platform <<Technology Component>> {
+  technology bindings
+}
+
+class "F8TF.COM3.Api" as Api <<Technology Boundary Component>> {
+  executable composition boundary
+}
+
+Domain <.. Application : depends on
+Application <.. Platform : implements requirements for
+
+Api --> Application : invokes
+Api --> Platform : composes
+
+note right of Domain
+TECH-ARCH-COM3-01
+TECH-COMP-COM3-01
+end note
+
+note right of Application
+TECH-ARCH-COM3-02
+TECH-COMP-COM3-02
+end note
+
+note right of Platform
+TECH-ARCH-COM3-03
+TECH-COMP-COM3-03
+end note
+
+note right of Api
+TECH-ARCH-COM3-04
+TECH-COMP-COM3-04
+end note
+
+note bottom
+TECH-ARCH-COM3-05
+Dependency Direction
+
+JSON/RPC is a reference Technology binding
+and does not define generic COM3 semantics.
+end note
+
+@enduml

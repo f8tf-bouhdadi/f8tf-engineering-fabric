@@ -1,0 +1,69 @@
+@startuml COM3_Computational_Sequence
+
+title COM3 — Computational Viewpoint — OperationInteractionService
+
+actor "Service Consumer" as Consumer
+participant "COMP-IF-COM3-01\nOperationInteractionService" as Service
+actor "Service Provider" as Provider
+
+alt Announcement
+
+  Consumer -> Service :
+    InvokeAnnouncement(operation, invocation)
+
+  Service -> Service :
+    COMP-OBL-COM3-01\nDeclared Operation Resolution
+
+  Service -> Service :
+    COMP-OBL-COM3-02\nInvocation Conformance
+
+  Service -> Service :
+    COMP-OBL-COM3-03\nOperation Form Preservation
+
+  Service -> Provider :
+    establish Announcement invocation
+
+  Service --> Consumer :
+    AnnouncementEstablished
+
+  note over Service
+    COMP-OBL-COM3-04
+    No contractual OperationTermination
+    belongs to Announcement semantics.
+  end note
+
+else Interrogation
+
+  Consumer -> Service :
+    BeginInterrogation(operation, invocation)
+
+  Service -> Service :
+    COMP-OBL-COM3-01..03
+
+  Service -> Provider :
+    establish Interrogation invocation
+
+  Service --> Consumer :
+    InterrogationEstablished
+
+  Provider -> Service :
+    CompleteInterrogation(invocation, termination)
+
+  Service -> Service :
+    COMP-OBL-COM3-05\nDeclared Interrogation Termination
+
+  Service -> Service :
+    COMP-OBL-COM3-06\nTermination Conformance
+
+  Service -> Service :
+    COMP-OBL-COM3-07\nInvocation–Termination Association
+
+  Service -> Service :
+    COMP-OBL-COM3-08\nSingle Contractual Termination
+
+  Service --> Consumer :
+    TerminationEstablished
+
+end
+
+@enduml

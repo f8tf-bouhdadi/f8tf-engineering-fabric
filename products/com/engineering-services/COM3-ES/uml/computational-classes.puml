@@ -1,0 +1,37 @@
+@startuml COM3_Computational_Classes
+
+title COM3 — Computational Viewpoint — Operation Interaction Structure
+
+skinparam classAttributeIconSize 0
+
+class "COMP-OBJ-COM3-01\nOperationInteractionService" as Service <<Computational Object>>
+
+class "COMP-OBJ-COM3-02\nServiceConsumer" as Consumer <<Computational Object>>
+class "COMP-OBJ-COM3-03\nServiceProvider" as Provider <<Computational Object>>
+
+interface "COMP-IF-COM3-01\nOperationInteractionService" as IF <<Computational Interface>>
+
+class "COMP-OBL-COM3-01\nDeclared Operation Resolution" as O1 <<Computational Obligation>>
+class "COMP-OBL-COM3-02\nInvocation Conformance" as O2 <<Computational Obligation>>
+class "COMP-OBL-COM3-03\nOperation Form Preservation" as O3 <<Computational Obligation>>
+class "COMP-OBL-COM3-04\nAnnouncement Termination Independence" as O4 <<Computational Obligation>>
+class "COMP-OBL-COM3-05\nDeclared Interrogation Termination" as O5 <<Computational Obligation>>
+class "COMP-OBL-COM3-06\nTermination Conformance" as O6 <<Computational Obligation>>
+class "COMP-OBL-COM3-07\nInvocation-Termination Association" as O7 <<Computational Obligation>>
+class "COMP-OBL-COM3-08\nSingle Contractual Termination" as O8 <<Computational Obligation>>
+
+Service -- IF : offers
+
+Consumer --> IF : invokes through
+Provider --> Service : participates in
+
+Service *-- O1
+Service *-- O2
+Service *-- O3
+Service *-- O4
+Service *-- O5
+Service *-- O6
+Service *-- O7
+Service *-- O8
+
+@enduml

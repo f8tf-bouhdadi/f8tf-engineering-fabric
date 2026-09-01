@@ -1,0 +1,32 @@
+@startuml COM3_Engineering_Sequence
+
+title COM3 — Engineering Viewpoint — Operation Interaction Processing
+
+participant "Operation Declaration\nBinding" as Declaration
+participant "Invocation Conformance\nGuard" as InvocationGuard
+participant "Operation Form\nGuard" as FormGuard
+participant "Interrogation State\nBinding" as State
+participant "Termination Conformance\nGuard" as TerminationGuard
+participant "Invocation-Termination\nBinding" as Correlation
+participant "Single Termination\nGuard" as Single
+
+Declaration -> InvocationGuard : ENG-COMP-COM3-01
+InvocationGuard -> FormGuard : ENG-COMP-COM3-02
+
+alt Announcement
+
+  FormGuard -> FormGuard : ENG-COMP-COM3-03
+  FormGuard -> FormGuard : ENG-COMP-COM3-04\nAnnouncement Completion Boundary
+
+else Interrogation
+
+  FormGuard -> State : ENG-COMP-COM3-05
+
+  State -> TerminationGuard : candidate termination
+  TerminationGuard -> Correlation : ENG-COMP-COM3-06
+  Correlation -> Single : ENG-COMP-COM3-07
+  Single -> State : ENG-COMP-COM3-08\ncompleted
+
+end
+
+@enduml

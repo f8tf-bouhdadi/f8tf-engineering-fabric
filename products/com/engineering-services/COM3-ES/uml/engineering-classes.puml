@@ -1,0 +1,35 @@
+@startuml COM3_Engineering_Classes
+
+title COM3 — Engineering Viewpoint — Operation Interaction Mechanisms
+
+skinparam classAttributeIconSize 0
+
+class "ENG-COMP-COM3-01\nOperation Declaration Binding" as E1 <<Engineering Mechanism>>
+class "ENG-COMP-COM3-02\nInvocation Conformance Guard" as E2 <<Engineering Mechanism>>
+class "ENG-COMP-COM3-03\nOperation Form Guard" as E3 <<Engineering Mechanism>>
+class "ENG-COMP-COM3-04\nAnnouncement Completion Boundary" as E4 <<Engineering Mechanism>>
+class "ENG-COMP-COM3-05\nInterrogation State Binding" as E5 <<Engineering Mechanism>>
+class "ENG-COMP-COM3-06\nTermination Conformance Guard" as E6 <<Engineering Mechanism>>
+class "ENG-COMP-COM3-07\nInvocation-Termination Binding" as E7 <<Engineering Mechanism>>
+class "ENG-COMP-COM3-08\nSingle Termination Guard" as E8 <<Engineering Mechanism>>
+
+E1 --> E2 : invocation
+E2 --> E3 : conforming invocation
+
+E3 --> E4 : Announcement
+E3 --> E5 : Interrogation
+
+E5 --> E6 : completion
+E6 --> E7 : conforming termination
+E7 --> E8 : establish once
+
+note bottom
+These elements project the authoritative
+LCS-06 Engineering Specification.
+
+No Engineering channel, interface, capsule,
+cluster or binding object is introduced
+unless independently specified.
+end note
+
+@enduml

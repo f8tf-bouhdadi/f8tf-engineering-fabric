@@ -1,0 +1,77 @@
+@startuml COM3_Information_Classes
+
+title COM3 — Information Viewpoint — Operation Interaction Information
+
+skinparam classAttributeIconSize 0
+
+class "INF-OBJ-COM3-01\nDeclaredOperation" as DeclaredOperation {
+  +operationIdentity
+  +operationForm : Announcement | Interrogation
+  +invocationSignature
+  +declaredTerminationTypes
+}
+
+class "INF-OBJ-COM3-02\nInvocationSignature" as InvocationSignature
+
+class "INF-OBJ-COM3-03\nTerminationType" as TerminationType {
+  +terminationIdentity
+  +terminationSignature
+}
+
+class "INF-OBJ-COM3-04\nOperationInvocation" as OperationInvocation {
+  +invocationIdentity
+  +concernedOperation
+  +invocationParameters
+}
+
+class "INF-OBJ-COM3-05\nOperationTermination" as OperationTermination {
+  +concernedInvocation
+  +selectedTerminationType
+  +terminationParameters
+}
+
+DeclaredOperation --> InvocationSignature : invocationSignature
+DeclaredOperation "1" o-- "0..*" TerminationType : declaredTerminationTypes
+
+OperationInvocation --> DeclaredOperation : concernedOperation
+OperationTermination --> OperationInvocation : concernedInvocation
+OperationTermination --> TerminationType : selectedTerminationType
+
+note right of DeclaredOperation
+INF-INV-COM3-03
+Announcement =>
+declaredTerminationTypes = empty
+
+INF-INV-COM3-04
+Interrogation =>
+declaredTerminationTypes is
+finite and non-empty
+end note
+
+note right of OperationInvocation
+INF-INV-COM3-01
+references exactly one
+DeclaredOperation
+
+INF-INV-COM3-02
+parameters conform to
+InvocationSignature
+end note
+
+note right of OperationTermination
+INF-INV-COM3-05
+selected type belongs to
+declared termination types
+
+INF-INV-COM3-06
+termination parameters conform
+
+INF-INV-COM3-07
+references exactly one invocation
+
+INF-INV-COM3-08
+completed Interrogation =>
+exactly one contractual termination
+end note
+
+@enduml

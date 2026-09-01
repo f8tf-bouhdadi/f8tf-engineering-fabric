@@ -1,0 +1,407 @@
+@startuml
+
+title COM3-ES — RM-ODP / UML4ODP Correspondence Projection
+
+' Canonical source:
+' COM3_ODP_CORRESPONDENCE_SPECIFICATIONS.md
+'
+' The textual correspondence specifications are authoritative.
+' This UML artifact is a graphical projection only.
+'
+' RM-ODP correspondence is pairwise and non-transitive.
+' F8TF Service Guarantee preservation is a distinct assurance relation.
+
+hide empty members
+skinparam packageStyle rectangle
+
+title CS-COM3-EI — Enterprise–Information Correspondence Specification
+
+package "endpoint viewpoint 1: COM3 Enterprise Viewpoint Specification" as CS_COM3_EI_VP1 {
+}
+
+package "endpoint viewpoint 2: COM3 Information Viewpoint Specification" as CS_COM3_EI_VP2 {
+}
+
+package "CS-COM3-EI\nEnterprise–Information Correspondence Specification" as CS_COM3_EI <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM3-EI-01\nEnterprise Information Preservation Rule" as CR_COM3_EI_01 <<CorrespondenceRule>>
+
+class "CL-COM3-EI-01\nDeclared Operation" as CL_COM3_EI_01 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBJ-COM3-01`"
+  endPoint2 = "`INF-OBJ-COM3-01`"
+}
+
+class "CL-COM3-EI-02\nOperation Invocation" as CL_COM3_EI_02 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBJ-COM3-02`"
+  endPoint2 = "`INF-OBJ-COM3-04`"
+}
+
+class "CL-COM3-EI-03\nOperation Termination" as CL_COM3_EI_03 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBJ-COM3-03`"
+  endPoint2 = "`INF-OBJ-COM3-05`"
+}
+
+class "CL-COM3-EI-04\nOperation Form Preservation" as CL_COM3_EI_04 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-02`"
+  endPoint2 = "`INF-INV-COM3-03`\n`INF-INV-COM3-04`"
+}
+
+class "CL-COM3-EI-05\nInvocation Conformance" as CL_COM3_EI_05 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-03`"
+  endPoint2 = "`INF-INV-COM3-02`"
+}
+
+class "CL-COM3-EI-06\nAnnouncement Semantics" as CL_COM3_EI_06 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-04`"
+  endPoint2 = "`INF-INV-COM3-03`"
+}
+
+class "CL-COM3-EI-07\nInterrogation Termination" as CL_COM3_EI_07 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-05`"
+  endPoint2 = "`INF-INV-COM3-04`\n`INF-INV-COM3-05`\n`INF-INV-COM3-06`\n`INF-INV-COM3-08`"
+}
+
+class "CL-COM3-EI-08\nInvocation–Termination Association" as CL_COM3_EI_08 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-06`"
+  endPoint2 = "`INF-INV-COM3-07`"
+}
+
+}
+
+CS_COM3_EI ..> CS_COM3_EI_VP1 : <<CorrespondingSpecification>>
+CS_COM3_EI ..> CS_COM3_EI_VP2 : <<CorrespondingSpecification>>
+
+CR_COM3_EI_01 .. CL_COM3_EI_01 : constrains
+CR_COM3_EI_01 .. CL_COM3_EI_02 : constrains
+CR_COM3_EI_01 .. CL_COM3_EI_03 : constrains
+CR_COM3_EI_01 .. CL_COM3_EI_04 : constrains
+CR_COM3_EI_01 .. CL_COM3_EI_05 : constrains
+CR_COM3_EI_01 .. CL_COM3_EI_06 : constrains
+CR_COM3_EI_01 .. CL_COM3_EI_07 : constrains
+CR_COM3_EI_01 .. CL_COM3_EI_08 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+newpage
+
+title CS-COM3-EC — Enterprise–Computational Correspondence Specification
+
+package "endpoint viewpoint 1: COM3 Enterprise Viewpoint Specification" as CS_COM3_EC_VP1 {
+}
+
+package "endpoint viewpoint 2: COM3 Computational Viewpoint Specification" as CS_COM3_EC_VP2 {
+}
+
+package "CS-COM3-EC\nEnterprise–Computational Correspondence Specification" as CS_COM3_EC <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM3-EC-01\nEnterprise Computational Realization Rule" as CR_COM3_EC_01 <<CorrespondenceRule>>
+
+class "CL-COM3-EC-01\nDeclared Operation Interaction" as CL_COM3_EC_01 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBJ-COM3-01`\n`ENT-OBJ-COM3-02`"
+  endPoint2 = "`COMP-IF-COM3-01`\n`COMP-OBJ-COM3-01`\n`COMP-OBL-COM3-01`"
+}
+
+class "CL-COM3-EC-02\nInvocation Conformance" as CL_COM3_EC_02 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-03`"
+  endPoint2 = "`COMP-OBL-COM3-02`"
+}
+
+class "CL-COM3-EC-03\nOperation Form Preservation" as CL_COM3_EC_03 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-02`"
+  endPoint2 = "`COMP-OBL-COM3-03`"
+}
+
+class "CL-COM3-EC-04\nAnnouncement Semantics" as CL_COM3_EC_04 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-04`"
+  endPoint2 = "`COMP-OBL-COM3-04`"
+}
+
+class "CL-COM3-EC-05\nInterrogation Termination" as CL_COM3_EC_05 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-05`"
+  endPoint2 = "`COMP-OBL-COM3-05`\n`COMP-OBL-COM3-06`\n`COMP-OBL-COM3-08`"
+}
+
+class "CL-COM3-EC-06\nInvocation–Termination Association" as CL_COM3_EC_06 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-06`"
+  endPoint2 = "`COMP-OBL-COM3-07`"
+}
+
+}
+
+CS_COM3_EC ..> CS_COM3_EC_VP1 : <<CorrespondingSpecification>>
+CS_COM3_EC ..> CS_COM3_EC_VP2 : <<CorrespondingSpecification>>
+
+CR_COM3_EC_01 .. CL_COM3_EC_01 : constrains
+CR_COM3_EC_01 .. CL_COM3_EC_02 : constrains
+CR_COM3_EC_01 .. CL_COM3_EC_03 : constrains
+CR_COM3_EC_01 .. CL_COM3_EC_04 : constrains
+CR_COM3_EC_01 .. CL_COM3_EC_05 : constrains
+CR_COM3_EC_01 .. CL_COM3_EC_06 : constrains
+
+newpage
+
+title CS-COM3-EENG — Enterprise–Engineering Correspondence Specification
+
+package "endpoint viewpoint 1: COM3 Enterprise Viewpoint Specification" as CS_COM3_EENG_VP1 {
+}
+
+package "endpoint viewpoint 2: COM3 Engineering Viewpoint Specification" as CS_COM3_EENG_VP2 {
+}
+
+package "CS-COM3-EENG\nEnterprise–Engineering Correspondence Specification" as CS_COM3_EENG <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM3-EENG-01\nEnterprise Engineering Support Rule" as CR_COM3_EENG_01 <<CorrespondenceRule>>
+
+class "CL-COM3-EENG-01\nDeclared Operation Support" as CL_COM3_EENG_01 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBJ-COM3-01`"
+  endPoint2 = "`ENG-COMP-COM3-01`"
+}
+
+class "CL-COM3-EENG-02\nInvocation Conformance Support" as CL_COM3_EENG_02 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-03`"
+  endPoint2 = "`ENG-COMP-COM3-02`"
+}
+
+class "CL-COM3-EENG-03\nOperation Form Support" as CL_COM3_EENG_03 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-02`"
+  endPoint2 = "`ENG-COMP-COM3-03`"
+}
+
+class "CL-COM3-EENG-04\nAnnouncement Completion Support" as CL_COM3_EENG_04 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-04`"
+  endPoint2 = "`ENG-COMP-COM3-04`"
+}
+
+class "CL-COM3-EENG-05\nInterrogation Termination Support" as CL_COM3_EENG_05 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-05`"
+  endPoint2 = "`ENG-COMP-COM3-05`\n`ENG-COMP-COM3-06`\n`ENG-COMP-COM3-08`"
+}
+
+class "CL-COM3-EENG-06\nInvocation–Termination Association Support" as CL_COM3_EENG_06 <<CorrespondenceLink>> {
+  endPoint1 = "`ENT-OBL-COM3-06`"
+  endPoint2 = "`ENG-COMP-COM3-05`\n`ENG-COMP-COM3-07`"
+}
+
+}
+
+CS_COM3_EENG ..> CS_COM3_EENG_VP1 : <<CorrespondingSpecification>>
+CS_COM3_EENG ..> CS_COM3_EENG_VP2 : <<CorrespondingSpecification>>
+
+CR_COM3_EENG_01 .. CL_COM3_EENG_01 : constrains
+CR_COM3_EENG_01 .. CL_COM3_EENG_02 : constrains
+CR_COM3_EENG_01 .. CL_COM3_EENG_03 : constrains
+CR_COM3_EENG_01 .. CL_COM3_EENG_04 : constrains
+CR_COM3_EENG_01 .. CL_COM3_EENG_05 : constrains
+CR_COM3_EENG_01 .. CL_COM3_EENG_06 : constrains
+
+newpage
+
+title CS-COM3-IC — Information–Computational Correspondence Specification
+
+package "endpoint viewpoint 1: COM3 Information Viewpoint Specification" as CS_COM3_IC_VP1 {
+}
+
+package "endpoint viewpoint 2: COM3 Computational Viewpoint Specification" as CS_COM3_IC_VP2 {
+}
+
+package "CS-COM3-IC\nInformation–Computational Correspondence Specification" as CS_COM3_IC <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM3-IC-01\nInformation Computational Realization Rule" as CR_COM3_IC_01 <<CorrespondenceRule>>
+
+class "CL-COM3-IC-01\nDeclared Operation Reference" as CL_COM3_IC_01 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-COM3-01`\n`INF-INV-COM3-01`"
+  endPoint2 = "`COMP-OBL-COM3-01`"
+}
+
+class "CL-COM3-IC-02\nInvocation Signature Conformance" as CL_COM3_IC_02 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-COM3-02`\n`INF-OBJ-COM3-04`\n`INF-INV-COM3-02`"
+  endPoint2 = "`COMP-OBL-COM3-02`"
+}
+
+class "CL-COM3-IC-03\nAnnouncement Semantics" as CL_COM3_IC_03 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-COM3-03`"
+  endPoint2 = "`COMP-OBL-COM3-03`\n`COMP-OBL-COM3-04`"
+}
+
+class "CL-COM3-IC-04\nInterrogation Termination Set" as CL_COM3_IC_04 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-COM3-04`\n`INF-INV-COM3-05`"
+  endPoint2 = "`COMP-OBL-COM3-05`"
+}
+
+class "CL-COM3-IC-05\nTermination Signature Conformance" as CL_COM3_IC_05 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-COM3-06`"
+  endPoint2 = "`COMP-OBL-COM3-06`"
+}
+
+class "CL-COM3-IC-06\nInvocation–Termination Association" as CL_COM3_IC_06 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-OBJ-COM3-05`\n`INF-INV-COM3-07`"
+  endPoint2 = "`COMP-OBL-COM3-07`"
+}
+
+class "CL-COM3-IC-07\nSingle Contractual Termination" as CL_COM3_IC_07 <<CorrespondenceLink>> {
+  endPoint1 = "`INF-INV-COM3-08`"
+  endPoint2 = "`COMP-OBL-COM3-08`"
+}
+
+}
+
+CS_COM3_IC ..> CS_COM3_IC_VP1 : <<CorrespondingSpecification>>
+CS_COM3_IC ..> CS_COM3_IC_VP2 : <<CorrespondingSpecification>>
+
+CR_COM3_IC_01 .. CL_COM3_IC_01 : constrains
+CR_COM3_IC_01 .. CL_COM3_IC_02 : constrains
+CR_COM3_IC_01 .. CL_COM3_IC_03 : constrains
+CR_COM3_IC_01 .. CL_COM3_IC_04 : constrains
+CR_COM3_IC_01 .. CL_COM3_IC_05 : constrains
+CR_COM3_IC_01 .. CL_COM3_IC_06 : constrains
+CR_COM3_IC_01 .. CL_COM3_IC_07 : constrains
+
+newpage
+
+title CS-COM3-CENG — Computational–Engineering Correspondence Specification
+
+package "endpoint viewpoint 1: COM3 Computational Viewpoint Specification" as CS_COM3_CENG_VP1 {
+}
+
+package "endpoint viewpoint 2: COM3 Engineering Viewpoint Specification" as CS_COM3_CENG_VP2 {
+}
+
+package "CS-COM3-CENG\nComputational–Engineering Correspondence Specification" as CS_COM3_CENG <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM3-CENG-01\nComputational Engineering Realization Rule" as CR_COM3_CENG_01 <<CorrespondenceRule>>
+
+class "CL-COM3-CENG-01\nDeclared Operation Resolution" as CL_COM3_CENG_01 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBL-COM3-01`"
+  endPoint2 = "`ENG-COMP-COM3-01`"
+}
+
+class "CL-COM3-CENG-02\nInvocation Conformance" as CL_COM3_CENG_02 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBL-COM3-02`"
+  endPoint2 = "`ENG-COMP-COM3-02`"
+}
+
+class "CL-COM3-CENG-03\nOperation Form Preservation" as CL_COM3_CENG_03 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBL-COM3-03`"
+  endPoint2 = "`ENG-COMP-COM3-03`"
+}
+
+class "CL-COM3-CENG-04\nAnnouncement Termination Independence" as CL_COM3_CENG_04 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBL-COM3-04`"
+  endPoint2 = "`ENG-COMP-COM3-04`"
+}
+
+class "CL-COM3-CENG-05\nDeclared Interrogation Termination" as CL_COM3_CENG_05 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBL-COM3-05`"
+  endPoint2 = "`ENG-COMP-COM3-05`\n`ENG-COMP-COM3-06`"
+}
+
+class "CL-COM3-CENG-06\nTermination Conformance" as CL_COM3_CENG_06 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBL-COM3-06`"
+  endPoint2 = "`ENG-COMP-COM3-06`"
+}
+
+class "CL-COM3-CENG-07\nInvocation–Termination Association" as CL_COM3_CENG_07 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBL-COM3-07`"
+  endPoint2 = "`ENG-COMP-COM3-05`\n`ENG-COMP-COM3-07`"
+}
+
+class "CL-COM3-CENG-08\nSingle Contractual Termination" as CL_COM3_CENG_08 <<CorrespondenceLink>> {
+  endPoint1 = "`COMP-OBL-COM3-08`"
+  endPoint2 = "`ENG-COMP-COM3-08`"
+}
+
+}
+
+CS_COM3_CENG ..> CS_COM3_CENG_VP1 : <<CorrespondingSpecification>>
+CS_COM3_CENG ..> CS_COM3_CENG_VP2 : <<CorrespondingSpecification>>
+
+CR_COM3_CENG_01 .. CL_COM3_CENG_01 : constrains
+CR_COM3_CENG_01 .. CL_COM3_CENG_02 : constrains
+CR_COM3_CENG_01 .. CL_COM3_CENG_03 : constrains
+CR_COM3_CENG_01 .. CL_COM3_CENG_04 : constrains
+CR_COM3_CENG_01 .. CL_COM3_CENG_05 : constrains
+CR_COM3_CENG_01 .. CL_COM3_CENG_06 : constrains
+CR_COM3_CENG_01 .. CL_COM3_CENG_07 : constrains
+CR_COM3_CENG_01 .. CL_COM3_CENG_08 : constrains
+
+newpage
+
+title CS-COM3-ENGT — Engineering–Technology Correspondence Specification
+
+package "endpoint viewpoint 1: COM3 Engineering Viewpoint Specification" as CS_COM3_ENGT_VP1 {
+}
+
+package "endpoint viewpoint 2: COM3 Technology Viewpoint Specification" as CS_COM3_ENGT_VP2 {
+}
+
+package "CS-COM3-ENGT\nEngineering–Technology Correspondence Specification" as CS_COM3_ENGT <<CorrespondenceSpecification>> {
+
+note "{constraint}\nCR-COM3-ENGT-01\nEngineering Technology Realization Rule" as CR_COM3_ENGT_01 <<CorrespondenceRule>>
+
+class "CL-COM3-ENGT-01\nOperation Declaration Binding" as CL_COM3_ENGT_01 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-COMP-COM3-01`"
+  endPoint2 = "`TECH-BIND-COM3-01`"
+}
+
+class "CL-COM3-ENGT-02\nInvocation Conformance Guard" as CL_COM3_ENGT_02 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-COMP-COM3-02`"
+  endPoint2 = "`TECH-GUARD-COM3-01`"
+}
+
+class "CL-COM3-ENGT-03\nOperation Form Guard" as CL_COM3_ENGT_03 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-COMP-COM3-03`"
+  endPoint2 = "`TECH-GUARD-COM3-02`"
+}
+
+class "CL-COM3-ENGT-04\nAnnouncement Completion Boundary" as CL_COM3_ENGT_04 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-COMP-COM3-04`"
+  endPoint2 = "`TECH-BOUND-COM3-01`"
+}
+
+class "CL-COM3-ENGT-05\nInterrogation State Binding" as CL_COM3_ENGT_05 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-COMP-COM3-05`"
+  endPoint2 = "`TECH-STATE-COM3-01`"
+}
+
+class "CL-COM3-ENGT-06\nTermination Conformance Guard" as CL_COM3_ENGT_06 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-COMP-COM3-06`"
+  endPoint2 = "`TECH-GUARD-COM3-03`"
+}
+
+class "CL-COM3-ENGT-07\nInvocation–Termination Binding" as CL_COM3_ENGT_07 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-COMP-COM3-07`"
+  endPoint2 = "`TECH-COR-COM3-01`"
+}
+
+class "CL-COM3-ENGT-08\nSingle Termination Guard" as CL_COM3_ENGT_08 <<CorrespondenceLink>> {
+  endPoint1 = "`ENG-COMP-COM3-08`"
+  endPoint2 = "`TECH-GUARD-COM3-04`"
+}
+
+}
+
+CS_COM3_ENGT ..> CS_COM3_ENGT_VP1 : <<CorrespondingSpecification>>
+CS_COM3_ENGT ..> CS_COM3_ENGT_VP2 : <<CorrespondingSpecification>>
+
+CR_COM3_ENGT_01 .. CL_COM3_ENGT_01 : constrains
+CR_COM3_ENGT_01 .. CL_COM3_ENGT_02 : constrains
+CR_COM3_ENGT_01 .. CL_COM3_ENGT_03 : constrains
+CR_COM3_ENGT_01 .. CL_COM3_ENGT_04 : constrains
+CR_COM3_ENGT_01 .. CL_COM3_ENGT_05 : constrains
+CR_COM3_ENGT_01 .. CL_COM3_ENGT_06 : constrains
+CR_COM3_ENGT_01 .. CL_COM3_ENGT_07 : constrains
+CR_COM3_ENGT_01 .. CL_COM3_ENGT_08 : constrains
+
+note bottom
+  Textual correspondence specification is authoritative.
+  Correspondence is pairwise and non-transitive.
+  Service Guarantee preservation is outside
+  RM-ODP CorrespondenceLink endpoints.
+end note
+
+@enduml

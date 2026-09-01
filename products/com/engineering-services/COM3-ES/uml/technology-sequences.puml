@@ -1,0 +1,42 @@
+@startuml COM3_Technology_Sequence
+
+title COM3 — Technology Viewpoint — Operation Interaction Realization
+
+participant "F8TF.COM3.Api" as Api
+participant "F8TF.COM3.Application" as App
+participant "F8TF.COM3.Platform" as Platform
+participant "F8TF.COM3.Domain" as Domain
+
+Api -> App : operation interaction
+
+App -> Domain : resolve DeclaredOperation
+App -> Domain : validate invocation representation
+
+alt Announcement
+
+  App -> App : preserve Announcement form
+  App --> Api : invocation established
+
+else Interrogation
+
+  App -> App : establish Interrogation state
+
+  App -> Domain : validate declared termination
+  App -> Platform : preserve invocation-termination association
+  App -> App : enforce single contractual termination
+
+  App --> Api : termination established
+
+end
+
+note right of App
+TECH-GUARD-COM3-01
+TECH-GUARD-COM3-02
+TECH-BOUND-COM3-01
+TECH-STATE-COM3-01
+TECH-GUARD-COM3-03
+TECH-COR-COM3-01
+TECH-GUARD-COM3-04
+end note
+
+@enduml
