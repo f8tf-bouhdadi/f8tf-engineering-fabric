@@ -62,6 +62,36 @@ products are available.
 
 [Explore COM2-ES](engineering-services/COM2-ES/)
 
+---
+
+### COM3-ES — Assured Operation Interaction
+
+**Need**
+
+Preserve the declared semantics of Operation interactions independently of a
+particular protocol, serialization format, routing mechanism or transport.
+
+**Interaction promise**
+
+Declared Operation identity and form are preserved, invocations conform to the
+declared Operation, Announcement semantics remain independent of contractual
+termination, and completed Interrogations establish one declared termination
+associated with the originating invocation.
+
+**Useful for**
+
+Distributed service interfaces, operation-oriented middleware, RPC-style
+technology bindings and integrations requiring explicit Announcement and
+Interrogation semantics.
+
+**Availability**
+
+Public Assured Integration-Ready Engineering Service Specification available.
+Qualified Runtime and Qualified Delivery lifecycle products are established and
+will be published separately.
+
+[Explore COM3-ES](engineering-services/COM3-ES/)
+
 ## Communication Service Portfolio
 
 F8TF Communication Services are developed progressively around bounded
@@ -91,5 +121,6 @@ than to this family navigation page.
 
 - [COM1-ES — Bounded Framed Message Interaction](engineering-services/COM1-ES/)
 - [COM2-ES — Controlled Interaction Admission](engineering-services/COM2-ES/)
+- [COM3-ES — Assured Operation Interaction](engineering-services/COM3-ES/)
 - [F8TF Interaction Services Catalog](../)
 - [F8TF Data Services](../data/)
